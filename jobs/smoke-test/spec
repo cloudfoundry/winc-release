@@ -1,0 +1,10 @@
+---
+name: smoke-test
+
+templates:
+  run.ps1: bin/run.ps1
+
+packages:
+- winc
+
+properties: {}

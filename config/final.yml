@@ -1,0 +1,6 @@
+---
+name: winc
+blobstore:
+  provider: s3
+  options:
+    bucket_name: winc-release

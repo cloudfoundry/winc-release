@@ -1,0 +1,9 @@
+---
+name: winc
+
+templates: {}
+
+packages:
+- winc
+
+properties: {}
