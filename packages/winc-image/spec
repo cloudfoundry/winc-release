@@ -1,0 +1,8 @@
+---
+name: winc-image
+
+dependencies:
+- golang-windows
+
+files:
+- winc-image/**/*

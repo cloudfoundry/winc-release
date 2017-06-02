@@ -1,10 +1,10 @@
 ---
 name: winc
 
-templates:
-  pre-start.ps1: bin/pre-start.ps1
+templates: {}
 
 packages:
 - winc
+- winc-image
 
 properties: {}
