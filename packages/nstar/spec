@@ -1,0 +1,8 @@
+---
+name: nstar
+
+dependencies:
+- golang-windows
+
+files:
+- nstar/**/*
