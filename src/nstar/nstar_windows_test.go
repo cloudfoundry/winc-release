@@ -106,6 +106,64 @@ var _ = Describe("Nstar", func() {
 		})
 	})
 
+	Context("when provided a path to stream out", func() {
+		var (
+			tempDir           string
+			pid               string
+			username          string
+			path              string
+			compressPath      string
+			nstarCmd          *exec.Cmd
+			stdout            *gbytes.Buffer
+			compressArgsLog   string
+			compressStdoutLog string
+		)
+
+		BeforeEach(func() {
+			var err error
+			tempDir, err = ioutil.TempDir("", "tar-log")
+			Expect(err).ToNot(HaveOccurred())
+
+			compressArgsLog = filepath.Join(tempDir, "args-log")
+			compressStdoutLog = "tar-stdout"
+
+			pid = strconv.Itoa(rand.Int())
+			path = filepath.Join("c:\\", "hello")
+			username = "some-username"
+			compressPath = "some-file"
+		})
+
+		JustBeforeEach(func() {
+			stdout = gbytes.NewBuffer()
+			nstarCmd = exec.Command(nstarBin, tarBin, pid, username, path, compressPath)
+			// nstarCmd.Stdout = stdout
+			nstarCmd.Env = []string{"ARGS_LOG=" + compressArgsLog, "STDOUT_LOG=" + compressStdoutLog}
+			session, err := gexec.Start(nstarCmd, stdout, GinkgoWriter)
+			Expect(err).ToNot(HaveOccurred())
+			Eventually(session).Should(gexec.Exit(0))
+		})
+
+		AfterEach(func() {
+			Expect(os.RemoveAll(filepath.Dir(compressArgsLog))).To(Succeed())
+			Expect(os.RemoveAll(filepath.Join("c:\\", "proc", pid))).To(Succeed())
+		})
+
+		It("calls tar with the correct arguments", func() {
+			Expect(readArgs(compressArgsLog)).To(Equal([]string{
+				"-cf",
+				"-",
+				"-C",
+				path,
+				compressPath,
+			}))
+		})
+
+		It("hooks up its stdout to tar's stdout", func() {
+			Expect(stdout).To(gbytes.Say("tar-stdout"))
+		})
+
+	})
+
 	Context("when not enough arguments are provided", func() {
 		It("exits with an error", func() {
 			stdout := gbytes.NewBuffer()
@@ -113,7 +171,7 @@ var _ = Describe("Nstar", func() {
 			session, err := gexec.Start(cmd, stdout, GinkgoWriter)
 			Expect(err).ToNot(HaveOccurred())
 			Eventually(session).Should(gexec.Exit(1))
-			Expect(stdout).To(gbytes.Say("not enough args to nstar.exe, got: 4"))
+			Expect(stdout).To(gbytes.Say("Incorrect number of args. Usage: nstar tarBin pid username pid <compressPath>"))
 		})
 	})
 
