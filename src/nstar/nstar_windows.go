@@ -44,9 +44,6 @@ func streamIn(tarBin, pid, username, path string) {
 }
 
 func streamOut(tarBin, pid, username, path, compressPath string) {
-	if compressPath == "" {
-		compressPath = "."
-	}
 	cmd := exec.Command(tarBin, "-cf", "-", "-C", path, compressPath)
 	cmd.Stdout = os.Stdout
 	err := cmd.Run()
