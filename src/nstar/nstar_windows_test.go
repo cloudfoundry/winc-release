@@ -18,6 +18,10 @@ import (
 )
 
 var _ = Describe("Nstar", func() {
+	BeforeEach(func() {
+		rand.Seed(int64(GinkgoParallelNode()))
+	})
+
 	Context("when provided a path to extract to", func() {
 		var (
 			pid                 string
