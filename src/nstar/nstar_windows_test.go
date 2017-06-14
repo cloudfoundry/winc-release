@@ -108,15 +108,16 @@ var _ = Describe("Nstar", func() {
 
 	Context("when provided a path to stream out", func() {
 		var (
-			tempDir           string
-			pid               string
-			username          string
-			path              string
-			compressPath      string
-			nstarCmd          *exec.Cmd
-			stdout            *gbytes.Buffer
-			compressArgsLog   string
-			compressStdoutLog string
+			tempDir             string
+			pid                 string
+			username            string
+			path                string
+			compressPath        string
+			expectedDestination string
+			nstarCmd            *exec.Cmd
+			stdout              *gbytes.Buffer
+			compressArgsLog     string
+			compressStdoutLog   string
 		)
 
 		BeforeEach(func() {
@@ -148,18 +149,50 @@ var _ = Describe("Nstar", func() {
 			Expect(os.RemoveAll(filepath.Join("c:\\", "proc", pid))).To(Succeed())
 		})
 
-		It("calls tar with the correct arguments", func() {
-			Expect(readArgs(compressArgsLog)).To(Equal([]string{
-				"-cf",
-				"-",
-				"-C",
-				path,
-				compressPath,
-			}))
-		})
-
 		It("hooks up its stdout to tar's stdout", func() {
 			Expect(stdout).To(gbytes.Say("tar-stdout"))
+		})
+
+		Context("when the path is absolute", func() {
+			BeforeEach(func() {
+				path = filepath.Join("c:\\", "some", "absolute", "path")
+				expectedDestination = filepath.Join("c:\\", "proc", pid, "root", "some", "absolute", "path")
+			})
+
+			It("calls tar with the correct arguments", func() {
+				Expect(readArgs(compressArgsLog)).To(Equal([]string{
+					"-cf",
+					"-",
+					"-C",
+					expectedDestination,
+					compressPath,
+				}))
+			})
+
+			It("creates the destination directory", func() {
+				Expect(expectedDestination).To(BeADirectory())
+			})
+		})
+
+		Context("when the path is relative", func() {
+			BeforeEach(func() {
+				path = filepath.Join("some", "relative", "path")
+				expectedDestination = filepath.Join("c:\\", "proc", pid, "root", "Users", username, "some", "relative", "path")
+			})
+
+			It("calls tar with the correct arguments", func() {
+				Expect(readArgs(compressArgsLog)).To(Equal([]string{
+					"-cf",
+					"-",
+					"-C",
+					expectedDestination,
+					compressPath,
+				}))
+			})
+
+			It("creates the destination directory relative to the user's home directory", func() {
+				Expect(expectedDestination).To(BeADirectory())
+			})
 		})
 
 	})

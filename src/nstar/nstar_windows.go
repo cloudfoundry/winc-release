@@ -21,14 +21,7 @@ func main() {
 }
 
 func streamIn(tarBin, pid, username, path string) {
-	var destination string
-	if filepath.IsAbs(path) {
-		containerPath := strings.TrimPrefix(path, filepath.VolumeName(path))
-		destination = filepath.Join("c:\\", "proc", pid, "root", containerPath)
-	} else {
-		destination = filepath.Join("c:\\", "proc", pid, "root", "Users", username, path)
-	}
-
+	destination := sanitizeDestination(pid, username, path)
 	if err := os.MkdirAll(destination, 0755); err != nil {
 		fmt.Printf("failed to create %s: %s\n", destination, err)
 		os.Exit(1)
@@ -44,11 +37,27 @@ func streamIn(tarBin, pid, username, path string) {
 }
 
 func streamOut(tarBin, pid, username, path, compressPath string) {
-	cmd := exec.Command(tarBin, "-cf", "-", "-C", path, compressPath)
+	destination := sanitizeDestination(pid, username, path)
+	if err := os.MkdirAll(destination, 0755); err != nil {
+		fmt.Printf("failed to create %s: %s\n", destination, err)
+		os.Exit(1)
+	}
+	cmd := exec.Command(tarBin, "-cf", "-", "-C", destination, compressPath)
 	cmd.Stdout = os.Stdout
 	err := cmd.Run()
 	if err != nil {
 		fmt.Print("tar compress failed")
 		os.Exit(1)
 	}
+}
+
+func sanitizeDestination(pid, username, path string) string {
+	var destination string
+	if filepath.IsAbs(path) {
+		containerPath := strings.TrimPrefix(path, filepath.VolumeName(path))
+		destination = filepath.Join("c:\\", "proc", pid, "root", containerPath)
+	} else {
+		destination = filepath.Join("c:\\", "proc", pid, "root", "Users", username, path)
+	}
+	return destination
 }
