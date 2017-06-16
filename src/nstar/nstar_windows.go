@@ -53,7 +53,8 @@ func streamOut(tarBin, pid, username, path, compressPath string) {
 
 func sanitizeDestination(pid, username, path string) string {
 	var destination string
-	if filepath.IsAbs(path) {
+	path = filepath.Clean(path)
+	if filepath.IsAbs(path) || strings.HasPrefix(path, "\\") {
 		containerPath := strings.TrimPrefix(path, filepath.VolumeName(path))
 		destination = filepath.Join("c:\\", "proc", pid, "root", containerPath)
 	} else {

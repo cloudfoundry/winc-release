@@ -108,6 +108,26 @@ var _ = Describe("Nstar", func() {
 				Expect(expectedDestination).To(BeADirectory())
 			})
 		})
+
+		Context("when the path is /tmp/app", func() {
+			BeforeEach(func() {
+				path = "/tmp/app"
+				expectedDestination = filepath.Join("c:\\", "proc", pid, "root", "tmp", "app")
+			})
+
+			It("calls tar with the correct arguments", func() {
+				Expect(readArgs(extractArgsLog)).To(Equal([]string{
+					"-xf",
+					"-",
+					"-C",
+					expectedDestination,
+				}))
+			})
+
+			It("creates the destination directory relative to the user's home directory", func() {
+				Expect(expectedDestination).To(BeADirectory())
+			})
+		})
 	})
 
 	Context("when provided a path to stream out", func() {
@@ -199,6 +219,26 @@ var _ = Describe("Nstar", func() {
 			})
 		})
 
+		Context("when the path is absolute with no drive", func() {
+			BeforeEach(func() {
+				path = "\\no\\drive\\letter"
+				expectedDestination = filepath.Join("c:\\", "proc", pid, "root", "no", "drive", "letter")
+			})
+
+			It("calls tar with the correct arguments", func() {
+				Expect(readArgs(compressArgsLog)).To(Equal([]string{
+					"-cf",
+					"-",
+					"-C",
+					expectedDestination,
+					compressPath,
+				}))
+			})
+
+			It("creates the destination directory relative to the user's home directory", func() {
+				Expect(expectedDestination).To(BeADirectory())
+			})
+		})
 	})
 
 	Context("when not enough arguments are provided", func() {
