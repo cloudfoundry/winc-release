@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	dockerCmd := "(docker inspect microsoft/windowsservercore | ConvertFrom-Json).GraphDriver.Data.Dir"
+	dockerCmd := "(docker inspect pivotalgreenhouse/cfwindowsfs | ConvertFrom-Json).GraphDriver.Data.Dir"
 	rootfsPath, err := exec.Command("powershell.exe", dockerCmd).CombinedOutput()
 	if err != nil {
 		os.Exit(1)
