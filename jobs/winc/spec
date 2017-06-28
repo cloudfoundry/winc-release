@@ -6,6 +6,7 @@ templates: {}
 packages:
 - winc
 - winc-image
+- winc-network
 - nstar
 
 properties: {}

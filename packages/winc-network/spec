@@ -1,0 +1,9 @@
+---
+name: winc-network
+
+dependencies:
+- golang-windows
+- mingw
+
+files:
+- code.cloudfoundry.org/winc/**/*
