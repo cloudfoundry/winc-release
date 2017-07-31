@@ -5,4 +5,4 @@ dependencies:
 - golang-windows
 
 files:
-- winc-image/**/*
+- code.cloudfoundry.org/winc/**/*
