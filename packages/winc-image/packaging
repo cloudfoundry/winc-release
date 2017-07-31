@@ -6,7 +6,8 @@ $BOSH_INSTALL_TARGET = Resolve-Path "${env:BOSH_INSTALL_TARGET}"
 $env:GOROOT="C:\var\vcap\packages\golang-windows\go"
 $env:GOPATH="${BOSH_INSTALL_TARGET}"
 $env:PATH="${env:GOROOT}\bin;${env:PATH}"
-$pkg_path="winc-image"
+$pkg_name="winc-image"
+$pkg_path="code.cloudfoundry.org/winc/cmd/winc-image"
 
 $env:PATH="C:\var\vcap\packages\mingw\mingw64\bin;"+$env:Path
 
@@ -17,7 +18,7 @@ if ($LASTEXITCODE -ge 8) {
     Write-Error "robocopy.exe /E ${PWD} ${BOSH_INSTALL_TARGET}\src"
 }
 
-go.exe build -o "${BOSH_INSTALL_TARGET}\winc-image.exe" "${pkg_path}"
+go.exe build -o "${BOSH_INSTALL_TARGET}\${pkg_name}.exe" "${pkg_path}"
 if ($LASTEXITCODE -ne 0) {
     Write-Error "Error compiling: ${pkg_path}"
 }
