@@ -3,6 +3,7 @@ name: winc-image
 
 dependencies:
 - golang-windows
+- mingw
 
 files:
 - code.cloudfoundry.org/winc/**/*
