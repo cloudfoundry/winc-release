@@ -1,0 +1,23 @@
+﻿$ErrorActionPreference = "Stop";
+trap { $host.SetShouldExit(1) }
+
+Write-Host "Starting pre-start"
+
+$rootfs = (docker inspect cloudfoundry/cfwindowsfs | ConvertFrom-Json).GraphDriver.Data.Dir
+$rootfsPackage="C:\var\vcap\packages\cfwindows2016"
+$rootfsSymlink="$rootfsPackage\rootfs"
+
+New-Item -Type Directory -Force "$rootfsPackage"
+if ((Test-Path $rootfsSymlink) -eq $true) {
+  cmd.exe /c "rmdir $rootfsSymlink"
+  if ($LASTEXITCODE -ne 0) {
+    Write-Error "Failed to remove old symlink"
+  }
+}
+
+cmd.exe /c "mklink /D $rootfsSymlink $rootfs"
+if ($LASTEXITCODE -ne 0) {
+  Write-Error "Failed to create mklink"
+}
+Write-Host "Finished pre-start"
+Exit 0
