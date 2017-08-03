@@ -3,8 +3,8 @@ trap { $host.SetShouldExit(1) }
 
 Write-Host "Starting pre-start"
 
-$rootfs = (docker inspect cloudfoundry/cfwindowsfs | ConvertFrom-Json).GraphDriver.Data.Dir
-$rootfsPackage="C:\var\vcap\packages\cfwindows2016"
+$rootfs = (docker inspect cloudfoundry/windows2016fs | ConvertFrom-Json).GraphDriver.Data.Dir
+$rootfsPackage="C:\var\vcap\packages\windows2016fs"
 $rootfsSymlink="$rootfsPackage\rootfs"
 
 New-Item -Type Directory -Force "$rootfsPackage"
