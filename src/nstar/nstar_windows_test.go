@@ -253,6 +253,10 @@ var _ = Describe("Nstar", func() {
 	})
 
 	Context("when tar fails", func() {
+		AfterEach(func() {
+			Expect(os.RemoveAll("c:\\proc\\IGNORED")).To(Succeed())
+		})
+
 		It("exits with an error", func() {
 			stdout := gbytes.NewBuffer()
 			cmd := exec.Command(nstarBin, tarBin, "IGNORED", "IGNORED", "CAUSE-TAR-TO-FAIL")
