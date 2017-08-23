@@ -1,0 +1,15 @@
+---
+name: winc-network
+
+templates:
+  interface.json.erb: config/interface.json
+  pre-start.ps1: bin/pre-start.ps1
+
+packages:
+- winc-network
+
+properties:
+  winc_network.mtu:
+    description: "Maximum network transmission unit length in bytes. Max allowed value is 1500."
+    default: 0
+

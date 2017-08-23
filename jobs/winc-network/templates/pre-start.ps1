@@ -1,26 +1,9 @@
 ﻿$ErrorActionPreference = "Stop";
 trap { $host.SetShouldExit(1) }
 
-Write-Host "Starting pre-start"
+Write-Host "Begin winc-network pre-start"
 
 Get-ContainerNetwork | Remove-ContainerNetwork -Force
-
-$rootfs = (docker inspect cloudfoundry/windows2016fs | ConvertFrom-Json).GraphDriver.Data.Dir
-$rootfsPackage="C:\var\vcap\packages\windows2016fs"
-$rootfsSymlink="$rootfsPackage\rootfs"
-
-New-Item -Type Directory -Force "$rootfsPackage"
-if ((Test-Path $rootfsSymlink) -eq $true) {
-  cmd.exe /c "rmdir $rootfsSymlink"
-  if ($LASTEXITCODE -ne 0) {
-    Write-Error "Failed to remove old symlink"
-  }
-}
-
-cmd.exe /c "mklink /D $rootfsSymlink $rootfs"
-if ($LASTEXITCODE -ne 0) {
-  Write-Error "Failed to create mklink"
-}
 
 # Check firewall rules
 function get-firewall {
@@ -75,5 +58,5 @@ if ($anyFirewallsDisabled -or $adminRuleMissing) {
     Write-Error "Failed to Set Firewall rule"
   }
 }
-Write-Host "Finished pre-start"
+Write-Host "Finished winc-network pre-start"
 Exit 0
