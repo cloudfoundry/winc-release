@@ -1,8 +1,7 @@
 ---
 name: winc-image
 
-templates:
-  pre-start.ps1: bin/pre-start.ps1
+templates: {}
 
 packages:
 - winc-image
