@@ -12,4 +12,6 @@ properties:
   winc_network.mtu:
     description: "Maximum network transmission unit length in bytes. Max allowed value is 1500."
     default: 0
-
+  winc_network.insider_preview:
+    description: "Set to true for use with a insider preview Windows image"
+    default: false
