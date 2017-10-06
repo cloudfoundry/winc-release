@@ -3,7 +3,9 @@ trap { $host.SetShouldExit(1) }
 
 Write-Host "Begin winc-network pre-start"
 
+<% if !p("winc_network.insider_preview") %>
 Get-ContainerNetwork | Remove-ContainerNetwork -Force
+<% end %>
 
 # Check firewall rules
 function get-firewall {
