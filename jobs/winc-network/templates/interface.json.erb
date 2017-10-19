@@ -1,7 +1,11 @@
-{
-  "mtu": <%= p("winc_network.mtu") %>,
-  "network_name": "winc-nat",
-  "subnet_range": "172.30.0.0/22",
-  "gateway_address": "172.30.0.1",
-  "insider_preview": <%= p("winc_network.insider_preview") %>
-}
+<%=
+  toRender = {
+    "mtu" => p("winc_network.mtu"),
+    "network_name" => "winc-nat",
+    "subnet_range" => "172.30.0.0/22",
+    "gateway_address" => "172.30.0.1",
+    "dns_servers" => p("winc_network.dns_servers"),
+  }
+
+  JSON.pretty_generate(toRender)
+%>

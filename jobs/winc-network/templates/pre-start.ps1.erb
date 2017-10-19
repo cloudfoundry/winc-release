@@ -3,9 +3,10 @@ trap { $host.SetShouldExit(1) }
 
 Write-Host "Begin winc-network pre-start"
 
-<% if !p("winc_network.insider_preview") %>
-Get-ContainerNetwork | Remove-ContainerNetwork -Force
-<% end %>
+C:\var\vcap\packages\winc-network\winc-network.exe --action delete --configFile C:\var\vcap\jobs\winc-network\config\interface.json
+if ($LASTEXITCODE -ne 0) {
+  exit $LASTEXITCODE
+}
 
 C:\var\vcap\packages\winc-network\winc-network.exe --action create --configFile C:\var\vcap\jobs\winc-network\config\interface.json
 if ($LASTEXITCODE -ne 0) {

@@ -12,6 +12,7 @@ properties:
   winc_network.mtu:
     description: "Maximum network transmission unit length in bytes. Max allowed value is 1500."
     default: 0
-  winc_network.insider_preview:
-    description: "Set to true for use with a insider preview Windows image"
-    default: false
+
+  winc_network.dns_servers:
+    description: "DNS servers that containers will use. If not set, will use DNS settings from the host."
+    default: []
