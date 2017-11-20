@@ -10,7 +10,7 @@ packages:
 
 properties:
   winc_network.mtu:
-    description: "Maximum network transmission unit length in bytes. Max allowed value is 1500."
+    description: "Maximum network transmission unit length in bytes."
     default: 0
 
   winc_network.dns_servers:
