@@ -9,6 +9,7 @@ files:
 - code.cloudfoundry.org/winc/cmd/winc/**/*
 - code.cloudfoundry.org/winc/config/**/*
 - code.cloudfoundry.org/winc/container/**/*
+- code.cloudfoundry.org/winc/filelock/**/*
 - code.cloudfoundry.org/winc/hcs/**/*
 - code.cloudfoundry.org/winc/mount/**/*
 - code.cloudfoundry.org/winc/vendor/**/*
