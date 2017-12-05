@@ -7,6 +7,7 @@ dependencies:
 
 files:
 - code.cloudfoundry.org/winc/cmd/winc-image/**/*
+- code.cloudfoundry.org/winc/filelock/**/*
 - code.cloudfoundry.org/winc/hcs/**/*
 - code.cloudfoundry.org/winc/image/**/*
 - code.cloudfoundry.org/winc/layer/**/*
