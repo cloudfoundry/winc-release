@@ -10,6 +10,7 @@ files:
 - code.cloudfoundry.org/winc/endpoint/**/*
 - code.cloudfoundry.org/winc/filelock/**/*
 - code.cloudfoundry.org/winc/hcs/**/*
+- code.cloudfoundry.org/winc/netinterface/**/*
 - code.cloudfoundry.org/winc/netrules/**/*
 - code.cloudfoundry.org/winc/netsh/**/*
 - code.cloudfoundry.org/winc/network/**/*

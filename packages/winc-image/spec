@@ -11,5 +11,6 @@ files:
 - code.cloudfoundry.org/winc/hcs/**/*
 - code.cloudfoundry.org/winc/image/**/*
 - code.cloudfoundry.org/winc/layer/**/*
+- code.cloudfoundry.org/winc/netinterface/**/*
 - code.cloudfoundry.org/winc/vendor/**/*
 - code.cloudfoundry.org/winc/volume/**/*

@@ -12,4 +12,5 @@ files:
 - code.cloudfoundry.org/winc/filelock/**/*
 - code.cloudfoundry.org/winc/hcs/**/*
 - code.cloudfoundry.org/winc/mount/**/*
+- code.cloudfoundry.org/winc/netinterface/**/*
 - code.cloudfoundry.org/winc/vendor/**/*
