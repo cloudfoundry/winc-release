@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e -x
+
+if ! which gosub >/dev/null 2>&1 ; then
+  echo "gosub not found. In the global $GOPATH, try: go get github.com/vito/gosub"
+  exit 1
+fi
+
+ROOT_DIR_PATH=$(cd "$(dirname "$0")"/.. && pwd)
+
+for package in winc winc-image winc-network; do
+  pushd "$ROOT_DIR_PATH"/packages/"$package"
+    {
+      cat spec | grep -v '# gosub'
+      GOOS=windows gosub list \
+        -a code.cloudfoundry.org/winc/cmd/$package \
+        | sed -e 's/\(.*\)/- \1\/**\/* # gosub/g'
+    } > spec.new
+    mv spec.new spec
+  popd
+done
