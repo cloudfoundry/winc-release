@@ -1,12 +1,7 @@
-7zip/7z1604-x64.msi:
-  size: 1668096
-  object_id: a130b3a9-3857-4af8-6af4-e4a18bfeb88c
-  sha: bae316e5148d3b42efa1d3f272afc10d3ffa6f4b
 golang/go1.9.2.windows-amd64.zip:
   size: 109420764
   object_id: e4b48faa-c28a-4c2c-6a63-90226b1673e1
   sha: 85a4093870319a673ec89c26b8f29f1e9f91a77a
-mingw/x86_64-7.1.0-release-win32-seh-rt_v5-rev0.7z:
-  size: 46744190
-  object_id: d4a74c5c-2887-4cef-6b79-1717113b8f7c
-  sha: a07d2a45cf5c062e3dadc4f8c255be4493054f24
+mingw/x86_64-7.1.0-release-win32-seh-rt_v5-rev0.zip:
+  size: 139402657
+  sha: 0e4a0e0fbe332a23ae6e5bff891216a1cf7defee
