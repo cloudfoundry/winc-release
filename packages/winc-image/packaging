@@ -23,7 +23,7 @@ if ($LASTEXITCODE -ne 0) {
     Write-Error "Error compiling: ${pkg_path}"
 }
 
-gcc.exe -c "code.cloudfoundry.org\winc\volume\quota\quota.c" -o quota.o
+gcc.exe -c "code.cloudfoundry.org\winc\image\volume\quota\quota.c" -o quota.o
 if ($LastExitCode -ne 0) {
   exit $LastExitCode
 }
