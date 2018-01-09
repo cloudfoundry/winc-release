@@ -7,12 +7,9 @@ dependencies:
 
 files:
 - code.cloudfoundry.org/winc/cmd/winc/**/* # gosub
-- code.cloudfoundry.org/winc/config/**/* # gosub
 - code.cloudfoundry.org/winc/container/**/* # gosub
 - code.cloudfoundry.org/winc/filelock/**/* # gosub
 - code.cloudfoundry.org/winc/hcs/**/* # gosub
-- code.cloudfoundry.org/winc/mount/**/* # gosub
-- code.cloudfoundry.org/winc/netinterface/**/* # gosub
 - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/**/* # gosub
 - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/**/* # gosub
 - code.cloudfoundry.org/winc/vendor/github.com/blang/semver/**/* # gosub

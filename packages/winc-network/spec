@@ -7,15 +7,9 @@ dependencies:
 
 files:
 - code.cloudfoundry.org/winc/cmd/winc-network/**/* # gosub
-- code.cloudfoundry.org/winc/endpoint/**/* # gosub
 - code.cloudfoundry.org/winc/filelock/**/* # gosub
 - code.cloudfoundry.org/winc/hcs/**/* # gosub
-- code.cloudfoundry.org/winc/netinterface/**/* # gosub
-- code.cloudfoundry.org/winc/netrules/**/* # gosub
-- code.cloudfoundry.org/winc/netsh/**/* # gosub
 - code.cloudfoundry.org/winc/network/**/* # gosub
-- code.cloudfoundry.org/winc/port_allocator/**/* # gosub
-- code.cloudfoundry.org/winc/serial/**/* # gosub
 - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/localip/**/* # gosub
 - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/**/* # gosub
 - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/**/* # gosub
