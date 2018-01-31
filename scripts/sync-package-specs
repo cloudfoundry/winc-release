@@ -7,6 +7,7 @@ if ! which gosub >/dev/null 2>&1 ; then
 fi
 
 ROOT_DIR_PATH=$(cd "$(dirname "$0")"/.. && pwd)
+GOPATH=$ROOT_DIR_PATH
 
 for package in winc winc-image winc-network; do
   pushd "$ROOT_DIR_PATH"/packages/"$package"
