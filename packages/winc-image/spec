@@ -7,16 +7,3 @@ dependencies:
 
 files:
 - code.cloudfoundry.org/winc/cmd/winc-image/**/* # gosub
-- code.cloudfoundry.org/winc/filelock/**/* # gosub
-- code.cloudfoundry.org/winc/hcs/**/* # gosub
-- code.cloudfoundry.org/winc/image/**/* # gosub
-- code.cloudfoundry.org/winc/image/layer/**/* # gosub
-- code.cloudfoundry.org/winc/image/volume/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-spec/specs-go/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/sirupsen/logrus/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/urfave/cli/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/ssh/terminal/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/**/* # gosub

@@ -7,20 +7,3 @@ dependencies:
 
 files:
 - code.cloudfoundry.org/winc/cmd/winc-network/**/* # gosub
-- code.cloudfoundry.org/winc/filelock/**/* # gosub
-- code.cloudfoundry.org/winc/hcs/**/* # gosub
-- code.cloudfoundry.org/winc/network/**/* # gosub
-- code.cloudfoundry.org/winc/network/endpoint/**/* # gosub
-- code.cloudfoundry.org/winc/network/netinterface/**/* # gosub
-- code.cloudfoundry.org/winc/network/netrules/**/* # gosub
-- code.cloudfoundry.org/winc/network/netsh/**/* # gosub
-- code.cloudfoundry.org/winc/network/port_allocator/**/* # gosub
-- code.cloudfoundry.org/winc/network/port_allocator/serial/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/localip/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/sirupsen/logrus/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/urfave/cli/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/ssh/terminal/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/**/* # gosub
