@@ -5,6 +5,7 @@
     "subnet_range" => "172.30.0.0/22",
     "gateway_address" => "172.30.0.1",
     "dns_servers" => p("winc_network.dns_servers"),
+    "maximum_outgoing_bandwidth" => p("winc_network.maximum_outgoing_bandwidth"),
   }
 
   JSON.pretty_generate(toRender)
