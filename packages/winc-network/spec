@@ -11,6 +11,7 @@ files:
 - code.cloudfoundry.org/winc/hcs/**/* # gosub
 - code.cloudfoundry.org/winc/network/**/* # gosub
 - code.cloudfoundry.org/winc/network/endpoint/**/* # gosub
+- code.cloudfoundry.org/winc/network/firewall/**/* # gosub
 - code.cloudfoundry.org/winc/network/netinterface/**/* # gosub
 - code.cloudfoundry.org/winc/network/netrules/**/* # gosub
 - code.cloudfoundry.org/winc/network/netsh/**/* # gosub
