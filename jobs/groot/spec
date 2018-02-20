@@ -1,0 +1,17 @@
+---
+name: groot
+
+templates:
+  pre-start.ps1.erb: bin/pre-start.ps1
+
+packages:
+- groot
+
+properties:
+  groot.cached_image_uris:
+    description: "An array of Windows container image URIs to cache at deployment time."
+    default: []
+
+  groot.driver_store:
+    description: "The directory in which groot will store cached container images."
+    default: "/var/lib/groot"

@@ -1,0 +1,35 @@
+$ErrorActionPreference = "Stop";
+trap { $host.SetShouldExit(1) }
+
+$BOSH_INSTALL_TARGET = Resolve-Path "${env:BOSH_INSTALL_TARGET}"
+
+$env:GOROOT="C:\var\vcap\packages\golang-windows\go"
+$env:GOPATH="${BOSH_INSTALL_TARGET}"
+$env:PATH="${env:GOROOT}\bin;${env:PATH}"
+$pkg_name="groot"
+$pkg_path="code.cloudfoundry.org/groot-windows"
+
+$env:PATH="C:\var\vcap\packages\mingw\mingw64\bin;"+$env:Path
+
+New-Item -ItemType "directory" -Force "${BOSH_INSTALL_TARGET}\src"
+
+robocopy.exe /E "${PWD}" "${BOSH_INSTALL_TARGET}\src"
+if ($LASTEXITCODE -ge 8) {
+    Write-Error "robocopy.exe /E ${PWD} ${BOSH_INSTALL_TARGET}\src"
+}
+
+go.exe build -o "${BOSH_INSTALL_TARGET}\${pkg_name}.exe" "${pkg_path}"
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Error compiling: ${pkg_path}"
+}
+
+gcc.exe -c "${pkg_path}\volume\quota\quota.c" -o quota.o
+if ($LastExitCode -ne 0) {
+  exit $LastExitCode
+}
+gcc.exe -shared -o "${BOSH_INSTALL_TARGET}\quota.dll" quota.o -lole32 -loleaut32
+if ($LastExitCode -ne 0) {
+  exit $LastExitCode
+}
+
+Remove-Item -Recurse -Path "${BOSH_INSTALL_TARGET}\src" -Force

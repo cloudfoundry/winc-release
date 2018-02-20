@@ -1,0 +1,16 @@
+$ErrorActionPreference = "Stop";
+trap { $host.SetShouldExit(1) }
+
+echo "log_level: debug" > "$env:TEMP/groot-winc-config.yml"
+
+Write-Host "Begin groot pre-start"
+<% p("groot.cached_image_uris").each do |arg| %>
+  Write-Host "Begin pulling <%= arg %> image"
+  C:\var\vcap\packages\groot\groot.exe --config "$env:TEMP/groot-winc-config.yml" --driver-store <%= p("groot.driver_store") %> pull <%= arg %>
+  Write-Host "Finished pulling <%= arg %> image"
+<% end %>
+if ($LASTEXITCODE -ne 0) {
+  exit $LASTEXITCODE
+}
+Write-Host "Finished groot pre-start"
+

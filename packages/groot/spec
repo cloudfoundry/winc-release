@@ -1,0 +1,75 @@
+---
+name: groot
+
+dependencies:
+- golang-windows
+- mingw
+
+files:
+  - code.cloudfoundry.org/groot-windows/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/driver/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/filelock/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/hcs/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/privilege/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/tarstream/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/groot/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/groot/fetcher/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/groot/fetcher/filefetcher/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/groot/fetcher/layerfetcher/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/groot/fetcher/layerfetcher/source/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/groot/imagepuller/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/lager/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/archive/tar/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/backuptar/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/directory/explicitfilepath/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/docker/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/docker/policyconfiguration/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/docker/reference/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/image/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/manifest/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/oci/internal/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/oci/layout/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/pkg/docker/config/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/pkg/strslice/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/pkg/tlsclientconfig/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/transports/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/types/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/digestset/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/reference/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/registry/api/errcode/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/registry/api/v2/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/registry/client/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/registry/client/auth/challenge/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/registry/client/transport/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/registry/storage/cache/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/registry/storage/cache/memory/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/docker-credential-helpers/client/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/docker-credential-helpers/credentials/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/docker/api/types/versions/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/docker/pkg/homedir/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/go-connections/sockets/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/go-connections/tlsconfig/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/libtrust/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/ghodss/yaml/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/gorilla/mux/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/opencontainers/go-digest/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/opencontainers/image-spec/specs-go/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/opencontainers/image-spec/specs-go/v1/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/opencontainers/runc/libcontainer/user/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/opencontainers/runtime-spec/specs-go/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/pkg/errors/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/sirupsen/logrus/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/urfave/cli/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/crypto/ssh/terminal/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/net/proxy/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/unix/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/unix/*.s # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/windows/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/windows/*.s # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/gopkg.in/yaml.v2/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/volume/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/volume/**/*.c # gosub
+  - code.cloudfoundry.org/groot-windows/volume/**/*.h # gosub
