@@ -9,14 +9,41 @@ fi
 ROOT_DIR_PATH=$(cd "$(dirname "$0")"/.. && pwd)
 GOPATH=$ROOT_DIR_PATH
 
-for package in winc winc-image winc-network; do
-  pushd "$ROOT_DIR_PATH"/packages/"$package"
+function sync_package() {
+  bosh_pkg=${1}
+
+  shift
+
+  (
+    set -e
+
+    cd packages/${bosh_pkg}
+
     {
       cat spec | grep -v '# gosub'
-      GOOS=windows gosub list \
-        -a code.cloudfoundry.org/winc/cmd/$package \
-        | sed -e 's/\(.*\)/- \1\/**\/* # gosub/g'
+
+      for package in $(gosub list "$@"); do
+        repo=$(echo ${2} | cut -f1-3 -d/)
+        if [ -d "../../src/${repo}/Godeps/_workspace/src/${package}" ]; then
+          package="${repo}/Godeps/_workspace/src/${package}"
+        fi
+        echo ${package} | sed -e 's/\(.*\)/  - \1\/*.go # gosub/g'
+        if ls ../../src/${package}/*.s >/dev/null 2>&1; then
+          echo ${package} | sed -e 's/\(.*\)/  - \1\/*.s # gosub/g'
+        fi
+        if ls ../../src/${package}/**/*.c >/dev/null 2>&1; then
+          echo ${package} | sed -e 's/\(.*\)/  - \1\/**\/*.c # gosub/g'
+        fi
+        if ls ../../src/${package}/**/*.h >/dev/null 2>&1; then
+          echo ${package} | sed -e 's/\(.*\)/  - \1\/**\/*.h # gosub/g'
+        fi
+      done
     } > spec.new
+
     mv spec.new spec
-  popd
-done
+  )
+}
+
+sync_package winc          -app  code.cloudfoundry.org/winc/cmd/winc &
+sync_package winc-network  -app  code.cloudfoundry.org/winc/cmd/winc-network &
+sync_package winc-image    -app  code.cloudfoundry.org/winc/cmd/winc-image

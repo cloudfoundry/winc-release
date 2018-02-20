@@ -6,22 +6,26 @@ dependencies:
 - mingw
 
 files:
-- code.cloudfoundry.org/winc/cmd/winc-network/**/* # gosub
-- code.cloudfoundry.org/winc/filelock/**/* # gosub
-- code.cloudfoundry.org/winc/hcs/**/* # gosub
-- code.cloudfoundry.org/winc/network/**/* # gosub
-- code.cloudfoundry.org/winc/network/endpoint/**/* # gosub
-- code.cloudfoundry.org/winc/network/firewall/**/* # gosub
-- code.cloudfoundry.org/winc/network/netinterface/**/* # gosub
-- code.cloudfoundry.org/winc/network/netrules/**/* # gosub
-- code.cloudfoundry.org/winc/network/netsh/**/* # gosub
-- code.cloudfoundry.org/winc/network/port_allocator/**/* # gosub
-- code.cloudfoundry.org/winc/network/port_allocator/serial/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/localip/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/sirupsen/logrus/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/urfave/cli/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/ssh/terminal/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/**/* # gosub
+  - code.cloudfoundry.org/winc/cmd/winc-network/*.go # gosub
+  - code.cloudfoundry.org/winc/filelock/*.go # gosub
+  - code.cloudfoundry.org/winc/hcs/*.go # gosub
+  - code.cloudfoundry.org/winc/network/*.go # gosub
+  - code.cloudfoundry.org/winc/network/endpoint/*.go # gosub
+  - code.cloudfoundry.org/winc/network/firewall/*.go # gosub
+  - code.cloudfoundry.org/winc/network/firewall/**/*.c # gosub
+  - code.cloudfoundry.org/winc/network/firewall/**/*.h # gosub
+  - code.cloudfoundry.org/winc/network/netinterface/*.go # gosub
+  - code.cloudfoundry.org/winc/network/netrules/*.go # gosub
+  - code.cloudfoundry.org/winc/network/netsh/*.go # gosub
+  - code.cloudfoundry.org/winc/network/port_allocator/*.go # gosub
+  - code.cloudfoundry.org/winc/network/port_allocator/serial/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/localip/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/sirupsen/logrus/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/urfave/cli/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/ssh/terminal/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.s # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/*.s # gosub

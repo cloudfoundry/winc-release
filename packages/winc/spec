@@ -6,20 +6,22 @@ dependencies:
 - mingw
 
 files:
-- code.cloudfoundry.org/winc/cmd/winc/**/* # gosub
-- code.cloudfoundry.org/winc/container/**/* # gosub
-- code.cloudfoundry.org/winc/container/config/**/* # gosub
-- code.cloudfoundry.org/winc/container/mount/**/* # gosub
-- code.cloudfoundry.org/winc/filelock/**/* # gosub
-- code.cloudfoundry.org/winc/hcs/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/blang/semver/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-spec/specs-go/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-tools/validate/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/sirupsen/logrus/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/syndtr/gocapability/capability/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/github.com/urfave/cli/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/ssh/terminal/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/**/* # gosub
-- code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/**/* # gosub
+  - code.cloudfoundry.org/winc/cmd/winc/*.go # gosub
+  - code.cloudfoundry.org/winc/container/*.go # gosub
+  - code.cloudfoundry.org/winc/container/config/*.go # gosub
+  - code.cloudfoundry.org/winc/container/mount/*.go # gosub
+  - code.cloudfoundry.org/winc/filelock/*.go # gosub
+  - code.cloudfoundry.org/winc/hcs/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/blang/semver/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-spec/specs-go/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-tools/validate/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/sirupsen/logrus/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/syndtr/gocapability/capability/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/urfave/cli/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/ssh/terminal/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.s # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/*.s # gosub
