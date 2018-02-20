@@ -1,6 +1,9 @@
 $ErrorActionPreference = "Stop";
 trap { $host.SetShouldExit(1) }
 
+# workaround for https://github.com/Microsoft/hcsshim/issues/155
+Get-ComputeProcess | Stop-ComputeProcess -f
+
 echo "log_level: debug" > "$env:TEMP/groot-winc-config.yml"
 
 Write-Host "Begin groot pre-start"
