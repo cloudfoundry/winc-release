@@ -8,10 +8,10 @@ Write-Host "Begin groot pre-start"
 <% p("groot.cached_image_uris").each do |uri| %>
   Write-Host "Begin pulling <%= uri %> image"
   C:\var\vcap\packages\groot\groot.exe --config "C:\var\vcap\jobs\groot\config\groot.yml" --driver-store <%= p("groot.driver_store") %> pull <%= uri %>
+  if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+  }
   Write-Host "Finished pulling <%= uri %> image"
 <% end %>
-if ($LASTEXITCODE -ne 0) {
-  exit $LASTEXITCODE
-}
 Write-Host "Finished groot pre-start"
 
