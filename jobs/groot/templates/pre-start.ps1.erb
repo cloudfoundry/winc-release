@@ -4,13 +4,11 @@ trap { $host.SetShouldExit(1) }
 # workaround for https://github.com/Microsoft/hcsshim/issues/155
 Get-ComputeProcess | Stop-ComputeProcess -f
 
-echo "log_level: debug" > "$env:TEMP/groot-winc-config.yml"
-
 Write-Host "Begin groot pre-start"
-<% p("groot.cached_image_uris").each do |arg| %>
-  Write-Host "Begin pulling <%= arg %> image"
-  C:\var\vcap\packages\groot\groot.exe --config "$env:TEMP/groot-winc-config.yml" --driver-store <%= p("groot.driver_store") %> pull <%= arg %>
-  Write-Host "Finished pulling <%= arg %> image"
+<% p("groot.cached_image_uris").each do |uri| %>
+  Write-Host "Begin pulling <%= uri %> image"
+  C:\var\vcap\packages\groot\groot.exe --config "C:\var\vcap\jobs\groot\config\groot.yml" --driver-store <%= p("groot.driver_store") %> pull <%= uri %>
+  Write-Host "Finished pulling <%= uri %> image"
 <% end %>
 if ($LASTEXITCODE -ne 0) {
   exit $LASTEXITCODE

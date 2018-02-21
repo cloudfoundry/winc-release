@@ -2,6 +2,7 @@
 name: groot
 
 templates:
+  groot.yml.erb: config/groot.yml
   pre-start.ps1.erb: bin/pre-start.ps1
 
 packages:
@@ -15,3 +16,7 @@ properties:
   groot.driver_store:
     description: "The directory in which groot will store cached container images."
     default: "/var/lib/groot"
+
+  groot.log_level:
+    description: "Can be debug, info, error or fatal"
+    default: "info"
