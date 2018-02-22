@@ -1,9 +1,0 @@
----
-name: winc-image
-
-templates: {}
-
-packages:
-- winc-image
-
-properties: {}
