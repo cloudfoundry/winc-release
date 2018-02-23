@@ -10,7 +10,6 @@ files:
   - code.cloudfoundry.org/winc/container/*.go # gosub
   - code.cloudfoundry.org/winc/container/config/*.go # gosub
   - code.cloudfoundry.org/winc/container/mount/*.go # gosub
-  - code.cloudfoundry.org/winc/filelock/*.go # gosub
   - code.cloudfoundry.org/winc/hcs/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/*.go # gosub

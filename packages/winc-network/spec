@@ -7,10 +7,10 @@ dependencies:
 
 files:
   - code.cloudfoundry.org/winc/cmd/winc-network/*.go # gosub
-  - code.cloudfoundry.org/winc/filelock/*.go # gosub
   - code.cloudfoundry.org/winc/hcs/*.go # gosub
   - code.cloudfoundry.org/winc/network/*.go # gosub
   - code.cloudfoundry.org/winc/network/endpoint/*.go # gosub
+  - code.cloudfoundry.org/winc/network/filelock/*.go # gosub
   - code.cloudfoundry.org/winc/network/firewall/*.go # gosub
   - code.cloudfoundry.org/winc/network/firewall/**/*.c # gosub
   - code.cloudfoundry.org/winc/network/firewall/**/*.h # gosub
