@@ -3,6 +3,8 @@ trap { $host.SetShouldExit(1) }
 
 Write-Host "Begin winc-network pre-start"
 
+Start-Service -Name http
+
 C:\var\vcap\packages\winc-network\winc-network.exe --action delete --configFile C:\var\vcap\jobs\winc-network\config\interface.json
 if ($LASTEXITCODE -ne 0) {
   exit $LASTEXITCODE
