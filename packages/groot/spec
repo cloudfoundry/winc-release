@@ -8,10 +8,10 @@ dependencies:
 files:
   - code.cloudfoundry.org/groot-windows/*.go # gosub
   - code.cloudfoundry.org/groot-windows/driver/*.go # gosub
-  - code.cloudfoundry.org/groot-windows/filelock/*.go # gosub
   - code.cloudfoundry.org/groot-windows/hcs/*.go # gosub
   - code.cloudfoundry.org/groot-windows/privilege/*.go # gosub
   - code.cloudfoundry.org/groot-windows/tarstream/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/filelock/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/groot/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/groot/fetcher/filefetcher/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/code.cloudfoundry.org/groot/fetcher/layerfetcher/*.go # gosub
