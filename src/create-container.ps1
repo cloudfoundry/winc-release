@@ -6,6 +6,14 @@ if (!$containerId) {
   $containerId = [guid]::NewGuid()
 }
 
+if ((Test-Path env:WINC_TEST_ROOTFS) -ne $true) {
+  Write-Error "Please set WINC_TEST_ROOTFS environment variable"
+}
+
+if ((Test-Path env:GROOT_IMAGE_STORE) -ne $true) {
+  Write-Error "Please set GROOT_IMAGE_STORE environment variable"
+}
+
 $rootfs = $env:WINC_TEST_ROOTFS
 
 Write-Host "groot delete"
