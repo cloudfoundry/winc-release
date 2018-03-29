@@ -50,7 +50,7 @@ Start-Process -FilePath "powershell.exe"
 {
     "ociVersion":  "1.0.1",
     "root":  {
-                 "path":  "\\\\?\\Volume{82662654-3390-11e8-9308-a3ff2ab93e2e}"
+                 "path":  "\\\\?\\Volume{8266269c-3390-11e8-9308-dfba61d53986}"
              },
     "windows":  {
                     "layerFolders":  [
