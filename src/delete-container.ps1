@@ -13,6 +13,6 @@ Write-Host "groot delete"
 groot.exe --driver-store $env:GROOT_IMAGE_STORE delete $containerId
 if ($LASTEXITCODE -ne 0) {
   Write-Error "groot delete failed"
-
+}
 
 Write-Host "Deleted container $containerId"
