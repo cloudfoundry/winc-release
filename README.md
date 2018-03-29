@@ -15,8 +15,8 @@ The following powershell script can be used to quickly create a new container.
   
 
 - Create Container with an optional containerId as an argument. This requires
-  setting `WINC_TEST_ROOTFS` to an image (e.g. docker:////microsoft/windowsservercore)
-  and `GROOT_IMAGE_STORE` (e.g C:\ProgramData\groot)
+  setting `WINC_TEST_ROOTFS` to an image (e.g. docker:///cloudfoundry/windows2016fs:latest)
+  and `GROOT_IMAGE_STORE` (e.g  C:\ProgramData\groot)
 
 ```
 Start-Process -FilePath "powershell.exe" 
@@ -50,7 +50,7 @@ Start-Process -FilePath "powershell.exe"
 {
     "ociVersion":  "1.0.1",
     "root":  {
-                 "path":  "\\\\?\\Volume{8266049d-3390-11e8-9308-f888cb3c348e}"
+                 "path":  "\\\\?\\Volume{8266260c-3390-11e8-9308-c5636b43ec3a}"
              },
     "windows":  {
                     "layerFolders":  [
