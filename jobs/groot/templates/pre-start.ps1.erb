@@ -2,14 +2,15 @@ $ErrorActionPreference = "Stop";
 trap { $host.SetShouldExit(1) }
 
 # workaround for https://github.com/Microsoft/hcsshim/issues/155
-$env:PATH="c:\var\vcap\packages\winc;c:\var\vcap\packages\groot;$env:PATH"
-$env:GROOT_IMAGE_STORE="<%= p("groot.driver_store") %>"
-Get-ComputeProcess | foreach { c:\var\vcap\packages\groot\delete-container.ps1 $_.Id }
+Get-ComputeProcess | foreach { c:\var\vcap\packages\winc\winc.exe delete $_.Id }
+
+$grootDriverStore = "<%= p("groot.driver_store") %>"
+ls "$grootDriverStore\volumes" | foreach { c:\var\vcap\packages\groot\groot.exe --driver-store $grootDriverStore delete $_.Name }
 
 Write-Host "Begin groot pre-start"
 <% p("groot.cached_image_uris").each do |uri| %>
   Write-Host "Begin pulling <%= uri %> image"
-  C:\var\vcap\packages\groot\groot.exe --config "C:\var\vcap\jobs\groot\config\groot.yml" --driver-store $env:GROOT_IMAGE_STORE pull <%= uri %>
+  C:\var\vcap\packages\groot\groot.exe --config "C:\var\vcap\jobs\groot\config\groot.yml" --driver-store $grootDriverStore pull <%= uri %>
   if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
   }

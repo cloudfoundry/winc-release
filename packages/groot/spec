@@ -6,7 +6,6 @@ dependencies:
 - mingw
 
 files:
-  - delete-container.ps1
   - code.cloudfoundry.org/groot-windows/*.go # gosub
   - code.cloudfoundry.org/groot-windows/driver/*.go # gosub
   - code.cloudfoundry.org/groot-windows/hcs/*.go # gosub
