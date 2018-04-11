@@ -5,7 +5,9 @@ trap { $host.SetShouldExit(1) }
 Get-ComputeProcess | foreach { c:\var\vcap\packages\winc\winc.exe delete $_.Id }
 
 $grootDriverStore = "<%= p("groot.driver_store") %>"
-ls "$grootDriverStore\volumes" | foreach { c:\var\vcap\packages\groot\groot.exe --driver-store $grootDriverStore delete $_.Name }
+if(Test-Path "$grootDriverStore\volumes"){
+  ls "$grootDriverStore\volumes" | foreach { c:\var\vcap\packages\groot\groot.exe --driver-store $grootDriverStore delete $_.Name }
+}
 
 Write-Host "Begin groot pre-start"
 <% p("groot.cached_image_uris").each do |uri| %>
