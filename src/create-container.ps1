@@ -14,6 +14,15 @@ if ((Test-Path env:GROOT_IMAGE_STORE) -ne $true) {
   Write-Error "Please set GROOT_IMAGE_STORE environment variable"
 }
 
+where.exe /Q winc
+if ($LASTEXITCODE -ne 0) {
+  Write-Error "winc.exe must be on the PATH"
+}
+where.exe /Q groot
+if ($LASTEXITCODE -ne 0) {
+  Write-Error "groot.exe must be on the PATH"
+}
+
 $rootfs = $env:WINC_TEST_ROOTFS
 
 Write-Host "groot delete"
