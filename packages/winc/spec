@@ -17,6 +17,7 @@ files:
   - code.cloudfoundry.org/winc/vendor/github.com/blang/semver/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-spec/specs-go/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-tools/validate/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/pkg/errors/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/sirupsen/logrus/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/syndtr/gocapability/capability/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/urfave/cli/*.go # gosub
