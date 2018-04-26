@@ -7,11 +7,14 @@ dependencies:
 
 files:
   - code.cloudfoundry.org/winc/cmd/winc/*.go # gosub
-  - code.cloudfoundry.org/winc/container/*.go # gosub
-  - code.cloudfoundry.org/winc/container/config/*.go # gosub
-  - code.cloudfoundry.org/winc/container/mount/*.go # gosub
-  - code.cloudfoundry.org/winc/container/process/*.go # gosub
   - code.cloudfoundry.org/winc/hcs/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/config/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/container/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/hcsprocess/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/mount/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/state/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/winsyscall/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/blang/semver/*.go # gosub
