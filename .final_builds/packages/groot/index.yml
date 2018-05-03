@@ -7,4 +7,8 @@ builds:
     version: 40bdc2ec9a1d4d2f22818bd479e40d25546bf155c0a374541d75c8da6045b4eb
     blobstore_id: eefb32cb-6f15-450c-788d-bc49790e54cb
     sha1: sha256:b596aa03765c3494f01dd4be95a78a9e51e4572e7b0ac6a0ae185257c8f1f927
+  c6dde09c5571cf76bd8be6daa3bdb838bd272cbdcaca3a622aa0866038d0035d:
+    version: c6dde09c5571cf76bd8be6daa3bdb838bd272cbdcaca3a622aa0866038d0035d
+    blobstore_id: ac438478-8238-4c4f-708c-711e7a9707ce
+    sha1: sha256:89d921d772d449298510230a1fdd8560f9de6febddaf6d8c81b18834a11ad5cc
 format-version: "2"
