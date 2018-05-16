@@ -1,0 +1,23 @@
+---
+name: winc-network-1803
+
+templates:
+  interface.json.erb: config/interface.json
+  pre-start.ps1.erb: bin/pre-start.ps1
+  addresses.json.erb: dns/addresses.json
+
+packages:
+- winc-network-1803
+
+properties:
+  winc_network.mtu:
+    description: "Maximum network transmission unit length in bytes."
+    default: 0
+
+  winc_network.dns_servers:
+    description: "DNS servers that containers will use. If not set, will use DNS settings from the host."
+    default: []
+
+  winc_network.maximum_outgoing_bandwidth:
+    description: "Maximum outgoing bandwidth in bytes for each container. If 0, no limit is set. Values under 10KB are not respected by HNS"
+    default: 0

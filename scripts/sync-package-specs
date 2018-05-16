@@ -44,6 +44,7 @@ function sync_package() {
   )
 }
 
-sync_package winc          -app  code.cloudfoundry.org/winc/cmd/winc &
-sync_package winc-network  -app  code.cloudfoundry.org/winc/cmd/winc-network &
-sync_package groot         -app  code.cloudfoundry.org/groot-windows
+sync_package winc              -app  code.cloudfoundry.org/winc/cmd/winc &
+sync_package winc-network      -app  code.cloudfoundry.org/winc/cmd/winc-network &
+sync_package winc-network-1803 -app  code.cloudfoundry.org/winc/cmd/winc-network &
+sync_package groot             -app  code.cloudfoundry.org/groot-windows
