@@ -8,12 +8,14 @@ files:
   - code.cloudfoundry.org/winc/cmd/winc-network/*.go # gosub
   - code.cloudfoundry.org/winc/hcs/*.go # gosub
   - code.cloudfoundry.org/winc/network/*.go # gosub
-  - code.cloudfoundry.org/winc/network/endpoint/*.go # gosub
+  - code.cloudfoundry.org/winc/network/endpoint/firewallendpoint/*.go # gosub
   - code.cloudfoundry.org/winc/network/firewall/*.go # gosub
   - code.cloudfoundry.org/winc/network/firewall/**/*.c # gosub
   - code.cloudfoundry.org/winc/network/firewall/**/*.h # gosub
+  - code.cloudfoundry.org/winc/network/mtu/*.go # gosub
   - code.cloudfoundry.org/winc/network/netinterface/*.go # gosub
   - code.cloudfoundry.org/winc/network/netrules/*.go # gosub
+  - code.cloudfoundry.org/winc/network/netrules/firewallapplier/*.go # gosub
   - code.cloudfoundry.org/winc/network/netsh/*.go # gosub
   - code.cloudfoundry.org/winc/network/port_allocator/*.go # gosub
   - code.cloudfoundry.org/winc/network/port_allocator/serial/*.go # gosub
