@@ -3,8 +3,10 @@ name: winc-network-1803
 
 dependencies:
 - golang-windows
+- mingw
 
 files:
+  - code.cloudfoundry.org/winc/network/endpoint/**/*.go
   - code.cloudfoundry.org/winc/cmd/winc-network/*.go # gosub
   - code.cloudfoundry.org/winc/hcs/*.go # gosub
   - code.cloudfoundry.org/winc/network/*.go # gosub

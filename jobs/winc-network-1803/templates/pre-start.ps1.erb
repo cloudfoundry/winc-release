@@ -15,9 +15,9 @@ EchoWithDate "Start http service"
 Start-Service -Name http
 EchoWithDate "Started http service"
 
-EchoWithDate "winc-network delete"
+EchoWithDate "winc-network-1803 delete"
 $deleteLog = New-TemporaryFile
-C:\var\vcap\packages\winc-network\winc-network.exe --log $deleteLog.Name --debug --log-format json --action delete --configFile C:\var\vcap\jobs\winc-network\config\interface.json
+C:\var\vcap\packages\winc-network-1803\winc-network.exe --log $deleteLog.Name --debug --log-format json --action delete --configFile C:\var\vcap\jobs\winc-network-1803\config\interface.json
 if ($LASTEXITCODE -ne 0) {
   $file = (Get-Content $deleteLog.Name)
   EchoWithDate $file
@@ -26,9 +26,9 @@ if ($LASTEXITCODE -ne 0) {
 }
 Remove-Item -Force -Path $deleteLog.Name
 
-EchoWithDate "winc-network create"
+EchoWithDate "winc-network-1803 create"
 $createLog = New-TemporaryFile
-C:\var\vcap\packages\winc-network\winc-network.exe --log $createLog.Name --debug --log-format json --action create --configFile C:\var\vcap\jobs\winc-network\config\interface.json
+C:\var\vcap\packages\winc-network-1803\winc-network.exe --log $createLog.Name --debug --log-format json --action create --configFile C:\var\vcap\jobs\winc-network-1803\config\interface.json
 if ($LASTEXITCODE -ne 0) {
   $file = (Get-Content $createLog.Name)
   EchoWithDate $file
