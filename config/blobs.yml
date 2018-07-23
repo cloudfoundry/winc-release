@@ -1,7 +1,7 @@
-golang/go1.9.4.windows-amd64.zip:
-  size: 110960773
-  object_id: ae77717b-a3d2-4a3e-44e0-191294e7cb0e
-  sha: e243d8c2e13e795fc9357c9546a44544a232d529
+golang/go1.10.3.windows-amd64.zip:
+  size: 139354339
+  object_id: c9d987f1-bddf-43b8-572d-1e796e31f6b9
+  sha: bc3500c018b4265f13913e5cb83cc0ac84334779
 mingw/x86_64-7.2.0-release-posix-seh-rt_v5-rev0.zip:
   size: 147569875
   object_id: ceb507dc-a3ca-4528-4542-1fd348fb4dbc
