@@ -23,6 +23,16 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/archive/tar/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/go-winio/backuptar/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/guid/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/hcs/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/hcserror/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/hns/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/interop/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/longpath/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/mergemaps/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/safefile/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/schema1/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/Microsoft/hcsshim/internal/wclayer/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/directory/explicitfilepath/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/docker/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/docker/policyconfiguration/*.go # gosub
