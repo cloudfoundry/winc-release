@@ -2,6 +2,7 @@ package main_test
 
 import (
 	"bytes"
+	"fmt"
 	"io"
 	"io/ioutil"
 	"math/rand"
@@ -69,6 +70,25 @@ var _ = Describe("Nstar", func() {
 			Expect(string(stdinContents)).To(Equal("hello"))
 		})
 
+		Context("when the path already exists", func() {
+			BeforeEach(func() {
+				path = filepath.Join("some", "relative", "path")
+				expectedDestination = filepath.Join("c:\\", "proc", pid, "root", "Users", username, "some", "relative", "path")
+				err := os.MkdirAll(expectedDestination, 0755)
+				Expect(err).ToNot(HaveOccurred())
+
+				out, err := getBuiltinUsersFullControlAcl(expectedDestination)
+				Expect(err).ToNot(HaveOccurred())
+				Expect(out).To(BeEmpty())
+			})
+
+			It("does not set new ACL policies on the directory", func() {
+				out, err := getBuiltinUsersFullControlAcl(expectedDestination)
+				Expect(err).ToNot(HaveOccurred())
+				Expect(out).To(BeEmpty())
+			})
+		})
+
 		Context("when the path is absolute", func() {
 			BeforeEach(func() {
 				path = filepath.Join("c:\\", "some", "absolute", "path")
@@ -86,6 +106,12 @@ var _ = Describe("Nstar", func() {
 
 			It("creates the destination directory", func() {
 				Expect(expectedDestination).To(BeADirectory())
+			})
+
+			It("sets the correct ACL policies on the directory", func() {
+				out, err := getBuiltinUsersFullControlAcl(expectedDestination)
+				Expect(err).ToNot(HaveOccurred())
+				Expect(out).NotTo(BeEmpty())
 			})
 		})
 
@@ -107,6 +133,12 @@ var _ = Describe("Nstar", func() {
 			It("creates the destination directory relative to the user's home directory", func() {
 				Expect(expectedDestination).To(BeADirectory())
 			})
+
+			It("sets the correct ACL policies on the directory", func() {
+				out, err := getBuiltinUsersFullControlAcl(expectedDestination)
+				Expect(err).ToNot(HaveOccurred())
+				Expect(out).NotTo(BeEmpty())
+			})
 		})
 
 		Context("when the path is /tmp/app", func() {
@@ -126,6 +158,12 @@ var _ = Describe("Nstar", func() {
 
 			It("creates the destination directory relative to the user's home directory", func() {
 				Expect(expectedDestination).To(BeADirectory())
+			})
+
+			It("sets the correct ACL policies on the directory", func() {
+				out, err := getBuiltinUsersFullControlAcl(expectedDestination)
+				Expect(err).ToNot(HaveOccurred())
+				Expect(out).NotTo(BeEmpty())
 			})
 		})
 	})
@@ -273,4 +311,13 @@ func readArgs(argsFilePath string) []string {
 	pluginArgsBytes, err := ioutil.ReadFile(argsFilePath)
 	Expect(err).ToNot(HaveOccurred())
 	return strings.Split(string(pluginArgsBytes), " ")
+}
+
+func getBuiltinUsersFullControlAcl(path string) (string, error) {
+	powershellCommand := fmt.Sprintf(`(Get-Acl %s).Access | where { $_.FileSystemRights -eq "FullControl" -and $_.IdentityReference -eq "BUILTIN\Users" }`, path)
+	out, err := exec.Command("powershell.exe", "-Command", powershellCommand).CombinedOutput()
+	if err != nil {
+		return "", err
+	}
+	return string(out), nil
 }

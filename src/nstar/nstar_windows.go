@@ -6,6 +6,9 @@ import (
 	"os/exec"
 	"path/filepath"
 	"strings"
+
+	acl "github.com/hectane/go-acl"
+	"golang.org/x/sys/windows"
 )
 
 func main() {
@@ -22,9 +25,27 @@ func main() {
 
 func streamIn(tarBin, pid, username, path string) {
 	destination := sanitizeDestination(pid, username, path)
-	if err := os.MkdirAll(destination, 0755); err != nil {
-		fmt.Printf("failed to create %s: %s\n", destination, err)
+
+	exists, err := fileExists(destination)
+	if err != nil {
+		fmt.Printf("failed to find file exists %s: %s\n", destination, err.Error())
 		os.Exit(1)
+	}
+
+	if !exists {
+		if err := os.MkdirAll(destination, 0755); err != nil {
+			fmt.Printf("failed to create %s: %s\n", destination, err)
+			os.Exit(1)
+		}
+		if err = acl.Apply(
+			destination,
+			false, //overwrite
+			false, //inherit
+			acl.GrantName(windows.GENERIC_ALL, `BUILTIN\Users`),
+		); err != nil {
+			fmt.Printf("failed to apply ACL: %s\n", err.Error())
+			os.Exit(1)
+		}
 	}
 
 	cmd := exec.Command(tarBin, "-xf", "-", "-C", destination)
@@ -61,4 +82,18 @@ func sanitizeDestination(pid, username, path string) string {
 		destination = filepath.Join("c:\\", "proc", pid, "root", "Users", username, path)
 	}
 	return destination
+}
+
+func fileExists(path string) (bool, error) {
+	_, err := os.Stat(path)
+
+	if os.IsNotExist(err) {
+		return false, nil
+	}
+
+	if err != nil {
+		return false, err
+	}
+
+	return true, nil
 }

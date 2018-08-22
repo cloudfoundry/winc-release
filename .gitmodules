@@ -19,3 +19,9 @@
 [submodule "src/code.cloudfoundry.org/groot-windows"]
 	path = src/code.cloudfoundry.org/groot-windows
 	url = https://github.com/cloudfoundry-incubator/groot-windows
+[submodule "src/github.com/hectane/go-acl"]
+	path = src/github.com/hectane/go-acl
+	url = https://github.com/hectane/go-acl.git
+[submodule "src/golang.org/x/sys"]
+	path = src/golang.org/x/sys
+	url = https://go.googlesource.com/sys
