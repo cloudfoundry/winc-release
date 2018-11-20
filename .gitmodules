@@ -25,3 +25,6 @@
 [submodule "src/golang.org/x/sys"]
 	path = src/golang.org/x/sys
 	url = https://go.googlesource.com/sys
+[submodule "src/code.cloudfoundry.org/diff-exporter"]
+	path = src/code.cloudfoundry.org/diff-exporter
+	url = https://github.com/cloudfoundry-incubator/diff-exporter
