@@ -28,3 +28,9 @@
 [submodule "src/code.cloudfoundry.org/diff-exporter"]
 	path = src/code.cloudfoundry.org/diff-exporter
 	url = https://github.com/cloudfoundry-incubator/diff-exporter
+[submodule "src/code.cloudfoundry.org/cert-injector"]
+	path = src/code.cloudfoundry.org/cert-injector
+	url = https://github.com/cloudfoundry/cert-injector
+[submodule "src/code.cloudfoundry.org/certsplitter"]
+	path = src/code.cloudfoundry.org/certsplitter
+	url = https://github.com/cloudfoundry/certsplitter

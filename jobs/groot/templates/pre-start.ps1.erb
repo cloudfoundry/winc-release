@@ -1,22 +1,30 @@
 $ErrorActionPreference = "Stop";
 trap { $host.SetShouldExit(1) }
 
-# workaround for https://github.com/Microsoft/hcsshim/issues/155
-Get-ComputeProcess | foreach { c:\var\vcap\packages\winc\winc.exe delete $_.Id }
+Write-Host "Started groot pre-start"
 
 $grootDriverStore = "<%= p("groot.driver_store") %>"
 if(Test-Path "$grootDriverStore\volumes"){
   ls "$grootDriverStore\volumes" | foreach { c:\var\vcap\packages\groot\groot.exe --driver-store $grootDriverStore delete $_.Name }
 }
 
-Write-Host "Begin groot pre-start"
+$mtx = New-Object System.Threading.Mutex($false, "RootfsMutex")
+$thirtyMinutes = 30 * 60 * 1000
+
 <% p("groot.cached_image_uris").each do |uri| %>
+  if (!$mtx.WaitOne($thirtyMinutes)) {
+    throw "Could not acquire RootfsMutex after 30 minutes"
+  }
+
   Write-Host "Begin pulling <%= uri %> image"
   C:\var\vcap\packages\groot\groot.exe --config "C:\var\vcap\jobs\groot\config\groot.yml" --driver-store $grootDriverStore pull <%= uri %>
   if ($LASTEXITCODE -ne 0) {
+    $mtx.ReleaseMutex()
     exit $LASTEXITCODE
   }
   Write-Host "Finished pulling <%= uri %> image"
-<% end %>
-Write-Host "Finished groot pre-start"
 
+  $mtx.ReleaseMutex()
+<% end %>
+
+Write-Host "Finished groot pre-start"

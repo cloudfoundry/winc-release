@@ -7,6 +7,16 @@ templates:
 
 packages:
 - groot
+- cert-injector
+- diff-exporter
+- certsplitter-fs
+
+provides:
+- name: groot
+  type: groot
+  properties:
+  - groot.cached_image_uris
+  - groot.driver_store
 
 properties:
   groot.cached_image_uris:
