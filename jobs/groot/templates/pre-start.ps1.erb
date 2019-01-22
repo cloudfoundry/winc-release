@@ -12,19 +12,23 @@ $mtx = New-Object System.Threading.Mutex($false, "RootfsMutex")
 $thirtyMinutes = 30 * 60 * 1000
 
 <% p("groot.cached_image_uris").each do |uri| %>
+  Write-Host "Acquiring RootfsMutex"
   if (!$mtx.WaitOne($thirtyMinutes)) {
     throw "Could not acquire RootfsMutex after 30 minutes"
   }
+  Write-Host "Acquired RootfsMutex"
 
   Write-Host "Begin pulling <%= uri %> image"
   C:\var\vcap\packages\groot\groot.exe --config "C:\var\vcap\jobs\groot\config\groot.yml" --driver-store $grootDriverStore pull <%= uri %>
   if ($LASTEXITCODE -ne 0) {
     $mtx.ReleaseMutex()
+    Write-Host "Released RootfsMutex"
     exit $LASTEXITCODE
   }
   Write-Host "Finished pulling <%= uri %> image"
 
   $mtx.ReleaseMutex()
+  Write-Host "Released RootfsMutex"
 <% end %>
 
 Write-Host "Finished groot pre-start"
