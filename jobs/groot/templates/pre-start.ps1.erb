@@ -18,6 +18,12 @@ $thirtyMinutes = 30 * 60 * 1000
   }
   Write-Host "Acquired RootfsMutex"
 
+  # We used to include this as a workaround for https://github.com/Microsoft/hcsshim/issues/155,
+  # but it turns out this is still required - if there are containers existing
+  # when bosh does a restart, the garden server would fail to come up because there is still a
+  # process using the old garden-init.exe
+  Get-ComputeProcess | foreach { c:\var\vcap\packages\winc\winc.exe delete $_.Id }
+
   Write-Host "Begin pulling <%= uri %> image"
   C:\var\vcap\packages\groot\groot.exe --config "C:\var\vcap\jobs\groot\config\groot.yml" --driver-store $grootDriverStore pull <%= uri %>
   if ($LASTEXITCODE -ne 0) {
