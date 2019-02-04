@@ -54,10 +54,10 @@ Start-Process -FilePath "powershell.exe"
              },
     "windows":  {
                     "layerFolders":  [
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\32705e47a01f0e978fa4ba436084a32ffe1eca2ad1b38918eb0fc951c008883c",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\2d74b4e862de847cd9c26be5885bbdf6e70e8cded6f59f8c28860315d8e330d7",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\91679d4f2b45dbd917e4274fdebf2d7f1416ad6f4aa83413fee030840fe220cc",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\b89c04e8eb6bb7291fae04746e3a85980b36fb1946b47c213dd41e1a158c3d08",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\72000b58f8041aff6ff88b81815ea27dcdc687a7e218866ca2d4519c21752004",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\0dbc7da9a570d4b589fa9a43f759ff6fd03dba6b4e23fee1eaf67fa713f768c6",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\9fdd61d5e64e3baf767f26811435b6da1bd5a622e6439e44320f101e0d497598",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\1739fa2507b55eac0e31098174ad86deba9bb13f8611d06cea78798f53e3c4b0",
                                          "C:\\var\\vcap\\data\\tmp\\groot\\layers\\fb6dcfd6ceec4dd8a261d250f79778a7e6510b155de80d89eae03c64d06ef70f",
                                          "C:\\var\\vcap\\data\\tmp\\groot\\layers\\cc8ea6d42aa42f9bd2cc36ccfc42f809453efdafab1a5e4d4e51382436eeb078",
                                          "C:\\var\\vcap\\data\\tmp\\groot\\layers\\360c1f2b53c86919d431344110a0265675d2647cf818e73a5051f5f106d1facd",
