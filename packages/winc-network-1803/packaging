@@ -21,7 +21,7 @@ if ($LASTEXITCODE -ge 8) {
     Write-Error "robocopy.exe /E ${PWD} ${BOSH_INSTALL_TARGET}\src"
 }
 
-go.exe build -o "${BOSH_INSTALL_TARGET}\${pkg_name}.exe" -tags "1803" "${pkg_path}"
+go.exe build -o "${BOSH_INSTALL_TARGET}\${pkg_name}.exe" -tags "hnsAcls" "${pkg_path}"
 if ($LASTEXITCODE -ne 0) {
     Write-Error "Error compiling: ${pkg_path}"
 }
