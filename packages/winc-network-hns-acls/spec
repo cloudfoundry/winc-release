@@ -1,0 +1,49 @@
+---
+name: winc-network-hns-acls
+
+dependencies:
+- golang-windows
+- mingw
+
+files:
+  - code.cloudfoundry.org/winc/network/endpoint/**/*.go
+  - code.cloudfoundry.org/winc/cmd/winc-network/*.go # gosub
+  - code.cloudfoundry.org/winc/hcs/*.go # gosub
+  - code.cloudfoundry.org/winc/network/*.go # gosub
+  - code.cloudfoundry.org/winc/network/endpoint/firewallendpoint/*.go # gosub
+  - code.cloudfoundry.org/winc/network/firewall/*.go # gosub
+  - code.cloudfoundry.org/winc/network/firewall/**/*.c # gosub
+  - code.cloudfoundry.org/winc/network/firewall/**/*.h # gosub
+  - code.cloudfoundry.org/winc/network/mtu/*.go # gosub
+  - code.cloudfoundry.org/winc/network/netinterface/*.go # gosub
+  - code.cloudfoundry.org/winc/network/netrules/*.go # gosub
+  - code.cloudfoundry.org/winc/network/netrules/firewallapplier/*.go # gosub
+  - code.cloudfoundry.org/winc/network/netsh/*.go # gosub
+  - code.cloudfoundry.org/winc/network/port_allocator/*.go # gosub
+  - code.cloudfoundry.org/winc/network/port_allocator/serial/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/filelock/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/localip/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/guestrequest/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/guid/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/hcs/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/hcserror/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/hns/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/interop/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/logfields/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/longpath/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/mergemaps/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/safefile/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/schema1/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/schema2/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/timeout/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/wclayer/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/konsorten/go-windows-terminal-sequences/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/sirupsen/logrus/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/urfave/cli/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/ssh/terminal/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.s # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/*.s # gosub
