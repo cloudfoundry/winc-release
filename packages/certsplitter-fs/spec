@@ -2,7 +2,7 @@
 name: certsplitter-fs
 
 dependencies:
-- golang-windows
+- golang-1.11-windows
 
 files:
   - code.cloudfoundry.org/certsplitter/cmd/certsplitter/*.go # gosub

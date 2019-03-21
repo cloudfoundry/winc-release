@@ -2,7 +2,7 @@
 name: cert-injector
 
 dependencies:
-- golang-windows
+- golang-1.11-windows
 
 files:
   - code.cloudfoundry.org/cert-injector/*.go # gosub

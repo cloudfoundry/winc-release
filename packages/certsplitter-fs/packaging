@@ -6,9 +6,8 @@ if ((Get-Item $BOSH_INSTALL_TARGET).LinkType -ne "") {
   $BOSH_INSTALL_TARGET = (Get-Item $BOSH_INSTALL_TARGET).Target
 }
 
-$env:GOROOT="C:\var\vcap\packages\golang-windows\go"
-$env:GOPATH="${BOSH_INSTALL_TARGET}"
-$env:PATH="${env:GOROOT}\bin;${env:PATH}"
+. C:\var\vcap\packages\golang-1.11-windows\bosh\compile.ps1
+
 $pkg_name="certsplitter"
 $pkg_path="code.cloudfoundry.org/certsplitter/cmd/certsplitter"
 

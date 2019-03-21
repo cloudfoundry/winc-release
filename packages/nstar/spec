@@ -2,7 +2,7 @@
 name: nstar
 
 dependencies:
-- golang-windows
+- golang-1.11-windows
 
 files:
 - nstar/**/*
