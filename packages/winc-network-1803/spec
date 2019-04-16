@@ -2,7 +2,7 @@
 name: winc-network-1803
 
 dependencies:
-- golang-1.11-windows
+- golang-1.12-windows
 - mingw
 
 files:
