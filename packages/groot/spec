@@ -47,6 +47,7 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/manifest/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/oci/internal/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/oci/layout/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/pkg/blobinfocache/none/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/pkg/docker/config/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/pkg/strslice/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/pkg/sysregistriesv2/*.go # gosub
