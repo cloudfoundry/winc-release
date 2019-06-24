@@ -15,7 +15,7 @@ The following powershell script can be used to quickly create a new container.
   
 
 - Create Container with an optional containerId as an argument. This requires
-  setting `WINC_TEST_ROOTFS` to an image (e.g. docker:///cloudfoundry/windows2016fs:1709)
+  setting `WINC_TEST_ROOTFS` to an image (e.g. docker:///cloudfoundry/windows2016fs:1803)
   and `GROOT_IMAGE_STORE` (e.g  C:\var\vcap\data\tmp\groot)
 
 ```
@@ -54,24 +54,25 @@ Start-Process -FilePath "powershell.exe"
              },
     "windows":  {
                     "layerFolders":  [
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\0e2999d3ece744b5e224bcb6f232c4108972527614da64921f27b00752a9e71b",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\4dedd10702cde318c09399085dd6b51d08415f27933754cd77b6a398679b0333",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\6f164eb442c328e6d27ae3549a1c9fa7bee847f035fe686a2db8eddd862a0baa",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\9f200577c39c91baece243dd8a910f13e24212985e5a0261a8ebe44bf6da1b5f",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\1b722ce92cbc52f96c7c517688c44ab4a5fee7d6b05efc8d2cd61787ed0f73c2",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\a253feb98ca57275fac7659ba8f542373c085fecadae80dc6b09bfdaa5429838",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\2ac5fe044c080730fc642c02a9b3b9683372cf36aa515a738854ab191eca7f14",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\fec2f7ea42feb74651d610a0567ebb076370f344f70d6ffec3a4e193b429b856",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\f90e37515037ce26cbf963272035440a863befc33ea136f82b559a4acd92c4d9",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\75d0636261963a492279ae76b6394e2312acefabeb6e26235c38c466f440f720",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\f1a1835856e96f42025892932d7850be443ef8385ffb2ce07baaf184bfa70949",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\4f9bd84516292624a125086a1f619e928f9c8607abe1996c851b890129eab45f",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\116232251d696df7eb215de16cfb7d4fb25cf22e3f6a5191b0b62f6f428da8e5",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\dbfe85afc8920bd89c41b2fdc74d17e45438ab0f3138dd76e5e98db22694fd38",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\472f602a7595b1fe9e50959bf402bd4837c161f99e6077c9c588f7f8f95dcba0",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\d055585748cd6dad7bec3250f865f49cd7db185e880aa85cb14f077ace38f09c",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\f9cf9c9bf1ff15af8811bac132f7b562088f12aba0969146fcf2758af9e8260f",
-                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\4bfe49d7bc33014df317149be23a71dfe176f2ddd6a78977068a37973dde89d8"
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\8c402cca7b3d1566524525c1579079d93d8393fa40071121605a54f48a124319",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\350d58ef2b8ba72802c0a294f811d3693640816654ff60379a7af3c3dc553175",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\f6d9e13f0b1d8c16ed4fd71aa509f6ff81a03587c4d4670a4281f367ba9f686a",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\9a0103b027ea183054e410552fee37a5d1d209a3982425612ad4ffab7a9e013f",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\33efc3c591d3d107f99901b92948a1c429c99bac13eeec8fb2f59e4bfdf25854",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\3926d28652605cbcb3efbe806be094ed511dca7c4d252a8136a43e506e658795",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\d46b93dc4b02bd95d8004cce7cb22b0dbac595df8761850a5e2be3f2e5d8ac86",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\459f34ee1d13f65262d2cebaa17feed0fedbd1e35779ad175157b2025fadbfd9",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\4ee1dfd959de0c19037fd485ea41191ad69dc94699947c5a9ea421188dc7db2a",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\25d96d3056408c575cd29282ab5cfd42d71cf5138095acc89c40d5a04b8e7fe5",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\7a4dc05ba6bc7b0a44e524e933e8d90b818bfcb02a063887d4b54e23bdfb1a48",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\56af5bdbee8f275cff85f1f00c3ad415eda857fa736ee69fa744186e1e60fc6d",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\85b9f24d0e5ca6d69d8a3471d9a38974595a88797aedc0d0524f104312a1527b",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\b067ac0ed4881debabd8c246f72bdad15ba4ac67d32785be503b36d5afd91587",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\c3610e888dd42e403e1267eed6af1f0d36e34442d27d93da45fecf0620a9dee9",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\b738e4151a7d9c78d45ef181f298cb8866c08d364a79bd994dd18792a27fceda",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\a91347505cd27aeba34ad3cb169e91258fad723741619cc087a8855e7f239c95",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\f44bbecf0dabcdac04acd62dd6a8c7f1cafddebdbc2401150972ecf55af7e45e",
+                                         "C:\\var\\vcap\\data\\tmp\\groot\\layers\\70bba925263c1c193fa7bc7f79b1aa062707b09fe7774c7896b8aaf091b901a9"
                                      ]
                 },
     "process":  {
