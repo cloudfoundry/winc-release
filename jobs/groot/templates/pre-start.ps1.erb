@@ -10,16 +10,16 @@ if(Test-Path "$grootDriverStore\volumes"){
   ls "$grootDriverStore\volumes" | foreach { c:\var\vcap\packages\groot\groot.exe --driver-store $grootDriverStore delete $_.Name }
 }
 
-$mtx = New-Object System.Threading.Mutex($false, "RootfsMutex")
-$thirtyMinutes = 30 * 60 * 1000
+$sharedEventName = "RootfsEvent"
+try {
+  $event = [System.Threading.EventWaitHandle]::OpenExisting($sharedEventName)
+} catch {
+  $mode = New-Object System.Threading.EventResetMode
+  $initSignaled = $false
+  $event = New-Object System.Threading.EventWaitHandle($initSignaled, $mode, $sharedEventName)
+}
 
 <% p("groot.cached_image_uris").each do |uri| %>
-  Write-Output "Acquiring RootfsMutex" | timestamp
-  if (!$mtx.WaitOne($thirtyMinutes)) {
-    throw "Could not acquire RootfsMutex after 30 minutes"
-  }
-  Write-Output "Acquired RootfsMutex" | timestamp
-
   # We used to include this as a workaround for https://github.com/Microsoft/hcsshim/issues/155,
   # but it turns out this is still required - if there are containers existing
   # when bosh does a restart, the garden server would fail to come up because there is still a
@@ -28,15 +28,22 @@ $thirtyMinutes = 30 * 60 * 1000
 
   Write-Output "Begin pulling <%= uri %> image" | timestamp
   C:\var\vcap\packages\groot\groot.exe --config "C:\var\vcap\jobs\groot\config\groot.yml" --driver-store $grootDriverStore pull <%= uri %>
+
   if ($LASTEXITCODE -ne 0) {
-    $mtx.ReleaseMutex()
-    Write-Output "Released RootfsMutex" | timestamp
+    Write-Output "Failed pulling <%= uri %> image" | timestamp
+    if (!$event.Set()) {
+      Write-Output "Failed to signal the $sharedEventName event" | timestamp
+      exit 1
+    }
     exit $LASTEXITCODE
   }
   Write-Output "Finished pulling <%= uri %> image" | timestamp
 
-  $mtx.ReleaseMutex()
-  Write-Output "Released RootfsMutex" | timestamp
+  if (!$event.Set()) {
+    Write-Output "Failed to signal the $sharedEventName event" | timestamp
+    exit 1
+  }
+  Write-Output "$sharedEventName event successfully signaled" | timestamp
 <% end %>
 
 Write-Output "Finished groot pre-start" | timestamp
