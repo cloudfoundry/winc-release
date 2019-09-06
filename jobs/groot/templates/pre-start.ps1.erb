@@ -19,15 +19,28 @@ try {
   $event = New-Object System.Threading.EventWaitHandle($initSignaled, $mode, $sharedEventName)
 }
 
-cd C:\var\vcap\data\groot\layers
-$largest=[long]"0";
-$largestSha="";
-Get-ChildItem | ForEach-Object { If( [long](Get-Content $_\size) -Gt $largest){ $largest=[long](Get-Content $_\size); $largestSha=$_.Name } }; 
-Write-Output "Base Layer sha is: $largestSha" | timestamp
-cd $largestSha;
-Write-Output "Removing size file from layer $largestSha" | timestamp
-rm size
-cd ..
+$refreshBaseLayer = [bool]$<%= p("groot.refresh_base_layer") %>
+if ($refreshBaseLayer -and (Test-Path "$grootDriverStore\layers")) {
+  Write-Output "Refreshing base layer" | timestamp
+
+  cd "$grootDriverStore\layers"
+
+  $largest=[long]"0";
+  $largestSha="";
+  Get-ChildItem | ForEach-Object { If( [long](Get-Content $_\size) -Gt $largest){ $largest=[long](Get-Content $_\size); $largestSha=$_.Name } };
+  Write-Output "Base layer sha is: $largestSha" | timestamp
+
+  Write-Output "Removing size file from base layer $largestSha" | timestamp
+  Remove-Item "$largestSha/size"
+  if (Test-Path "$largestSha/size") {
+    Write-Output "Removing size file from base layer $largestSha failed" | timestamp
+
+    if (!$event.Set()) {
+      Write-Output "Failed to signal the $sharedEventName event" | timestamp
+    }
+    exit 1
+  }
+}
 
 <% p("groot.cached_image_uris").each do |uri| %>
   # We used to include this as a workaround for https://github.com/Microsoft/hcsshim/issues/155,
@@ -43,7 +56,6 @@ cd ..
     Write-Output "Failed pulling <%= uri %> image" | timestamp
     if (!$event.Set()) {
       Write-Output "Failed to signal the $sharedEventName event" | timestamp
-      exit 1
     }
     exit $LASTEXITCODE
   }

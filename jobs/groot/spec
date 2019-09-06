@@ -30,3 +30,7 @@ properties:
   groot.log_level:
     description: "Can be debug, info, error or fatal"
     default: "info"
+
+  groot.refresh_base_layer:
+    description: "Delete size file in order to pull fresh base layer."
+    default: false
