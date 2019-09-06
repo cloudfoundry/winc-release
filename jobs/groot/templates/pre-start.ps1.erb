@@ -19,6 +19,16 @@ try {
   $event = New-Object System.Threading.EventWaitHandle($initSignaled, $mode, $sharedEventName)
 }
 
+cd C:\var\vcap\data\groot\layers
+$largest=[long]"0";
+$largestSha="";
+Get-ChildItem | ForEach-Object { If( [long](Get-Content $_\size) -Gt $largest){ $largest=[long](Get-Content $_\size); $largestSha=$_.Name } }; 
+Write-Output "Base Layer sha is: $largestSha" | timestamp
+cd $largestSha;
+Write-Output "Removing size file from layer $largestSha" | timestamp
+rm size
+cd ..
+
 <% p("groot.cached_image_uris").each do |uri| %>
   # We used to include this as a workaround for https://github.com/Microsoft/hcsshim/issues/155,
   # but it turns out this is still required - if there are containers existing
