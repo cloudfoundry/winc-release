@@ -6,7 +6,7 @@ trap { $host.SetShouldExit(1) }
 Write-Output "Started groot pre-start" | timestamp
 
 $grootDriverStore = "<%= p("groot.driver_store") %>"
-if(Test-Path "$grootDriverStore\volumes"){
+if (Test-Path "$grootDriverStore\volumes") {
   ls "$grootDriverStore\volumes" | foreach { c:\var\vcap\packages\groot\groot.exe --driver-store $grootDriverStore delete $_.Name }
 }
 
@@ -23,23 +23,28 @@ $refreshBaseLayer = [bool]$<%= p("groot.refresh_base_layer") %>
 if ($refreshBaseLayer -and (Test-Path "$grootDriverStore\layers")) {
   Write-Output "Refreshing base layer" | timestamp
 
-  cd "$grootDriverStore\layers"
+  # This is a workaround to prevent https://github.com/Microsoft/hcsshim/issues/598
+  Push-Location "$grootDriverStore\layers"
+    $largest=[long]"0";
+    $largestSha="";
+    Get-ChildItem | ForEach-Object {
+      if ( [long](Get-Content $_\size) -Gt $largest) {
+        $largest=[long](Get-Content $_\size); $largestSha=$_.Name
+      }
+    };
+    Write-Output "Base layer sha is: $largestSha" | timestamp
 
-  $largest=[long]"0";
-  $largestSha="";
-  Get-ChildItem | ForEach-Object { If( [long](Get-Content $_\size) -Gt $largest){ $largest=[long](Get-Content $_\size); $largestSha=$_.Name } };
-  Write-Output "Base layer sha is: $largestSha" | timestamp
+    Write-Output "Removing size file from base layer $largestSha" | timestamp
+    Remove-Item "$largestSha/size"
+    if (Test-Path "$largestSha/size") {
+      Write-Output "Removing size file from base layer $largestSha failed" | timestamp
 
-  Write-Output "Removing size file from base layer $largestSha" | timestamp
-  Remove-Item "$largestSha/size"
-  if (Test-Path "$largestSha/size") {
-    Write-Output "Removing size file from base layer $largestSha failed" | timestamp
-
-    if (!$event.Set()) {
-      Write-Output "Failed to signal the $sharedEventName event" | timestamp
+      if (!$event.Set()) {
+        Write-Output "Failed to signal the $sharedEventName event" | timestamp
+      }
+      exit 1
     }
-    exit 1
-  }
+  Pop-Location
 }
 
 <% p("groot.cached_image_uris").each do |uri| %>
