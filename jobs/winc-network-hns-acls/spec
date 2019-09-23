@@ -21,3 +21,7 @@ properties:
   winc_network.maximum_outgoing_bandwidth:
     description: "Maximum outgoing bandwidth in bytes for each container. If 0, no limit is set. Values under 10KB are not respected by HNS"
     default: 0
+
+  winc_network.search_domains:
+    description: "DNS suffixes that the container will use to construct an FQDN that will be used for name resolution by the DNS client"
+    default: []

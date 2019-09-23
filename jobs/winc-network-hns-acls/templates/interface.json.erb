@@ -6,6 +6,7 @@
     "gateway_address" => "172.30.0.1",
     "dns_servers" => p("winc_network.dns_servers"),
     "maximum_outgoing_bandwidth" => p("winc_network.maximum_outgoing_bandwidth"),
+    "search_domains" => p("winc_network.search_domains"),
   }
 
   JSON.pretty_generate(toRender)
