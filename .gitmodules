@@ -34,3 +34,6 @@
 [submodule "src/code.cloudfoundry.org/certsplitter"]
 	path = src/code.cloudfoundry.org/certsplitter
 	url = https://github.com/cloudfoundry/certsplitter
+[submodule "src/golang.org/x/xerrors"]
+	path = src/golang.org/x/xerrors
+	url = https://go.googlesource.com/xerrors
