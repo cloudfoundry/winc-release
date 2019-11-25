@@ -2,7 +2,7 @@
 name: groot
 
 dependencies:
-- golang-1.12-windows
+- golang-1-windows
 - mingw
 
 files:
