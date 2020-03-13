@@ -14,6 +14,14 @@ properties:
     description: "Maximum network transmission unit length in bytes."
     default: 0
 
+  winc_network.subnet_range:
+    description: "IP addresses will be assigned to windows containers from this range."
+    default: 172.30.0.0/22
+
+  winc_network.gateway_address:
+    description: "The default route for windows containers"
+    default: "172.30.0.1"
+
   winc_network.dns_servers:
     description: "DNS servers that containers will use. If not set, will use DNS settings from the host."
     default: []

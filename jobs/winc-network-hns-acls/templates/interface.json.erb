@@ -2,8 +2,8 @@
   toRender = {
     "mtu" => p("winc_network.mtu"),
     "network_name" => "winc-nat",
-    "subnet_range" => "172.30.0.0/22",
-    "gateway_address" => "172.30.0.1",
+    "subnet_range" => p("winc_network.subnet_range"),
+    "gateway_address" => p("winc_network.gateway_address"),
     "dns_servers" => p("winc_network.dns_servers"),
     "maximum_outgoing_bandwidth" => p("winc_network.maximum_outgoing_bandwidth"),
     "search_domains" => p("winc_network.search_domains"),
