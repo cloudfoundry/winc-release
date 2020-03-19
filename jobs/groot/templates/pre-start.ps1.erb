@@ -1,4 +1,4 @@
-filter timestamp {"$(Get-Date -Format G): $_"}
+filter timestamp { "$((get-date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss:fffffff00Z')): $_" }
 
 $ErrorActionPreference = "Stop";
 trap { $host.SetShouldExit(1) }

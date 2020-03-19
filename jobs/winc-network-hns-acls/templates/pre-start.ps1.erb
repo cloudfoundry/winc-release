@@ -1,45 +1,39 @@
-﻿$ErrorActionPreference = "Stop";
+﻿filter timestamp { "$((get-date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss:fffffff00Z')): $_" }
+
+$ErrorActionPreference = "Stop";
 trap { $host.SetShouldExit(1) }
 
-function EchoWithDate {
-  Param (
-    [string] $msg
-  )
-  $date = Get-Date -Format "dd-MM-yyyy @ hh:mm:ss"
-  Write-Host "$date - $msg"
-}
+Write-Output "Begin winc-network-hns-acls pre-start" | timestamp
 
-EchoWithDate "Begin winc-network-hns-acls pre-start"
-
-EchoWithDate "Start http service"
+Write-Output "Start http service" | timestamp
 Start-Service -Name http
-EchoWithDate "Started http service"
+Write-Output "Started http service" | timestamp
 
-EchoWithDate "winc-network-hns-acls delete"
+Write-Output "winc-network-hns-acls delete" | timestamp
 $deleteLog = New-TemporaryFile
 C:\var\vcap\packages\winc-network-hns-acls\winc-network.exe --log $deleteLog.Name --debug --log-format json --action delete --configFile C:\var\vcap\jobs\winc-network-hns-acls\config\interface.json
 if ($LASTEXITCODE -ne 0) {
   $file = (Get-Content $deleteLog.Name)
-  EchoWithDate $file
+  Write-Output $file | timestamp
   Remove-Item -Force -Path $deleteLog.Name
   exit $LASTEXITCODE
 }
 Remove-Item -Force -Path $deleteLog.Name
 
-EchoWithDate "winc-network-hns-acls create"
+Write-Output "winc-network-hns-acls create" | timestamp
 $createLog = New-TemporaryFile
 C:\var\vcap\packages\winc-network-hns-acls\winc-network.exe --log $createLog.Name --debug --log-format json --action create --configFile C:\var\vcap\jobs\winc-network-hns-acls\config\interface.json
 if ($LASTEXITCODE -ne 0) {
   $file = (Get-Content $createLog.Name)
-  EchoWithDate $file
+  Write-Output $file | timestamp
   Remove-Item -Force -Path $createLog.Name
   exit $LASTEXITCODE
 }
 Remove-Item -Force -Path $createLog
 
-EchoWithDate "Blocking Inbound and Allowing Outbound connections"
+Write-Output "Blocking Inbound and Allowing Outbound connections" | timestamp
 Set-NetFirewallProfile -All -DefaultInboundAction Block -DefaultOutboundAction Allow -Enabled True
-EchoWithDate "Blocked Inbound and Allowed Outbound connections"
+Write-Output "Blocked Inbound and Allowed Outbound connections" | timestamp
 
-EchoWithDate "Finished winc-network-hns-acls pre-start"
+Write-Output "Finished winc-network-hns-acls pre-start" | timestamp
 Exit 0

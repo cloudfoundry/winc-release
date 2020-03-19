@@ -1,37 +1,31 @@
-﻿$ErrorActionPreference = "Stop";
+﻿filter timestamp { "$((get-date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss:fffffff00Z')): $_" }
+
+$ErrorActionPreference = "Stop";
 trap { $host.SetShouldExit(1) }
 
-function EchoWithDate {
-  Param (
-    [string] $msg
-  )
-  $date = Get-Date -Format "dd-MM-yyyy @ hh:mm:ss"
-  Write-Host "$date - $msg"
-}
+Write-Output "Begin winc-network pre-start" | timestamp
 
-EchoWithDate "Begin winc-network pre-start"
-
-EchoWithDate "Start http service"
+Write-Output "Start http service" | timestamp
 Start-Service -Name http
-EchoWithDate "Started http service"
+Write-Output "Started http service" | timestamp
 
-EchoWithDate "winc-network delete"
+Write-Output "winc-network delete" | timestamp
 $deleteLog = New-TemporaryFile
 C:\var\vcap\packages\winc-network\winc-network.exe --log $deleteLog.Name --debug --log-format json --action delete --configFile C:\var\vcap\jobs\winc-network\config\interface.json
 if ($LASTEXITCODE -ne 0) {
   $file = (Get-Content $deleteLog.Name)
-  EchoWithDate $file
+  Write-Output $file | timestamp
   Remove-Item -Force -Path $deleteLog.Name
   exit $LASTEXITCODE
 }
 Remove-Item -Force -Path $deleteLog.Name
 
-EchoWithDate "winc-network create"
+Write-Output "winc-network create" | timestamp
 $createLog = New-TemporaryFile
 C:\var\vcap\packages\winc-network\winc-network.exe --log $createLog.Name --debug --log-format json --action create --configFile C:\var\vcap\jobs\winc-network\config\interface.json
 if ($LASTEXITCODE -ne 0) {
   $file = (Get-Content $createLog.Name)
-  EchoWithDate $file
+  Write-Output $file | timestamp
   Remove-Item -Force -Path $createLog.Name
   exit $LASTEXITCODE
 }
@@ -48,9 +42,9 @@ function get-firewall {
 function check-firewall {
 	param([string] $profile)
 	$firewall = (get-firewall $profile)
-	EchoWithDate "Check-Firewall for $profile $firewall"
+	Write-Output "Check-Firewall for $profile $firewall" | timestamp
 	if ($firewall -ne "$profile,Block,Block") {
-		EchoWithDate $firewall
+		Write-Output $firewall | timestamp
 		Write-Error "Unable to set $profile Profile"
 	}
 }
@@ -78,21 +72,23 @@ if ($anyFirewallsDisabled -or $adminRuleMissing) {
     -Enabled True -Profile Any -Action Allow -Direction Outbound `
     -LocalUser $LocalUser
 
-  EchoWithDate "Blocking All Inbound and Outbound connections"
+  Write-Output "Blocking All Inbound and Outbound connections" | timestamp
   Set-NetFirewallProfile -All -DefaultInboundAction Block -DefaultOutboundAction Block -Enabled True
-  EchoWithDate "Blocked All Inbound and Outbound connections"
+  Write-Output "Blocked All Inbound and Outbound connections" | timestamp
   check-firewall "public"
   check-firewall "private"
   check-firewall "domain"
   $anyFirewallsDisabled = !!(Get-NetFirewallProfile -All | Where-Object { $_.Enabled -eq "False" })
   $adminRuleMissing = !(Get-NetFirewallRule -Name CFAllowAdmins -ErrorAction Ignore)
   if ($anyFirewallsDisabled -or $adminRuleMissing) {
-    EchoWithDate "anyFirewallsDisabled: $anyFirewallsDisabled"
-    EchoWithDate "adminRuleMissing: $adminRuleMissing"
+    Write-Output "anyFirewallsDisabled: $anyFirewallsDisabled" | timestamp
+    Write-Output "adminRuleMissing: $adminRuleMissing" | timestamp
     Write-Error "Failed to Set Firewall rule"
   }
-  } else {
-  EchoWithDate "CFAllowAdmins rule exists"
-  }
-EchoWithDate "Finished winc-network pre-start"
+} else {
+  Write-Output "CFAllowAdmins rule exists" | timestamp
+}
+
+Write-Output "Finished winc-network pre-start" | timestamp
+
 Exit 0
