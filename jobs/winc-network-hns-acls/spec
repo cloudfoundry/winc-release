@@ -25,3 +25,7 @@ properties:
   winc_network.search_domains:
     description: "DNS suffixes that the container will use to construct an FQDN that will be used for name resolution by the DNS client"
     default: []
+
+  winc_network.allow_outbound_traffic_by_default:
+    description: "Allow containers to have outbound traffic. Only respected when network properties are left unspecified."
+    default: false
