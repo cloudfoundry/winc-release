@@ -15,11 +15,11 @@ properties:
     default: 0
 
   winc_network.subnet_range:
-    description: "IP addresses will be assigned to windows containers from this range."
+    description: "Range of IP addresses assigned to containers."
     default: 172.30.0.0/22
 
   winc_network.gateway_address:
-    description: "The default route for windows containers"
+    description: "Gateway address assigned to containers."
     default: "172.30.0.1"
 
   winc_network.dns_servers:
