@@ -37,3 +37,7 @@ properties:
   winc_network.allow_outbound_traffic_by_default:
     description: "Allow containers to have outbound traffic. Only respected when network properties are left unspecified."
     default: false
+
+  winc_network.wait_timeout_in_seconds:
+    description: "Timeout to wait for commands to execute within a running container."
+    default: 2
