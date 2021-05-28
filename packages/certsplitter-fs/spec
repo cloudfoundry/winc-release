@@ -5,4 +5,4 @@ dependencies:
 - golang-1-windows
 
 files:
-  - code.cloudfoundry.org/certsplitter/cmd/certsplitter/*.go # gosub
+  - code.cloudfoundry.org/certsplitter/**/*

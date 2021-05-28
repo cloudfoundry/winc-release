@@ -6,5 +6,3 @@ dependencies:
 
 files:
 - nstar/**/*
-- golang.org/x/sys/windows/**/*
-- github.com/hectane/go-acl/**/*
