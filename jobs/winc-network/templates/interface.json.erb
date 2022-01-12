@@ -1,4 +1,23 @@
 <%=
+  def parse_ip (ip, var_name)
+    unless ip.empty?
+      ip = ip.split(":")[0]
+	begin
+	  parsed = IPAddr.new ip
+	rescue  => e
+	  raise "Invalid #{var_name} '#{ip}': #{e}"
+	end
+    end
+  end
+
+  def parse_ips(ips, var_name)
+    ips.each do |ip|
+      parse_ip(ip, var_name)
+    end
+  end
+
+  parse_ips(p('winc_network.dns_servers'), 'winc_network.dns_servers')
+
   toRender = {
     "mtu" => p("winc_network.mtu"),
     "network_name" => "winc-nat",
