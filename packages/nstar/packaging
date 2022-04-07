@@ -11,7 +11,7 @@ $go_mod_path="${PWD}\nstar"
 
 cd "$go_mod_path"
 
-go.exe build -o "${BOSH_INSTALL_TARGET}\${pkg_name}" "${pkg_path}"
+go.exe build -buildvcs=false -o "${BOSH_INSTALL_TARGET}\${pkg_name}" "${pkg_path}"
 if ($LASTEXITCODE -ne 0) {
     Write-Error "Error compiling: ${pkg_path}"
 }
