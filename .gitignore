@@ -13,3 +13,4 @@ releases/**/*.tgz
 *#
 #*
 pkg
+Gemfile.lock
