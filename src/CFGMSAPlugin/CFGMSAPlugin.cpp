@@ -1,10 +1,10 @@
 #include "pch.h"
-#include "framework.h"
 #include "CFGMSAPlugin.h"
 #include <wrl.h>
 #include <string>
 #include <wil\resource.h>
 #include "CCGPlugin_h.h"
+#include <windows.h>
 #include <fstream>
 #include <iostream>
 
@@ -103,5 +103,4 @@ public:
         return S_OK;
     }
 };
-
 CoCreatableClass(CCGPlugin);

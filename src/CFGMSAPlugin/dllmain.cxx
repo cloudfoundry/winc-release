@@ -1,8 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "pch.h"
 #include <wrl\module.h>
-#include "pch.h"
-#include <wrl\module.h>
 #include "winstring.h"
 
 using namespace Microsoft::WRL;
