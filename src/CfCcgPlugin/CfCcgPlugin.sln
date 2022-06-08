@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32413.511
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CfCcgPlugin", "CfCcgPlugin.csproj", "{B506B871-68A5-4429-804E-738429BD712D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CfCcgPlugin.Tests", "..\CfCcgPlugin.Tests\CfCcgPlugin.Tests.csproj", "{D17C6641-0F81-4434-87D8-EF129D16DF6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B506B871-68A5-4429-804E-738429BD712D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B506B871-68A5-4429-804E-738429BD712D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B506B871-68A5-4429-804E-738429BD712D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B506B871-68A5-4429-804E-738429BD712D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D17C6641-0F81-4434-87D8-EF129D16DF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17C6641-0F81-4434-87D8-EF129D16DF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17C6641-0F81-4434-87D8-EF129D16DF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17C6641-0F81-4434-87D8-EF129D16DF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37FA829C-F956-46AD-A700-437B4C07D188}
+	EndGlobalSection
+EndGlobal
