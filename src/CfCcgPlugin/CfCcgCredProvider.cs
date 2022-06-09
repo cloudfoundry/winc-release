@@ -55,11 +55,6 @@ namespace CfCcgPlugin
             const string LogSource = "CfCcgPlugin";
             const string LogName = "Cloudfoundry-CCG-Plugin";
 
-            if (!EventLog.SourceExists(LogSource))
-            {
-                EventLog.CreateEventSource(LogSource, LogName);
-            }
-
             using (var eventLog = new EventLog(LogName))
             {
                 eventLog.Source = LogSource;
