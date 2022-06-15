@@ -20,7 +20,7 @@ Note - to verify the plugin you don't need to set up any Active Directory stuff 
     ```
 - Set broad permissions on the plugin dll
     ```powershell
-    cmd.exe /C "icacls c:\\CfCcgPlugin.dll /grant Everyone:(F)
+    cmd.exe /C "icacls c:\\CfCcgPlugin.dll /grant Everyone:(F)"
     ```
 - Register the plugin as a com object with the .net framework
 
