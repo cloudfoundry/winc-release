@@ -1,0 +1,11 @@
+---
+name: ccg-plugin
+
+templates:
+  pre-start.ps1.erb: bin/pre-start.ps1
+  post-stop.ps1.erb: bin/post-stop.ps1
+
+packages:
+- ccg-plugin
+
+properties: {}

@@ -1,0 +1,19 @@
+$ErrorActionPreference = "Stop";
+trap { $host.SetShouldExit(1) }
+
+$BOSH_INSTALL_TARGET = Resolve-Path "${env:BOSH_INSTALL_TARGET}"
+$env:PATH="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\;"+$env:Path
+
+cd .\CfCcgPlugin
+
+MSBuild.exe .\CfCcgPlugin.sln /t:CfCcgPlugin /p:Configuration=Release /p:OutDir="${BOSH_INSTALL_TARGET}"
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Error "Error compiling: CfCcgPlugin"
+}
+
+cp EventLog.reg "${BOSH_INSTALL_TARGET}"
+cp RegisterPluginWithCCG.ps1 "${BOSH_INSTALL_TARGET}"
+cp ChangePluginIdentity.ps1 "${BOSH_INSTALL_TARGET}"
+
+Exit 0

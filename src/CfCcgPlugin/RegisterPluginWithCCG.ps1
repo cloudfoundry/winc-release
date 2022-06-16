@@ -78,14 +78,6 @@ function enable-privilege {
  $type[0]::EnablePrivilege($processHandle, $Privilege, $Disable)
 }
 
-# New-Item -path "HKLM:\Software\CLASSES\Appid\{130DE5D3-54AE-4968-90EC-5B62E1654713}" -Force
-# $sddlString = "01,00,04,80,44,00,00,00,54,00,00,00,00,00,00,00,14,00,00,00,02,00,30,00,02,00,00,00,00,00,14,00,0B,00,00,00,01,01,00,00,00,00,00,05,12,00,00,00,00,00,14,00,0B,00,00,00,01,01,00,00,00,00,00,05,06,00,00,00,01,02,00,00,00,00,00,05,20,00,00,00,20,02,00,00,01,02,00,00,00,00,00,05,20,00,00,00,20,02,00,00"
-# $hexSddl = $sddlString.Split(',') | ForEach-Object { "0x$_"}
-# New-ItemProperty -Path "HKLM:\Software\CLASSES\Appid\{130DE5D3-54AE-4968-90EC-5B62E1654713}" -Name "AccessPermission" -PropertyType Binary -Value ([byte[]]$hexSddl) -Force
-# New-ItemProperty -Path "HKLM:\Software\CLASSES\Appid\{130DE5D3-54AE-4968-90EC-5B62E1654713}" -Name "LaunchPermission" -PropertyType Binary -Value ([byte[]]$hexSddl) -Force
-# New-ItemProperty -Path "HKLM:\Software\CLASSES\Appid\{130DE5D3-54AE-4968-90EC-5B62E1654713}" -Name "DllSurrogate" -Value "" -Force
-# New-ItemProperty -path "HKLM:\SOFTWARE\CLASSES\CLSID\{8019A64C-3F4E-4DE3-AD2B-9A544290E2C3}" -Name "AppID" -Value "{130DE5D3-54AE-4968-90EC-5B62E1654713}" -Force
-
 #set owner of key to current user
 if(enable-privilege SeTakeOwnershipPrivilege){
 	Write-Host "Enabled SeTakeOwnershipPrivilege privilege"

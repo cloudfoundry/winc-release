@@ -1,0 +1,7 @@
+---
+name: ccg-plugin
+
+dependencies: []
+
+files:
+  - CfCcgPlugin/**/*
