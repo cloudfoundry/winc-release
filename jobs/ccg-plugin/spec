@@ -4,8 +4,48 @@ name: ccg-plugin
 templates:
   pre-start.ps1.erb: bin/pre-start.ps1
   post-stop.ps1.erb: bin/post-stop.ps1
+  credential_spec.json.erb: config/credential_spec.json
 
 packages:
 - ccg-plugin
 
-properties: {}
+properties:
+  ccg.enabled:
+    description: When enabled, winc will pass a credential spec to HCS on container creation.
+    default: false
+
+  ccg.plugin_guid:
+    description: The curly-brace-enclosed GUID of the COM class which implements the ICcgDomainAuthCredentials::GetPasswordCredentials method. See https://docs.microsoft.com/en-us/windows/win32/api/ccgplugins/nf-ccgplugins-iccgdomainauthcredentials-getpasswordcredentials.
+    default: "{8019A64C-3F4E-4DE3-AD2B-9A544290E2C3}"
+
+  ccg.plugin_input:
+    description: The input to the plugin used to resolve credentials from Active Directory. See https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/manage-serviceaccounts#additional-credential-spec-configuration-for-non-domain-joined-container-host-use-case
+
+  ccg.credential_spec:
+    description: JSON string describing the GMSA user account and domain details.  See https://docs.microsoft.com/en-us/virtualization/windowscontainers/manage-containers/manage-serviceaccounts#create-a-credential-spec
+    example: |
+      {
+        "CmsPlugins": [
+          "ActiveDirectory"
+        ],
+        "DomainJoinConfig": {
+          "Sid": "S-1-5-21-702590844-1001920913-2680819671",
+          "MachineAccountName": "webapp01",
+          "Guid": "56d9b66c-d746-4f87-bd26-26760cfdca2e",
+          "DnsTreeName": "contoso.com",
+          "DnsName": "contoso.com",
+          "NetBiosName": "CONTOSO"
+        },
+        "ActiveDirectoryConfig": {
+          "GroupManagedServiceAccounts": [
+            {
+              "Name": "webapp01",
+              "Scope": "contoso.com"
+            },
+            {
+              "Name": "webapp01",
+              "Scope": "CONTOSO"
+            }
+          ]
+        }
+      }

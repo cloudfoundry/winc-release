@@ -9,7 +9,7 @@ module Bosh::Template::Test
     let(:release_path) {File.join(File.dirname(__FILE__), '../..')}
     let(:release) {ReleaseDir.new(release_path)}
 
-    describe 'winc job' do let(:job) {release.job('winc')}
+    describe 'ccg-plugin job' do let(:job) {release.job('ccg-plugin')}
       describe 'credential_spec.json.erb' do
         let(:template) {job.template('config/credential_spec.json')}
 
@@ -96,14 +96,6 @@ module Bosh::Template::Test
 
           describe 'validations' do
             describe 'plugin guid' do
-              it 'validates presence' do
-                merged_manifest_properties['ccg']['plugin_guid'] = nil
-
-                expect do
-                  template.render(merged_manifest_properties)
-                end.to raise_error(/ccg.plugin_guid is required when ccg.enabled is true/)
-              end
-
               it 'validates structure' do
                 merged_manifest_properties['ccg']['plugin_guid'] = "[totally-not-a-guid]"
 
