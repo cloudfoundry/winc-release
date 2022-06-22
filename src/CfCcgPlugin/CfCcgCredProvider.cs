@@ -47,7 +47,9 @@ namespace CfCcgPlugin
                 throw new ArgumentException("Plugin input must be in the format domain:username:password");
             }
 
-            (domainName, username, password) = (split[0], split[1], split[2]);
+            domainName = split[0];
+            username = split[1];
+            password = split[2];
             Log("Sucessfully got password credentials");
         }
         private void Log(string message, EventLogEntryType level = EventLogEntryType.Information)

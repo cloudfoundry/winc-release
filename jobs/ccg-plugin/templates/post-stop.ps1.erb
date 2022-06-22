@@ -1,0 +1,13 @@
+filter timestamp { "$((get-date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss:fffffff00Z')): $_" }
+
+$ErrorActionPreference = "Stop";
+trap { $host.SetShouldExit(1) }
+
+Write-Output "Started ccg-plugin post-stop" | timestamp
+$ccgPackagePath = Resolve-Path "/var/vcap/packages/ccg-plugin"
+
+Write-Output "Unregister plugin with the .net framework" | timestamp
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regsvcs.exe /u $ccgPackagePath\CfCcgPlugin.dll
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe /u $ccgPackagePath\CfCcgPlugin.dll
+
+Write-Output "Finished ccg-plugin post-stop" | timestamp

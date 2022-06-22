@@ -1,0 +1,25 @@
+filter timestamp { "$((get-date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss:fffffff00Z')): $_" }
+
+$ErrorActionPreference = "Stop";
+trap { $host.SetShouldExit(1) }
+
+Write-Output "Started ccg-plugin pre-start" | timestamp
+$ccgPackagePath = Resolve-Path "/var/vcap/packages/ccg-plugin"
+
+Write-Output "Create event log and register event source" | timestamp
+reg.exe import $ccgPackagePath\EventLog.reg
+
+Write-Output "Register the plugin's GUID with CCG" | timestamp
+& "$ccgPackagePath\RegisterPluginWithCCG.ps1"
+
+Write-Output "Change permissions to grant everyone access to dll" | timestamp
+cmd.exe /C "icacls $ccgPackagePath\CfCcgPlugin.dll /grant Everyone:(F)"
+
+Write-Output "Register plugin with the .net framework" | timestamp
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe /codebase /tlb $ccgPackagePath\CfCcgPlugin.dll
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\regsvcs.exe /fc $ccgPackagePath\CfCcgPlugin.dll
+
+Write-Output "Change identity of plugin to 'NT AUTHORITY\LocalService'" | timestamp
+& "$ccgPackagePath\ChangePluginIdentity.ps1"
+
+Write-Output "Finished ccg-plugin pre-start" | timestamp

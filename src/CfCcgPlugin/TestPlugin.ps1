@@ -1,3 +1,15 @@
+$ErrorActionPreference = "Stop";
+
+function releaseCOMObject {
+	Write-Output "Disposing of CfCcgCredProvider COM object"
+	$plugin.Dispose()
+}
+
+trap {
+	releaseCOMObject
+	$host.SetShouldExit(1)
+}
+
 $domain=""
 $username=""
 $password=""
@@ -12,3 +24,6 @@ $plugin.GetPasswordCredentials($pluginInput, [ref] $domain, [ref] $username, [re
 Write-Output "Success!"
 
 Write-Output "Results - domain: $domain, username: $username, password: $password"
+
+releaseCOMObject
+Exit 0
