@@ -19,8 +19,10 @@ properties:
     default: 172.30.0.0/22
 
   winc_network.gateway_address:
-    description: "Gateway address assigned to containers."
-    default: "172.30.0.1"
+    description: |
+        Gateway address assigned to containers. When not specified, the first
+        usable address in the subnet_range will be used. For example, if
+        subnet_range is specified as 192.168.1.0/24, it will choose 192.168.1.
 
   winc_network.dns_servers:
     description: "DNS servers that containers will use. If not set, will use DNS settings from the host."

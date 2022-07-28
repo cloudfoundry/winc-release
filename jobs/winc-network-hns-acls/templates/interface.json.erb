@@ -16,15 +16,35 @@
     end
   end
 
-  parse_ip(p('winc_network.subnet_range'), 'winc_network.subnet_range')
-  parse_ip(p('winc_network.gateway_address'), 'winc_network.gateway_address')
+  def gateway_for(subnet)
+    begin
+      network = IPAddr.new subnet
+      if network.prefix < 1 || network.prefix > 30
+	raise 'subnet_range prefix length must be between 1 and 30'
+      end
+
+      gateway = network.to_range.to_a[1].to_s #grab first non-network IP in the subnet
+      if_p('winc_network.gateway_address') do |gw|
+	 parse_ip(p('winc_network.gateway_address'), 'winc_network.gateway_address')
+	gateway = gw
+      end
+    rescue => e
+      raise "Invalid 'winc_network.subnet_range': #{e}"
+    end
+    if ! network.include?(gateway)
+      raise "Invalid 'winc_network.gateway_address': #{gateway} is outside the #{network}/#{network.prefix} subnet range"
+    end
+    gateway
+  end
+
   parse_ips(p('winc_network.dns_servers'), 'winc_network.dns_servers')
+  gateway = gateway_for(p('winc_network.subnet_range'))
 
   toRender = {
     "mtu" => p("winc_network.mtu"),
     "network_name" => "winc-nat",
     "subnet_range" => p("winc_network.subnet_range"),
-    "gateway_address" => p("winc_network.gateway_address"),
+    "gateway_address" => gateway,
     "dns_servers" => p("winc_network.dns_servers"),
     "maximum_outgoing_bandwidth" => p("winc_network.maximum_outgoing_bandwidth"),
     "search_domains" => p("winc_network.search_domains"),
