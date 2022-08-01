@@ -22,7 +22,7 @@ properties:
     description: |
         Gateway address assigned to containers. When not specified, the first
         usable address in the subnet_range will be used. For example, if
-        subnet_range is specified as 192.168.1.0/24, it will choose 192.168.1.
+        subnet_range is specified as 192.168.1.0/24, it will choose 192.168.1.1
 
   winc_network.dns_servers:
     description: "DNS servers that containers will use. If not set, will use DNS settings from the host."
