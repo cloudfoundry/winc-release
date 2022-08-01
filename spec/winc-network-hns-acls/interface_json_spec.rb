@@ -49,7 +49,7 @@ module Bosh::Template::Test
           end
 
           describe 'when a gateway_addr is not specified' do
-            it 'chooses the first non-network address of the subnet' do
+            it 'chooses the first usable IP address of the subnet' do
               jsonRendered = JSON.parse(template.render(merged_manifest_properties))
               expect(jsonRendered['gateway_address']).to eq('192.168.5.1')
             end

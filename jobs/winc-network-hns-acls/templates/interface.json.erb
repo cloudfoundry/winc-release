@@ -23,7 +23,7 @@
 	raise 'subnet_range prefix length must be between 1 and 30'
       end
 
-      gateway = network.to_range.to_a[1].to_s #grab first non-network IP in the subnet
+      gateway = network.to_range.to_a[1].to_s #grab first usable IP in the subnet
       if_p('winc_network.gateway_address') do |gw|
 	 parse_ip(p('winc_network.gateway_address'), 'winc_network.gateway_address')
 	gateway = gw

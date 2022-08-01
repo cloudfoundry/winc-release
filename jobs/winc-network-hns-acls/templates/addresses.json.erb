@@ -5,7 +5,7 @@
       if network.prefix < 1 || network.prefix > 30
 	raise 'subnet_range prefix length must be between 1 and 30'
       end
-      network.to_range.to_a[1].to_s #grab first non-network IP in the subnet
+      network.to_range.to_a[1].to_s #grab first usable IP in the subnet
     rescue => e
       raise "Invalid 'winc_network.subnet_range': #{e}"
     end

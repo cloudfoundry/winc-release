@@ -40,7 +40,7 @@ module Bosh::Template::Test
             }
           end
 
-          it 'chooses the first non-network address of the subnet' do
+          it 'chooses the first usable IP address of the subnet' do
             jsonRendered = JSON.parse(template.render(merged_manifest_properties))
             expect(jsonRendered['subnet_range']).to eq('192.168.5.0/28')
             expect(jsonRendered['gateway_address']).to eq('192.168.5.1')
