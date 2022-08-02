@@ -16,13 +16,26 @@
     end
   end
 
+  def gateway_for(subnet)
+    begin
+      network = IPAddr.new subnet
+      if network.prefix < 1 || network.prefix > 30
+	raise 'subnet_range prefix length must be between 1 and 30'
+      end
+      network.to_range.to_a[1].to_s #grab first usable IP in the subnet
+    rescue => e
+      raise "Invalid 'winc_network.subnet_range': #{e}"
+    end
+  end
+
   parse_ips(p('winc_network.dns_servers'), 'winc_network.dns_servers')
+  gateway = gateway_for(p('winc_network.subnet_range'))
 
   toRender = {
     "mtu" => p("winc_network.mtu"),
     "network_name" => "winc-nat",
-    "subnet_range" => "172.30.0.0/22",
-    "gateway_address" => "172.30.0.1",
+    "subnet_range" => p('winc_network.subnet_range'),
+    "gateway_address" => gateway,
     "dns_servers" => p("winc_network.dns_servers"),
     "maximum_outgoing_bandwidth" => p("winc_network.maximum_outgoing_bandwidth"),
   }

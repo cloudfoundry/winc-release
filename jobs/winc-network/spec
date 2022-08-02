@@ -21,3 +21,7 @@ properties:
   winc_network.maximum_outgoing_bandwidth:
     description: "Maximum outgoing bandwidth in bytes for each container. If 0, no limit is set. Values under 10KB are not respected by HNS"
     default: 0
+
+  winc_network.subnet_range:
+    default: "CIDR block for the subnet to use for container networking"
+    default: "172.30.0.0/22"
