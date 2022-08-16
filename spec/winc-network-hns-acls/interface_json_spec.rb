@@ -27,7 +27,7 @@ module Bosh::Template::Test
               "mtu" => 0,
               "network_name" => "winc-nat",
               "maximum_outgoing_bandwidth" => 0,
-              "dns_servers" => [],
+              "dns_servers" => "172.30.0.1",
               "search_domains" => [],
               "allow_outbound_traffic_by_default" => false,
               "wait_timeout_in_seconds" => 2,
@@ -131,6 +131,64 @@ module Bosh::Template::Test
                 template.render(merged_manifest_properties)
               end.to raise_error(/Invalid 'winc_network.subnet_range': subnet_range prefix length must be between 1 and 30/)
             end
+          end
+        end
+
+        describe 'when dns_servers are not provided' do
+          let(:merged_manifest_properties) do
+            {
+            }
+          end
+          it 'uses the gateway address as the dns server' do
+            jsonRendered = JSON.parse(template.render(merged_manifest_properties))
+            expect(jsonRendered['dns_servers']).to eq(jsonRendered['gateway_address'])
+          end
+
+          describe 'and subnet_range is provided' do
+            let(:merged_manifest_properties) do
+              {
+                "winc_network" => {
+                  'subnet_range' => '192.168.5.0/28',
+                }
+              }
+            end
+            it 'uses the subnet range gateway_address as the dns server' do
+              jsonRendered = JSON.parse(template.render(merged_manifest_properties))
+              expect(jsonRendered['dns_servers']).to eq('192.168.5.1')
+              expect(jsonRendered['dns_servers']).to eq(jsonRendered['gateway_address'])
+            end
+
+            describe 'and gateway_address is provided' do
+              let(:merged_manifest_properties) do
+                {
+                  "winc_network" => {
+                    'subnet_range' => '192.168.5.0/28',
+                    'gateway_address' => '192.168.5.5',
+                  }
+                }
+              end
+              it 'uses the provided gateway address' do
+                jsonRendered = JSON.parse(template.render(merged_manifest_properties))
+                expect(jsonRendered['dns_servers']).to eq('192.168.5.5')
+                expect(jsonRendered['dns_servers']).to eq(jsonRendered['gateway_address'])
+              end
+            end
+          end
+        end
+
+        describe 'when dns_servers are provided manually' do
+          let(:merged_manifest_properties) do
+            {
+              "winc_network" => {
+                'subnet_range' => '192.168.5.0/28',
+                'dns_servers' => ['8.8.8.8', '8.8.4.4'],
+              }
+            }
+          end
+
+          it 'uses the provided dns servers' do
+            jsonRendered = JSON.parse(template.render(merged_manifest_properties))
+            expect(jsonRendered['dns_servers']).to match_array(['8.8.4.4', '8.8.8.8'])
           end
         end
       end

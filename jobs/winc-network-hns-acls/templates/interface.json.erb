@@ -37,15 +37,24 @@
     gateway
   end
 
+  def dns_for(supplied, gateway)
+    unless supplied.empty?
+      return supplied
+    end
+    gateway
+  end
+
+
   parse_ips(p('winc_network.dns_servers'), 'winc_network.dns_servers')
   gateway = gateway_for(p('winc_network.subnet_range'))
+  dns = dns_for(p('winc_network.dns_servers'), gateway)
 
   toRender = {
     "mtu" => p("winc_network.mtu"),
     "network_name" => "winc-nat",
     "subnet_range" => p("winc_network.subnet_range"),
     "gateway_address" => gateway,
-    "dns_servers" => p("winc_network.dns_servers"),
+    "dns_servers" => dns,
     "maximum_outgoing_bandwidth" => p("winc_network.maximum_outgoing_bandwidth"),
     "search_domains" => p("winc_network.search_domains"),
     "allow_outbound_traffic_by_default" => p("winc_network.allow_outbound_traffic_by_default"),
