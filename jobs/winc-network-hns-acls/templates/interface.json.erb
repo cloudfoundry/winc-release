@@ -41,7 +41,8 @@
     unless supplied.empty?
       return supplied
     end
-    gateway
+    # intentional coercion into array
+    [ gateway ]
   end
 
 
