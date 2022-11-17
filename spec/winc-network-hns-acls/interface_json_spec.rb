@@ -27,7 +27,7 @@ module Bosh::Template::Test
               "mtu" => 0,
               "network_name" => "winc-nat",
               "maximum_outgoing_bandwidth" => 0,
-              "dns_servers" => "172.30.0.1",
+              "dns_servers" => ["172.30.0.1"],
               "search_domains" => [],
               "allow_outbound_traffic_by_default" => false,
               "wait_timeout_in_seconds" => 2,
@@ -141,7 +141,7 @@ module Bosh::Template::Test
           end
           it 'uses the gateway address as the dns server' do
             jsonRendered = JSON.parse(template.render(merged_manifest_properties))
-            expect(jsonRendered['dns_servers']).to eq(jsonRendered['gateway_address'])
+            expect(jsonRendered['dns_servers']).to eq([jsonRendered['gateway_address']])
           end
 
           describe 'and subnet_range is provided' do
@@ -154,8 +154,8 @@ module Bosh::Template::Test
             end
             it 'uses the subnet range gateway_address as the dns server' do
               jsonRendered = JSON.parse(template.render(merged_manifest_properties))
-              expect(jsonRendered['dns_servers']).to eq('192.168.5.1')
-              expect(jsonRendered['dns_servers']).to eq(jsonRendered['gateway_address'])
+              expect(jsonRendered['dns_servers']).to eq(['192.168.5.1'])
+              expect(jsonRendered['dns_servers']).to eq([jsonRendered['gateway_address']])
             end
 
             describe 'and gateway_address is provided' do
@@ -169,8 +169,8 @@ module Bosh::Template::Test
               end
               it 'uses the provided gateway address' do
                 jsonRendered = JSON.parse(template.render(merged_manifest_properties))
-                expect(jsonRendered['dns_servers']).to eq('192.168.5.5')
-                expect(jsonRendered['dns_servers']).to eq(jsonRendered['gateway_address'])
+                expect(jsonRendered['dns_servers']).to eq(['192.168.5.5'])
+                expect(jsonRendered['dns_servers']).to eq([jsonRendered['gateway_address']])
               end
             end
           end
