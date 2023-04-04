@@ -7,3 +7,4 @@ dependencies:
 
 files:
   - code.cloudfoundry.org/groot-windows/**/*
+  - code.cloudfoundry.org/groot-windows/*.go # gosub

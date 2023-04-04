@@ -7,3 +7,4 @@ dependencies:
 
 files:
   - code.cloudfoundry.org/diff-exporter/**/*
+  - code.cloudfoundry.org/diff-exporter/*.go # gosub

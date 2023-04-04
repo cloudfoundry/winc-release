@@ -6,3 +6,4 @@ dependencies:
 
 files:
   - code.cloudfoundry.org/certsplitter/**/*
+  - code.cloudfoundry.org/certsplitter/cmd/certsplitter/*.go # gosub

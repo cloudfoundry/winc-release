@@ -6,3 +6,4 @@ dependencies:
 
 files:
   - code.cloudfoundry.org/cert-injector/**/*
+  - code.cloudfoundry.org/cert-injector/*.go # gosub
