@@ -1,39 +1,20 @@
 [submodule "src/code.cloudfoundry.org/winc"]
 	path = src/code.cloudfoundry.org/winc
-	url = https://github.com/cloudfoundry-incubator/winc
-[submodule "src/github.com/onsi/ginkgo"]
-	path = src/github.com/onsi/ginkgo
-	url = https://github.com/onsi/ginkgo
-[submodule "src/github.com/onsi/gomega"]
-	path = src/github.com/onsi/gomega
-	url = https://github.com/onsi/gomega
-[submodule "src/gopkg.in/yaml.v2"]
-	path = src/gopkg.in/yaml.v2
-	url = https://gopkg.in/yaml.v2
-[submodule "src/golang.org/x/net"]
-	path = src/golang.org/x/net
-	url = https://go.googlesource.com/net
-[submodule "src/golang.org/x/text"]
-	path = src/golang.org/x/text
-	url = https://go.googlesource.com/text
+	url = https://github.com/cloudfoundry/winc
+	branch = master
 [submodule "src/code.cloudfoundry.org/groot-windows"]
 	path = src/code.cloudfoundry.org/groot-windows
-	url = https://github.com/cloudfoundry-incubator/groot-windows
-[submodule "src/github.com/hectane/go-acl"]
-	path = src/github.com/hectane/go-acl
-	url = https://github.com/hectane/go-acl.git
-[submodule "src/golang.org/x/sys"]
-	path = src/golang.org/x/sys
-	url = https://go.googlesource.com/sys
+	url = https://github.com/cloudfoundry/groot-windows
+	branch = master
 [submodule "src/code.cloudfoundry.org/diff-exporter"]
 	path = src/code.cloudfoundry.org/diff-exporter
-	url = https://github.com/cloudfoundry-incubator/diff-exporter
+	url = https://github.com/cloudfoundry/diff-exporter
+	branch = master
 [submodule "src/code.cloudfoundry.org/cert-injector"]
 	path = src/code.cloudfoundry.org/cert-injector
 	url = https://github.com/cloudfoundry/cert-injector
+	branch = main
 [submodule "src/code.cloudfoundry.org/certsplitter"]
 	path = src/code.cloudfoundry.org/certsplitter
 	url = https://github.com/cloudfoundry/certsplitter
-[submodule "src/golang.org/x/xerrors"]
-	path = src/golang.org/x/xerrors
-	url = https://go.googlesource.com/xerrors
+	branch = main
