@@ -47,7 +47,7 @@ if (!(Test-Path $quotaDllPath)) {
 Write-Host "Build winc-network"
 
 Push-Location src/code.cloudfoundry.org/winc
-  go build -o "$env:GOBIN\winc-network.exe" -tags "hnsAcls" ./cmd/winc-network
+  go build -o "$env:GOBIN\winc-network.exe" ./cmd/winc-network
   if (!(Get-Command "winc-network.exe" -ErrorAction SilentlyContinue)) {
      Write-Host "Unable to build winc-network.exe"
      Exit 1
