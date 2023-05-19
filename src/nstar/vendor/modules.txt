@@ -15,7 +15,7 @@ github.com/google/go-cmp/cmp/internal/value
 # github.com/google/pprof v0.0.0-20210407192527-94a9f03dee38
 ## explicit; go 1.14
 github.com/google/pprof/profile
-# github.com/hectane/go-acl v0.0.0-20190604041725-da78bae5fc95
+# github.com/hectane/go-acl v0.0.0-20230122075934-ca0b05cb1adb
 ## explicit; go 1.12
 github.com/hectane/go-acl
 github.com/hectane/go-acl/api
