@@ -1,9 +1,0 @@
----
-name: winc-network
-
-dependencies:
-- golang-1-windows
-- mingw
-
-files:
-  - code.cloudfoundry.org/winc/cmd/winc-network/*.go # gosub
