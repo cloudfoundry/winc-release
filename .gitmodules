@@ -1,15 +1,15 @@
 [submodule "src/code.cloudfoundry.org/winc"]
 	path = src/code.cloudfoundry.org/winc
 	url = https://github.com/cloudfoundry/winc
-	branch = master
+	branch = main
 [submodule "src/code.cloudfoundry.org/groot-windows"]
 	path = src/code.cloudfoundry.org/groot-windows
 	url = https://github.com/cloudfoundry/groot-windows
-	branch = master
+	branch = main
 [submodule "src/code.cloudfoundry.org/diff-exporter"]
 	path = src/code.cloudfoundry.org/diff-exporter
 	url = https://github.com/cloudfoundry/diff-exporter
-	branch = master
+	branch = main
 [submodule "src/code.cloudfoundry.org/cert-injector"]
 	path = src/code.cloudfoundry.org/cert-injector
 	url = https://github.com/cloudfoundry/cert-injector
