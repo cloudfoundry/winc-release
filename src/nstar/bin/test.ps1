@@ -3,5 +3,5 @@ trap { $host.SetShouldExit(1) }
 
 ginkgo.exe -r -p --race --keep-going --randomize-suites
 if ($LastExitCode -ne 0) {
-  Exit 1
+  throw "tests failed"
 }
