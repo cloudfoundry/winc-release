@@ -1,13 +1,13 @@
 #!/bin/bash
-set -e -x
+set -e
 
-if ! which gosub >/dev/null 2>&1 ; then
-  echo "gosub not found. In the global $GOPATH, try: go get github.com/vito/gosub"
-  exit 1
-fi
+export PATH="$PWD/bin:$PATH"
 
-ROOT_DIR_PATH=$(cd "$(dirname "$0")"/.. && pwd)
-GOPATH=$ROOT_DIR_PATH
+(
+  mkdir -p bin
+  cd "src/gosub"
+  go build -o "../../bin/gosub" .
+)
 
 function sync_package() {
   bosh_pkg=${1}
@@ -45,7 +45,6 @@ function sync_package() {
 }
 
 sync_package winc                  -app  code.cloudfoundry.org/winc/cmd/winc
-sync_package winc-network          -app  code.cloudfoundry.org/winc/cmd/winc-network
 sync_package winc-network-hns-acls -app  code.cloudfoundry.org/winc/cmd/winc-network
 sync_package groot                 -app  code.cloudfoundry.org/groot-windows
 sync_package diff-exporter         -app  code.cloudfoundry.org/diff-exporter
