@@ -14,3 +14,5 @@ releases/**/*.tgz
 #*
 pkg
 Gemfile.lock
+bin
+/bin
