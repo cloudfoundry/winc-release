@@ -48,7 +48,7 @@ Start-Process -FilePath "powershell.exe"
 
 ```json
 {
-    "ociVersion":  "1.1.0-rc.2",
+    "ociVersion":  "1.1.0-rc.3",
     "root":  {
                  "path":  "\\\\?\\Volume{guid-xxxx-xxxx-xxxxxxxxxxxxx}"
              },
