@@ -16,3 +16,5 @@ pkg
 Gemfile.lock
 bin
 /bin
+!src/WindowsAuth/bin
+
