@@ -31,6 +31,10 @@ properties:
     description: "Can be debug, info, error or fatal"
     default: "info"
 
+  groot.log_format:
+    description: "Can be rfc3339 or epoch"
+    default: "epoch"
+
   groot.refresh_base_layer:
     description: "EXPERIMENTAL: Delete size file in order to pull fresh base layer."
     default: false
