@@ -2,7 +2,7 @@
 name: winc
 
 dependencies:
-- golang-1-windows
+- golang-1.21-windows
 - mingw
 
 files:
