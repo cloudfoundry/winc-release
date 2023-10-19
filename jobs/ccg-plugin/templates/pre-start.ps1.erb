@@ -1,3 +1,4 @@
+<% if p('ccg.enabled') %>
 filter timestamp { "$((get-date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ss:fffffff00Z')): $_" }
 
 $ErrorActionPreference = "Stop";
@@ -23,3 +24,4 @@ Write-Output "Change identity of plugin to 'NT AUTHORITY\LocalService'" | timest
 & "$ccgPackagePath\ChangePluginIdentity.ps1"
 
 Write-Output "Finished ccg-plugin pre-start" | timestamp
+<% end %>
