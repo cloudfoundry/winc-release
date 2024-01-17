@@ -5,4 +5,11 @@ dependencies:
 - golang-1.21-windows
 
 files:
-  - code.cloudfoundry.org/cert-injector/**/*
+  - code.cloudfoundry.org/cert-injector/go.mod
+  - code.cloudfoundry.org/cert-injector/go.sum
+  - code.cloudfoundry.org/cert-injector/vendor/modules.txt
+  - code.cloudfoundry.org/cert-injector/*.go # gosub
+  - code.cloudfoundry.org/cert-injector/command/*.go # gosub
+  - code.cloudfoundry.org/cert-injector/container/*.go # gosub
+  - code.cloudfoundry.org/cert-injector/injector/*.go # gosub
+  - code.cloudfoundry.org/cert-injector/vendor/github.com/opencontainers/runtime-spec/specs-go/*.go # gosub
