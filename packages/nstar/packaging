@@ -7,7 +7,7 @@ $BOSH_INSTALL_TARGET = Resolve-Path "${env:BOSH_INSTALL_TARGET}"
 
 $pkg_name="nstar.exe"
 $pkg_path="."
-$go_mod_path="${PWD}\nstar"
+$go_mod_path="${PWD}\code.cloudfoundry.org\nstar"
 
 cd "$go_mod_path"
 

@@ -5,4 +5,7 @@ dependencies:
 - golang-1.21-windows
 
 files:
-  - code.cloudfoundry.org/certsplitter/**/*
+  - code.cloudfoundry.org/certsplitter/go.mod
+  - code.cloudfoundry.org/certsplitter/go.sum
+  - code.cloudfoundry.org/certsplitter/vendor/modules.txt
+  - code.cloudfoundry.org/certsplitter/cmd/certsplitter/*.go # gosub

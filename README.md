@@ -5,6 +5,20 @@ A [BOSH](http://docs.cloudfoundry.org/bosh/) release for deploying [winc](https:
 The following powershell script can be used to quickly create a new container.
 
   
+### <a name="developer-workflow"></a> Developer Workflow
+
+- Clone [CI repository](https://github.com/cloudfoundry/wg-app-platform-runtime-ci) (next to where this code is cloned), and make sure latest
+is pulled by running `git pull`
+
+  ```bash
+  mkdir -p ~/workspace
+  cd ~/workspace
+  git clone https://github.com/cloudfoundry/wg-app-platform-runtime-ci.git
+  ```
+- [Git](https://git-scm.com/) - Distributed version control system
+- [Go](https://golang.org/doc/install#install) - The Go programming
+  language
+
 
 - Build required binaries
 
@@ -99,3 +113,13 @@ Start-Process -FilePath "powershell.exe"
 ```
  
 
+
+
+##### With Docker
+
+- `./scripts/create-docker-container.bash`: This will create a docker container with appropriate mounts.
+- `./scripts/test-in-docker-locally.bash`: Create docker container and run tempate tests and linters
+
+When inside docker container: 
+- `/repo/scripts/docker/tests-templates.bash`: This will run all of tests for bosh tempalates
+- `/repo/scripts/docker/lint.bash`: This will run all of linting defined for this repo.

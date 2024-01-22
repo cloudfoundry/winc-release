@@ -18,7 +18,3 @@
 	path = src/code.cloudfoundry.org/certsplitter
 	url = https://github.com/cloudfoundry/certsplitter
 	branch = main
-[submodule "src/gosub"]
-	path = src/gosub
-	url = https://github.com/vito/gosub
-	branch = master

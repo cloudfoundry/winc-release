@@ -6,4 +6,74 @@ dependencies:
 - mingw
 
 files:
-  - code.cloudfoundry.org/winc/**/*
+  - code.cloudfoundry.org/winc/go.mod
+  - code.cloudfoundry.org/winc/go.sum
+  - code.cloudfoundry.org/winc/vendor/modules.txt
+  - code.cloudfoundry.org/winc/cmd/winc/*.go # gosub
+  - code.cloudfoundry.org/winc/hcs/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/config/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/container/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/hcsprocess/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/mount/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/state/*.go # gosub
+  - code.cloudfoundry.org/winc/runtime/winsyscall/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/internal/fs/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/internal/socket/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/internal/stringbuffer/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/pkg/guid/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/pkg/security/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/go-winio/vhd/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/Makefile # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/computestorage/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/cow/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/hcs/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/hcs/schema1/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/hcs/schema2/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/hcserror/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/hns/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/interop/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/jobobject/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/log/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/logfields/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/longpath/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/mergemaps/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/oc/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/queue/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/safefile/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/timeout/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/vmcompute/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/wclayer/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/internal/winapi/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/osversion/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/blang/semver/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/containerd/cgroups/stats/v1/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/cpuguy83/go-md2man/v2/md2man/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/gogo/protobuf/gogoproto/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/gogo/protobuf/gogoproto/Makefile # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/gogo/protobuf/proto/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/gogo/protobuf/proto/Makefile # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/gogo/protobuf/protoc-gen-gogo/descriptor/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/gogo/protobuf/protoc-gen-gogo/descriptor/Makefile # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/golang/groupcache/lru/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-spec/specs-go/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-tools/validate/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/pkg/errors/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/pkg/errors/Makefile # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/russross/blackfriday/v2/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/sirupsen/logrus/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/syndtr/gocapability/capability/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/urfave/cli/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/go.opencensus.io/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/go.opencensus.io/Makefile # gosub
+  - code.cloudfoundry.org/winc/vendor/go.opencensus.io/internal/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/go.opencensus.io/trace/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/go.opencensus.io/trace/internal/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/go.opencensus.io/trace/tracestate/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.s # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.c # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/windows/*.s # gosub
