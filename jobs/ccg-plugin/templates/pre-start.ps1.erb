@@ -5,6 +5,12 @@ $ErrorActionPreference = "Stop";
 trap { $host.SetShouldExit(1) }
 
 Write-Output "Started ccg-plugin pre-start" | timestamp
+
+if ([Microsoft.Win32.Registry]::LocalMachine.OpenSubKey("SYSTEM\CurrentControlSet\Control\CCG\COMClasses") -eq $null ) {
+  Write-Error "CCG is not enabled on the stemcell: the 'SYSTEM\CurrentControlSet\Control\CCG\COMClasses' registry key does not exist"
+  exit 1
+}
+
 $ccgPackagePath = Resolve-Path "/var/vcap/packages/ccg-plugin"
 
 Write-Output "Create event log and register event source" | timestamp
