@@ -54,10 +54,6 @@ files:
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/gogo/protobuf/protoc-gen-gogo/descriptor/Makefile # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/golang/groupcache/lru/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/golang/protobuf/proto/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/golang/protobuf/ptypes/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/golang/protobuf/ptypes/any/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/golang/protobuf/ptypes/duration/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/golang/protobuf/ptypes/timestamp/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/opencontainers/runtime-spec/specs-go/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/pkg/errors/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/pkg/errors/Makefile # gosub
@@ -104,6 +100,7 @@ files:
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/internal/strs/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/internal/version/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/proto/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/protoadapt/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/reflect/protodesc/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/reflect/protodesc/*.binpb # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/reflect/protoreflect/*.go # gosub
@@ -112,5 +109,3 @@ files:
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/runtime/protoimpl/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/types/descriptorpb/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/types/known/anypb/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/types/known/durationpb/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/types/known/timestamppb/*.go # gosub
