@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -36,7 +35,7 @@ var _ = Describe("Nstar", func() {
 		)
 
 		BeforeEach(func() {
-			tempDir, err := ioutil.TempDir("", "tar-log")
+			tempDir, err := os.MkdirTemp("", "tar-log")
 			Expect(err).ToNot(HaveOccurred())
 
 			extractArgsLog = filepath.Join(tempDir, "args-log")
@@ -64,7 +63,7 @@ var _ = Describe("Nstar", func() {
 		})
 
 		It("hooks up its stdin to tar's stdin", func() {
-			stdinContents, err := ioutil.ReadFile(extractStdinLog)
+			stdinContents, err := os.ReadFile(extractStdinLog)
 			Expect(err).ToNot(HaveOccurred())
 
 			Expect(string(stdinContents)).To(Equal("hello"))
@@ -184,7 +183,7 @@ var _ = Describe("Nstar", func() {
 
 		BeforeEach(func() {
 			var err error
-			tempDir, err = ioutil.TempDir("", "tar-log")
+			tempDir, err = os.MkdirTemp("", "tar-log")
 			Expect(err).ToNot(HaveOccurred())
 
 			compressArgsLog = filepath.Join(tempDir, "args-log")
@@ -308,7 +307,7 @@ var _ = Describe("Nstar", func() {
 
 func readArgs(argsFilePath string) []string {
 	Eventually(argsFilePath).Should(BeAnExistingFile())
-	pluginArgsBytes, err := ioutil.ReadFile(argsFilePath)
+	pluginArgsBytes, err := os.ReadFile(argsFilePath)
 	Expect(err).ToNot(HaveOccurred())
 	return strings.Split(string(pluginArgsBytes), " ")
 }

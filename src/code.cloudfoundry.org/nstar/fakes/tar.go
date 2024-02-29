@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 	"strings"
 )
@@ -18,7 +17,7 @@ func main() {
 	stdinLog := os.Getenv("STDIN_LOG")
 	stdoutLog := os.Getenv("STDOUT_LOG")
 
-	if err := ioutil.WriteFile(argsLog, []byte(strings.Join(os.Args[1:], " ")), 0644); err != nil {
+	if err := os.WriteFile(argsLog, []byte(strings.Join(os.Args[1:], " ")), 0644); err != nil {
 		panic(err)
 	}
 
