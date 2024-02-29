@@ -18,10 +18,6 @@ import (
 )
 
 var _ = Describe("Nstar", func() {
-	BeforeEach(func() {
-		rand.Seed(int64(GinkgoParallelProcess()))
-	})
-
 	Context("when provided a path to extract to", func() {
 		var (
 			pid                 string
@@ -32,16 +28,18 @@ var _ = Describe("Nstar", func() {
 			stdin               io.Reader
 			extractArgsLog      string
 			extractStdinLog     string
+			randomGenerator     *Rand
 		)
 
 		BeforeEach(func() {
+			randomGenerator := rand.New(rand.NewSource(int64(GinkgoParallelProcess())))
 			tempDir, err := os.MkdirTemp("", "tar-log")
 			Expect(err).ToNot(HaveOccurred())
 
 			extractArgsLog = filepath.Join(tempDir, "args-log")
 			extractStdinLog = filepath.Join(tempDir, "stdin-log")
 
-			pid = strconv.Itoa(rand.Int())
+			pid = strconv.Itoa(randomGenerator.Int())
 			path = filepath.Join("c:\\", "hello")
 			expectedDestination = ""
 			stdin = bytes.NewBuffer([]byte("hello"))
@@ -189,7 +187,7 @@ var _ = Describe("Nstar", func() {
 			compressArgsLog = filepath.Join(tempDir, "args-log")
 			compressStdoutLog = "tar-stdout"
 
-			pid = strconv.Itoa(rand.Int())
+			pid = strconv.Itoa(randomGenerator.Int())
 			path = filepath.Join("c:\\", "hello")
 			username = "some-username"
 			compressPath = "some-file"
