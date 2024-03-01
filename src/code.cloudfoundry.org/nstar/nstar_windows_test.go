@@ -18,6 +18,11 @@ import (
 )
 
 var _ = Describe("Nstar", func() {
+	var randomGenerator *rand.Rand
+	BeforeEach(func() {
+		randomGenerator = rand.New(rand.NewSource(int64(GinkgoParallelProcess())))
+
+	})
 	Context("when provided a path to extract to", func() {
 		var (
 			pid                 string
@@ -28,11 +33,9 @@ var _ = Describe("Nstar", func() {
 			stdin               io.Reader
 			extractArgsLog      string
 			extractStdinLog     string
-			randomGenerator     *Rand
 		)
 
 		BeforeEach(func() {
-			randomGenerator := rand.New(rand.NewSource(int64(GinkgoParallelProcess())))
 			tempDir, err := os.MkdirTemp("", "tar-log")
 			Expect(err).ToNot(HaveOccurred())
 
