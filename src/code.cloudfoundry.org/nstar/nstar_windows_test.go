@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -19,10 +18,11 @@ import (
 )
 
 var _ = Describe("Nstar", func() {
+	var randomGenerator *rand.Rand
 	BeforeEach(func() {
-		rand.Seed(int64(GinkgoParallelProcess()))
-	})
+		randomGenerator = rand.New(rand.NewSource(int64(GinkgoParallelProcess())))
 
+	})
 	Context("when provided a path to extract to", func() {
 		var (
 			pid                 string
@@ -36,13 +36,13 @@ var _ = Describe("Nstar", func() {
 		)
 
 		BeforeEach(func() {
-			tempDir, err := ioutil.TempDir("", "tar-log")
+			tempDir, err := os.MkdirTemp("", "tar-log")
 			Expect(err).ToNot(HaveOccurred())
 
 			extractArgsLog = filepath.Join(tempDir, "args-log")
 			extractStdinLog = filepath.Join(tempDir, "stdin-log")
 
-			pid = strconv.Itoa(rand.Int())
+			pid = strconv.Itoa(randomGenerator.Int())
 			path = filepath.Join("c:\\", "hello")
 			expectedDestination = ""
 			stdin = bytes.NewBuffer([]byte("hello"))
@@ -64,7 +64,7 @@ var _ = Describe("Nstar", func() {
 		})
 
 		It("hooks up its stdin to tar's stdin", func() {
-			stdinContents, err := ioutil.ReadFile(extractStdinLog)
+			stdinContents, err := os.ReadFile(extractStdinLog)
 			Expect(err).ToNot(HaveOccurred())
 
 			Expect(string(stdinContents)).To(Equal("hello"))
@@ -184,13 +184,13 @@ var _ = Describe("Nstar", func() {
 
 		BeforeEach(func() {
 			var err error
-			tempDir, err = ioutil.TempDir("", "tar-log")
+			tempDir, err = os.MkdirTemp("", "tar-log")
 			Expect(err).ToNot(HaveOccurred())
 
 			compressArgsLog = filepath.Join(tempDir, "args-log")
 			compressStdoutLog = "tar-stdout"
 
-			pid = strconv.Itoa(rand.Int())
+			pid = strconv.Itoa(randomGenerator.Int())
 			path = filepath.Join("c:\\", "hello")
 			username = "some-username"
 			compressPath = "some-file"
@@ -308,7 +308,7 @@ var _ = Describe("Nstar", func() {
 
 func readArgs(argsFilePath string) []string {
 	Eventually(argsFilePath).Should(BeAnExistingFile())
-	pluginArgsBytes, err := ioutil.ReadFile(argsFilePath)
+	pluginArgsBytes, err := os.ReadFile(argsFilePath)
 	Expect(err).ToNot(HaveOccurred())
 	return strings.Split(string(pluginArgsBytes), " ")
 }
