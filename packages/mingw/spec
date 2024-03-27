@@ -1,7 +1,8 @@
 ---
 name: mingw
 
-dependencies: []
+dependencies:
+- 7zip
 
 files:
 - mingw/x86_64-*.zip
