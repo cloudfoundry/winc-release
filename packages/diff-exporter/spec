@@ -46,6 +46,12 @@ files:
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/osversion/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/cgroups/v3/cgroup1/stats/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/errdefs/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/errdefs/pkg/errgrpc/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/errdefs/pkg/internal/cause/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/errdefs/pkg/internal/types/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/typeurl/v2/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/gogo/protobuf/proto/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/gogo/protobuf/proto/Makefile # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/golang/groupcache/lru/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/opencontainers/runtime-spec/specs-go/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/pkg/errors/*.go # gosub
