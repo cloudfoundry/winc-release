@@ -1,0 +1,105 @@
+name: winc
+version: 2.30.0
+commit_hash: 9b5b22c
+uncommitted_changes: false
+jobs:
+- name: ccg-plugin
+  version: bd508e8048e1fe66876d70211b2b8f0aa061983738e4a0653af1edd921adf6e8
+  fingerprint: bd508e8048e1fe66876d70211b2b8f0aa061983738e4a0653af1edd921adf6e8
+  sha1: sha256:c2709a77c444482f97e29360fab0483c6809bbc844213519bf12d69898817bb1
+  packages:
+  - ccg-plugin
+- name: groot
+  version: 4ade8861b596110b35b4b2ca3018b84c8e780841a5f90cdeeae6714de9ca07ff
+  fingerprint: 4ade8861b596110b35b4b2ca3018b84c8e780841a5f90cdeeae6714de9ca07ff
+  sha1: sha256:ea7789b59e845acd45b6e678312d918b8974e37df875bacf06815443d84d7bbf
+  packages:
+  - groot
+  - cert-injector
+  - diff-exporter
+  - certsplitter-fs
+- name: winc
+  version: c79b1009f3e4c44eb8ad125bc610adfc72962c8131ffde801d46c86f0ad6d2c3
+  fingerprint: c79b1009f3e4c44eb8ad125bc610adfc72962c8131ffde801d46c86f0ad6d2c3
+  sha1: sha256:0e22ab428ed3556e4b82709e9abc43563f7b3d9610e3ca5cee359e5fe387fef3
+  packages:
+  - nstar
+  - winc
+- name: winc-network-hns-acls
+  version: ff558c74576bea009a65cf4e1ee73c3508e8c0ba65277b48e442d74e5d333ddd
+  fingerprint: ff558c74576bea009a65cf4e1ee73c3508e8c0ba65277b48e442d74e5d333ddd
+  sha1: sha256:2dfb71755a448c86332a58fa2c67a97b5f99562c35b508154aaa645dd9fcf989
+  packages:
+  - winc-network-hns-acls
+packages:
+- name: 7zip
+  version: 9c0fa774be66628dbbcc723491bbc37c26dcd102b9bae5415b013eea6380465b
+  fingerprint: 9c0fa774be66628dbbcc723491bbc37c26dcd102b9bae5415b013eea6380465b
+  sha1: sha256:224b86787308dce7cee60d783da32e5a7d470213492354f48d78c3549fc9490e
+  dependencies: []
+- name: ccg-plugin
+  version: 517bda09bffbc0c4596687d50c16b07bcbdff6a1901f3d3f6df8dc327222ef6c
+  fingerprint: 517bda09bffbc0c4596687d50c16b07bcbdff6a1901f3d3f6df8dc327222ef6c
+  sha1: sha256:67e16cde0e07624ea6b1018fcb48de47be93d5447be6a9cd632cd4370a0cebe1
+  dependencies: []
+- name: cert-injector
+  version: 1411e5594e81a3e4e2d4b1c5a97d4a3990be1e926a4a669ee3d672b528ac976d
+  fingerprint: 1411e5594e81a3e4e2d4b1c5a97d4a3990be1e926a4a669ee3d672b528ac976d
+  sha1: sha256:e42d4cb5b5173dfc5fba63ac2b29fac676a8d558c09f11a917fc6caf3c4fbe7a
+  dependencies:
+  - golang-1.23-windows
+- name: certsplitter-fs
+  version: c9ef1add81efbf8b227c3c4e3944c3845c8b12d46f669ed77307e6fbde0dc11c
+  fingerprint: c9ef1add81efbf8b227c3c4e3944c3845c8b12d46f669ed77307e6fbde0dc11c
+  sha1: sha256:1fba21c0d4b4d06d72382e6bd7d8691a6c7989b8600d8e95b54d1a70c683b663
+  dependencies:
+  - golang-1.23-windows
+- name: diff-exporter
+  version: 857e489e7ec2a23808b848a289fddc6c41d258cf1c7df8f8838185951626d465
+  fingerprint: 857e489e7ec2a23808b848a289fddc6c41d258cf1c7df8f8838185951626d465
+  sha1: sha256:f15e44206cc2d6f6631c62f7c55c1c189b6f8a2b8c7ee26155bcca0889fa7952
+  dependencies:
+  - golang-1.23-windows
+  - mingw
+- name: golang-1.23-windows
+  version: 1ee8c0de290be0363104a7f2cdebf6373f3777189afc13d9ac9a8795d36be7ba
+  fingerprint: 1ee8c0de290be0363104a7f2cdebf6373f3777189afc13d9ac9a8795d36be7ba
+  sha1: sha256:208217826e4b4fddf79d220e0f29ea9bdf72681eff2141282e7eb7892bff4531
+  dependencies: []
+- name: groot
+  version: def4178cce6aac145b8c14811f58bcfef8c7357f439d0d255aa5d8bcb03c6eaf
+  fingerprint: def4178cce6aac145b8c14811f58bcfef8c7357f439d0d255aa5d8bcb03c6eaf
+  sha1: sha256:80c435c910dc69acf7f61aaa3de447bb85063d4e16a833ec54c1fff100461243
+  dependencies:
+  - golang-1.23-windows
+  - mingw
+- name: mingw
+  version: 93ea7b3404de8b4e2f1118e6c4449a9c5d252ce3a2e45c08acd466b365604cd2
+  fingerprint: 93ea7b3404de8b4e2f1118e6c4449a9c5d252ce3a2e45c08acd466b365604cd2
+  sha1: sha256:cfe3d84a5016ce61a25658e3e594a40f120de9154302a5f127372a60fdfca584
+  dependencies:
+  - 7zip
+- name: nstar
+  version: 43e8a39453abd4d5a5536d9b22d23d34cb8b34a263df4cf4230c058cb93aa019
+  fingerprint: 43e8a39453abd4d5a5536d9b22d23d34cb8b34a263df4cf4230c058cb93aa019
+  sha1: sha256:8d2f3abbcc5455e52be5cc4aab7217dbe76bc1c9faeb2b9490bbb241a5d32b78
+  dependencies:
+  - golang-1.23-windows
+- name: winc
+  version: 3f32d4b8981e20f2b3dff7747b936f183f110b23eb01d81e681845640d9e84ee
+  fingerprint: 3f32d4b8981e20f2b3dff7747b936f183f110b23eb01d81e681845640d9e84ee
+  sha1: sha256:106cf749afedce7092c262ff44fd74ec51d8eaadb11d1f1eed9ae01f7c7990b1
+  dependencies:
+  - golang-1.23-windows
+  - mingw
+- name: winc-network-hns-acls
+  version: ddcc9fa91bf2266aef399365de1ef7e45bbab33e25f77db066da78ddc66aa539
+  fingerprint: ddcc9fa91bf2266aef399365de1ef7e45bbab33e25f77db066da78ddc66aa539
+  sha1: sha256:73e2b7f6c36746c57b76561b4853ae27a9dabbef91b2d25310c1fc4e7b579527
+  dependencies:
+  - golang-1.23-windows
+  - mingw
+license:
+  version: 5f967b3ffa90c0443b588f6a5a93c0742e453c9f7b08c687434b378d85d32b90
+  fingerprint: 5f967b3ffa90c0443b588f6a5a93c0742e453c9f7b08c687434b378d85d32b90
+  sha1: sha256:f66762a8842dbbec1812e0f381984cdc93448ad904e61db6fa77ade6afb60d60
