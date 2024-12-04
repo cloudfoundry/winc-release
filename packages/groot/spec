@@ -125,6 +125,7 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/github.com/golang/groupcache/lru/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/gorilla/mux/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/gorilla/mux/Makefile # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/moby/sys/capability/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/moby/sys/mountinfo/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/moby/sys/user/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/opencontainers/go-digest/*.go # gosub
@@ -137,7 +138,6 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/github.com/pkg/errors/Makefile # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/russross/blackfriday/v2/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/sirupsen/logrus/*.go # gosub
-  - code.cloudfoundry.org/groot-windows/vendor/github.com/syndtr/gocapability/capability/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/urfave/cli/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/go.opencensus.io/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/go.opencensus.io/Makefile # gosub
