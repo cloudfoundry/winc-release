@@ -70,6 +70,7 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/pkg/platform/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/private/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/putblobdigest/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/reflink/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/rootless/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/set/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/signature/*.go # gosub
@@ -110,7 +111,6 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/github.com/distribution/reference/Makefile # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/registry/api/errcode/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/registry/api/v2/*.go # gosub
-  - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/distribution/registry/client/auth/challenge/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/docker-credential-helpers/client/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/docker-credential-helpers/credentials/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/docker/docker/api/types/versions/*.go # gosub
