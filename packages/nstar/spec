@@ -2,7 +2,7 @@
 name: nstar
 
 dependencies:
-- golang-1.23-windows
+- golang-1.24-windows
 
 files:
 - code.cloudfoundry.org/nstar/**/*
