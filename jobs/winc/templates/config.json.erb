@@ -1,0 +1,9 @@
+<%=
+  config = {
+    credhub_endpoint: p("winc.credhub_endpoint"),
+    credhub_ca_certificate: p("winc.credhub_ca_certificate"),
+    uaa_credhub_client_id: p("winc.uaa_credhub_client_id"),
+    uaa_credhub_client_secret: p("winc.uaa_credhub_client_secret"),
+  }
+  config.to_json
+%>
