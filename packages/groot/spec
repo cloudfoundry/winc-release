@@ -70,7 +70,6 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/pkg/platform/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/private/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/putblobdigest/*.go # gosub
-  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/reflink/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/rootless/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/set/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/internal/signature/*.go # gosub
@@ -145,7 +144,6 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/go.opencensus.io/trace/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/go.opencensus.io/trace/internal/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/go.opencensus.io/trace/tracestate/*.go # gosub
-  - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/exp/maps/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/unix/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/unix/*.s # gosub
   - code.cloudfoundry.org/groot-windows/vendor/golang.org/x/sys/unix/*.c # gosub
