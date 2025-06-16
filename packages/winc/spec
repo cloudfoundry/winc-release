@@ -9,6 +9,14 @@ files:
   - code.cloudfoundry.org/winc/go.mod
   - code.cloudfoundry.org/winc/go.sum
   - code.cloudfoundry.org/winc/vendor/modules.txt
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/credhub-cli/credhub/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/credhub-cli/credhub/auth/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/credhub-cli/credhub/auth/uaa/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/credhub-cli/credhub/credentials/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/credhub-cli/credhub/credentials/generate/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/credhub-cli/credhub/credentials/values/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/credhub-cli/credhub/permissions/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/code.cloudfoundry.org/credhub-cli/credhub/server/*.go # gosub
   - code.cloudfoundry.org/winc/cmd/winc/*.go # gosub
   - code.cloudfoundry.org/winc/hcs/*.go # gosub
   - code.cloudfoundry.org/winc/runtime/*.go # gosub
@@ -52,6 +60,8 @@ files:
   - code.cloudfoundry.org/winc/vendor/github.com/Microsoft/hcsshim/osversion/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/blang/semver/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/blang/semver/v4/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/cloudfoundry/go-socks5/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/cloudfoundry/socks5-proxy/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/containerd/cgroups/v3/cgroup1/stats/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/containerd/errdefs/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/containerd/errdefs/pkg/errgrpc/*.go # gosub
@@ -65,6 +75,7 @@ files:
   - code.cloudfoundry.org/winc/vendor/github.com/hashicorp/errwrap/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/hashicorp/go-multierror/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/hashicorp/go-multierror/Makefile # gosub
+  - code.cloudfoundry.org/winc/vendor/github.com/hashicorp/go-version/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-spec/specs-go/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-tools/error/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/opencontainers/runtime-tools/filepath/*.go # gosub
@@ -89,6 +100,18 @@ files:
   - code.cloudfoundry.org/winc/vendor/go.opencensus.io/trace/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/go.opencensus.io/trace/internal/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/go.opencensus.io/trace/tracestate/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/blowfish/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/chacha20/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/chacha20/*.s # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/curve25519/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/internal/alias/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/internal/poly1305/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/internal/poly1305/*.s # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/ssh/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/crypto/ssh/internal/bcrypt_pbkdf/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/net/context/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/net/internal/socks/*.go # gosub
+  - code.cloudfoundry.org/winc/vendor/golang.org/x/net/proxy/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.s # gosub
   - code.cloudfoundry.org/winc/vendor/golang.org/x/sys/unix/*.c # gosub

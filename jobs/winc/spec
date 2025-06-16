@@ -1,10 +1,23 @@
 ---
 name: winc
 
-templates: {}
+templates:
+  config.json.erb: config/config.json
 
 packages:
 - nstar
 - winc
 
-properties: {}
+properties:
+  winc.credhub_endpoint:
+    description: "Address for credhub server"
+    default: "https://credhub.service.cf.internal:8844"
+  winc.credhub_ca_certificate:
+    description: "Credhub CA Certificate"
+    default: ""
+  winc.uaa_credhub_client_id:
+    description: "UAA Credhub Client Id for fetching GMSA Credentials"
+    default: ""
+  winc.uaa_credhub_client_secret:
+    description: "UAA Credhub Client Secret for fetching GMSA Credentials"
+    default: ""
