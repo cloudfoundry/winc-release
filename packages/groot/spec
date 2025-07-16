@@ -93,6 +93,7 @@ files:
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/image/v5/version/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/libtrust/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/ocicrypt/spec/*.go # gosub
+  - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/storage/internal/rawfilelock/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/storage/pkg/fileutils/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/storage/pkg/homedir/*.go # gosub
   - code.cloudfoundry.org/groot-windows/vendor/github.com/containers/storage/pkg/idtools/*.go # gosub
