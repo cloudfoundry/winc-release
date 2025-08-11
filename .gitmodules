@@ -1,4 +1,0 @@
-[submodule "src/code.cloudfoundry.org/winc"]
-	path = src/code.cloudfoundry.org/winc
-	url = https://github.com/cloudfoundry/winc
-	branch = main
