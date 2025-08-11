@@ -2,10 +2,6 @@
 	path = src/code.cloudfoundry.org/winc
 	url = https://github.com/cloudfoundry/winc
 	branch = main
-[submodule "src/code.cloudfoundry.org/groot-windows"]
-	path = src/code.cloudfoundry.org/groot-windows
-	url = https://github.com/cloudfoundry/groot-windows
-	branch = main
 [submodule "src/code.cloudfoundry.org/diff-exporter"]
 	path = src/code.cloudfoundry.org/diff-exporter
 	url = https://github.com/cloudfoundry/diff-exporter
