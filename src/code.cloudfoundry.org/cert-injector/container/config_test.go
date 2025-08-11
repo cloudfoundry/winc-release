@@ -1,0 +1,58 @@
+package container_test
+
+import (
+	"encoding/json"
+	"os"
+	"path/filepath"
+
+	"code.cloudfoundry.org/cert-injector/container"
+	. "github.com/onsi/ginkgo/v2"
+	. "github.com/onsi/gomega"
+	oci "github.com/opencontainers/runtime-spec/specs-go"
+)
+
+var _ = Describe("Config", func() {
+	var (
+		bundleDir     string
+		certDirectory string
+		grootOutput   string
+		path          string
+		err           error
+
+		conf container.Config
+	)
+	BeforeEach(func() {
+		bundleDir, err = os.MkdirTemp("", "cert-injector-config-test-*")
+		Expect(err).ToNot(HaveOccurred())
+		certDirectory = "some-directory-containing-certs"
+		grootOutput = `{"ociVersion": "2.2.2"}`
+		path = filepath.Join(bundleDir, "config.json")
+
+		conf = container.NewConfig()
+	})
+
+	AfterEach(func() {
+		Expect(os.RemoveAll(path)).NotTo(HaveOccurred())
+	})
+
+	It("the config.json contains a process spec to import the certificates, and bind-mounts the certificates into the container", func() {
+		err = conf.Write(bundleDir, grootOutput, certDirectory)
+		Expect(err).NotTo(HaveOccurred())
+
+		data, err := os.ReadFile(path)
+		Expect(err).NotTo(HaveOccurred())
+
+		cont := oci.Spec{}
+		json.Unmarshal(data, &cont)
+		Expect(cont.Version).To(Equal("2.2.2"))
+		Expect(cont.Process.Cwd).To(Equal("C:\\"))
+		Expect(cont.Process.Args).To(ConsistOf("powershell.exe", "-Command", container.ImportCertificatePs))
+	})
+
+	Context("when the groot output is invalid json", func() {
+		It("returns  helpful error message", func() {
+			err = conf.Write(bundleDir, "$$$", certDirectory)
+			Expect(err).To(MatchError("json unmarshal groot output: invalid character '$' looking for beginning of value"))
+		})
+	})
+})
