@@ -2,7 +2,3 @@
 	path = src/code.cloudfoundry.org/winc
 	url = https://github.com/cloudfoundry/winc
 	branch = main
-[submodule "src/code.cloudfoundry.org/certsplitter"]
-	path = src/code.cloudfoundry.org/certsplitter
-	url = https://github.com/cloudfoundry/certsplitter
-	branch = main
