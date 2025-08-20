@@ -3,20 +3,25 @@ trap { $host.SetShouldExit(1) }
 
 $BOSH_INSTALL_TARGET = Resolve-Path "${env:BOSH_INSTALL_TARGET}"
 
+# Create GOPATH
+New-Item -ItemType "directory" -Force src
+
+robocopy.exe /E "${PWD}" src /xd src
+if ($LASTEXITCODE -ge 8) {
+    Write-Error "robocopy.exe /E ${PWD} src /xd src"
+}
+
 . C:\var\vcap\packages\golang-*-windows\bosh\compile.ps1
 
-$pkg_name="certsplitter.exe"
-$pkg_path="./cmd/certsplitter"
-$go_mod_path="${PWD}\code.cloudfoundry.org\certsplitter"
+$pkg_name="certsplitter"
+$pkg_path="code.cloudfoundry.org/certsplitter/cmd/certsplitter"
 
-cd "$go_mod_path"
-
-# Create a go.mod file
-go mod init code.cloudfoundry.org/certsplitter
-
-go.exe build -buildvcs=false -o "${BOSH_INSTALL_TARGET}\${pkg_name}" "${pkg_path}"
+push-location src/code.cloudfoundry.org/modules
+go.exe build -buildvcs=false -o "${BOSH_INSTALL_TARGET}\${pkg_name}.exe" "${pkg_path}"
 if ($LASTEXITCODE -ne 0) {
     Write-Error "Error compiling: ${pkg_path}"
 }
+pop-location
 
 Exit 0
+
