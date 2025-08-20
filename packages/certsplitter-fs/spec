@@ -2,10 +2,10 @@
 name: certsplitter-fs
 
 dependencies:
-- golang-1.24-windows
+  - golang-1.24-windows
 
 files:
-  - code.cloudfoundry.org/certsplitter/go.mod
-  - code.cloudfoundry.org/certsplitter/go.sum
-  - code.cloudfoundry.org/certsplitter/vendor/modules.txt
-  - code.cloudfoundry.org/certsplitter/cmd/certsplitter/*.go # gosub
+  - code.cloudfoundry.org/modules/go.mod
+  - code.cloudfoundry.org/modules/go.sum
+  - code.cloudfoundry.org/modules/vendor/modules.txt
+  - code.cloudfoundry.org/modules/vendor/code.cloudfoundry.org/certsplitter/cmd/certsplitter/*.go # gosub
