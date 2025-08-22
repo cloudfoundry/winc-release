@@ -54,7 +54,7 @@ func testDNS(host string) {
 }
 
 func testTCP(addr string, port int) {
-	_, err := net.Dial("tcp", fmt.Sprintf("%s:%d", addr, port))
+	_, err := net.Dial("tcp", net.JoinHostPort(addr, strconv.Itoa(port)))
 	if err != nil {
 		fmt.Println(err.Error())
 		os.Exit(1)
