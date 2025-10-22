@@ -1,6 +1,6 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
-code.cloudfoundry.org/credhub-cli v0.0.0-20251014195659-0e45fa40da27 h1:IBIsfNjDTIGF2qm96c3qikni9Wuc//qQTyKobSQqOeE=
-code.cloudfoundry.org/credhub-cli v0.0.0-20251014195659-0e45fa40da27/go.mod h1:IrVzsWYqVqFEv7/PfyLEAdX6E5fDnof/YWvnri+9ebI=
+code.cloudfoundry.org/credhub-cli v0.0.0-20251020132013-870a4dda3a37 h1:iyVRSLTHRi8jqYZ9JA7mDYpXMqqzE7lP/HmcJq5bViw=
+code.cloudfoundry.org/credhub-cli v0.0.0-20251020132013-870a4dda3a37/go.mod h1:8ydmDnVA8v+ZCZyb466qMP6g9YQ7ZjP4PGGv2gORaf4=
 code.cloudfoundry.org/filelock v0.49.0 h1:rp1mttosupDBqMzgLQ+/s7g738wRtGrrjor8OK+ypwQ=
 code.cloudfoundry.org/filelock v0.49.0/go.mod h1:QiljNFxOpoV60UldHa1p8Br5j2Di8Cit/ur2Pp/eSHM=
 code.cloudfoundry.org/localip v0.54.0 h1:vnHcRoFbsl5DycQL8qKTZNj6OwEkx3oL9CLUdCXWh+U=
@@ -21,8 +21,8 @@ github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/cloudfoundry/go-socks5 v0.0.0-20250423223041-4ad5fea42851 h1:oy59UYcspoP44ggE8DM3kjxl1+sTFd802bbZlBBhBMk=
 github.com/cloudfoundry/go-socks5 v0.0.0-20250423223041-4ad5fea42851/go.mod h1:72EEm1oq5oXqGfu9XGtaRPWEcAFYd/P10cMNln0QhA8=
-github.com/cloudfoundry/socks5-proxy v0.2.156 h1:O0sqgbNlNzhUDU6B+Q1vAA0KdsHGViGYdKHSI1tYInc=
-github.com/cloudfoundry/socks5-proxy v0.2.156/go.mod h1:Blyn3pFyflE46w7mETBKe9CEkNvrTiNH8VItD8bRevU=
+github.com/cloudfoundry/socks5-proxy v0.2.157 h1:/6zGdttVfA1uKhR31APYha6FatINeDj2oRkf2XSBSX4=
+github.com/cloudfoundry/socks5-proxy v0.2.157/go.mod h1:owsGELXjFmfqFNYTFPnxloIM1Wqg7Uma2h0vpKtci0Q=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
 github.com/containerd/cgroups/v3 v3.0.5 h1:44na7Ud+VwyE7LIoJ8JTNQOa549a8543BmzaJHo6Bzo=
 github.com/containerd/cgroups/v3 v3.0.5/go.mod h1:SA5DLYnXO8pTGYiAHXz94qvLQTKfVM5GEVisn4jpins=
@@ -245,8 +245,8 @@ google.golang.org/appengine v1.4.0/go.mod h1:xpcJRLb0r/rnEns0DIKYYv+WjYCduHsrkT7
 google.golang.org/genproto v0.0.0-20180817151627-c66870c02cf8/go.mod h1:JiN7NxoALGmiZfu7CAH4rXhgtRTLTxftemlI0sWmxmc=
 google.golang.org/genproto v0.0.0-20190819201941-24fa4b261c55/go.mod h1:DMBHOl98Agz4BDEuKkezgsaosCRResVns1a3J2ZsMNc=
 google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013/go.mod h1:NbSheEEYHJ7i3ixzK3sjbqSGDJWnxyFXZblF3eUsNvo=
-google.golang.org/genproto/googleapis/rpc v0.0.0-20251014184007-4626949a642f h1:1FTH6cpXFsENbPR5Bu8NQddPSaUUE6NA2XdZdDSAJK4=
-google.golang.org/genproto/googleapis/rpc v0.0.0-20251014184007-4626949a642f/go.mod h1:7i2o+ce6H/6BluujYR+kqX3GKH+dChPTQU19wjRPiGk=
+google.golang.org/genproto/googleapis/rpc v0.0.0-20251020155222-88f65dc88635 h1:3uycTxukehWrxH4HtPRtn1PDABTU331ViDjyqrUbaog=
+google.golang.org/genproto/googleapis/rpc v0.0.0-20251020155222-88f65dc88635/go.mod h1:7i2o+ce6H/6BluujYR+kqX3GKH+dChPTQU19wjRPiGk=
 google.golang.org/grpc v1.19.0/go.mod h1:mqu4LbDTu4XGKhr4mRzUsmM4RtVoemTSY81AxZiDr8c=
 google.golang.org/grpc v1.23.0/go.mod h1:Y5yQAOtifL1yxbo5wqy6BxZv8vAUGQwXBOALyacEbxg=
 google.golang.org/grpc v1.25.1/go.mod h1:c3i+UQWmh7LiEpx4sFZnkU36qjEYZ0imhYfXVyQciAY=
