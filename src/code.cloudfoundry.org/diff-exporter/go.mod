@@ -7,12 +7,12 @@ require (
 	github.com/Microsoft/hcsshim v0.13.0
 	github.com/onsi/ginkgo/v2 v2.27.2
 	github.com/onsi/gomega v1.38.2
-	github.com/opencontainers/runtime-spec v1.2.1
+	github.com/opencontainers/runtime-spec v1.3.0
 )
 
 require (
 	github.com/Masterminds/semver/v3 v3.4.0 // indirect
-	github.com/containerd/cgroups/v3 v3.1.0 // indirect
+	github.com/containerd/cgroups/v3 v3.1.1 // indirect
 	github.com/containerd/errdefs v1.0.0 // indirect
 	github.com/containerd/errdefs/pkg v0.3.0 // indirect
 	github.com/containerd/typeurl/v2 v2.2.3 // indirect
@@ -32,7 +32,7 @@ require (
 	golang.org/x/sys v0.37.0 // indirect
 	golang.org/x/text v0.30.0 // indirect
 	golang.org/x/tools v0.38.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20251022142026-3a174f9686a8 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20251103181224-f26f9409b101 // indirect
 	google.golang.org/grpc v1.76.0 // indirect
 	google.golang.org/protobuf v1.36.10 // indirect
 )
