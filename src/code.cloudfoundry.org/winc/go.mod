@@ -3,7 +3,7 @@ module code.cloudfoundry.org/winc
 go 1.24.0
 
 require (
-	code.cloudfoundry.org/credhub-cli v0.0.0-20251027231142-f720bbd35b00
+	code.cloudfoundry.org/credhub-cli v0.0.0-20251104211411-cc4d0d0b0cb5
 	code.cloudfoundry.org/filelock v0.49.0
 	code.cloudfoundry.org/localip v0.55.0
 	github.com/Microsoft/hcsshim v0.13.0
@@ -14,7 +14,7 @@ require (
 	github.com/mitchellh/go-ps v1.0.0
 	github.com/onsi/ginkgo/v2 v2.27.2
 	github.com/onsi/gomega v1.38.2
-	github.com/opencontainers/runtime-spec v1.2.1
+	github.com/opencontainers/runtime-spec v1.3.0
 	github.com/opencontainers/runtime-tools v0.9.1-0.20221107090550-2e043c6bd626
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
@@ -29,8 +29,8 @@ require (
 	github.com/Microsoft/go-winio v0.6.2 // indirect
 	github.com/blang/semver/v4 v4.0.0 // indirect
 	github.com/cloudfoundry/go-socks5 v0.0.0-20250423223041-4ad5fea42851 // indirect
-	github.com/cloudfoundry/socks5-proxy v0.2.158 // indirect
-	github.com/containerd/cgroups/v3 v3.1.0 // indirect
+	github.com/cloudfoundry/socks5-proxy v0.2.159 // indirect
+	github.com/containerd/cgroups/v3 v3.1.1 // indirect
 	github.com/containerd/errdefs v1.0.0 // indirect
 	github.com/containerd/errdefs/pkg v0.3.0 // indirect
 	github.com/containerd/typeurl/v2 v2.2.3 // indirect
@@ -55,7 +55,7 @@ require (
 	golang.org/x/mod v0.29.0 // indirect
 	golang.org/x/net v0.46.0 // indirect
 	golang.org/x/tools v0.38.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20251022142026-3a174f9686a8 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20251103181224-f26f9409b101 // indirect
 	google.golang.org/grpc v1.76.0 // indirect
 	google.golang.org/protobuf v1.36.10 // indirect
 )
