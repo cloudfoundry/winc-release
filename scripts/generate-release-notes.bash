@@ -11,15 +11,17 @@ REPO_NAME=$(git_get_remote_name)
 REPO_PATH="${THIS_FILE_DIR}/../"
 unset THIS_FILE_DIR
 
-START_REF="${1}" # ex: "v0.0.7"
-END_REF="${2}" # ex: "v0.0.8"
+# ex. version_range="v0.343.0...v0.344.0"
+version_range="${1:?Please provide the start and end versions you want to generate release notes for './generate-release-notes.bash local_start_ref...local_end_ref' }"
+# ex. local_start_ref="v0.343.0"
+local_start_ref=$(get_start_ref_from_range "${version_range}")
+# ex. local_end_ref="v0.344.0"
+local_end_ref=$(get_end_ref_from_range "${version_range}")
 
-get_non_bot_commits "${START_REF}" "${END_REF}"
-echo ""
+display_non_bot_commits "${local_start_ref}" "${local_end_ref}"
 
 submodules=( 
   "cert-injector"
-  "certsplitter"
   "diff-exporter"
   "groot-windows"
   "nstar"
@@ -27,8 +29,7 @@ submodules=(
   )
 
 for s in "${submodules[@]}"; do
-  display_go_mod_diff "${START_REF}" "${END_REF}" "src/code.cloudfoundry.org/${s}/go.mod" "${s}"
-echo ""
+  display_go_mod_diff "${local_start_ref}" "${local_end_ref}" "src/code.cloudfoundry.org/${s}/go.mod" "${s}"
 done
 
-display_blob_change_info "${START_REF}" "${END_REF}" config/blobs.yml
+display_blob_change_info "${local_start_ref}" "${local_end_ref}" config/blobs.yml
