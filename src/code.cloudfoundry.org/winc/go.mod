@@ -3,7 +3,7 @@ module code.cloudfoundry.org/winc
 go 1.24.0
 
 require (
-	code.cloudfoundry.org/credhub-cli v0.0.0-20251125211615-1945033c8416
+	code.cloudfoundry.org/credhub-cli v0.0.0-20251202215125-29206b8257c2
 	code.cloudfoundry.org/filelock v0.52.0
 	code.cloudfoundry.org/localip v0.57.0
 	github.com/Microsoft/hcsshim v0.13.0
@@ -31,7 +31,7 @@ require (
 	github.com/blang/semver/v4 v4.0.0 // indirect
 	github.com/cloudfoundry/go-socks5 v0.0.0-20250423223041-4ad5fea42851 // indirect
 	github.com/cloudfoundry/socks5-proxy v0.2.162 // indirect
-	github.com/containerd/cgroups/v3 v3.1.1 // indirect
+	github.com/containerd/cgroups/v3 v3.1.2 // indirect
 	github.com/containerd/errdefs v1.0.0 // indirect
 	github.com/containerd/errdefs/pkg v0.3.0 // indirect
 	github.com/containerd/typeurl/v2 v2.2.3 // indirect
@@ -44,7 +44,7 @@ require (
 	github.com/google/go-cmp v0.7.0 // indirect
 	github.com/google/pprof v0.0.0-20251114195745-4902fdda35c8 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
-	github.com/hashicorp/go-version v1.7.0 // indirect
+	github.com/hashicorp/go-version v1.8.0 // indirect
 	github.com/opencontainers/selinux v1.13.1 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
 	github.com/syndtr/gocapability v0.0.0-20200815063812-42c35b437635 // indirect
@@ -57,7 +57,7 @@ require (
 	golang.org/x/mod v0.30.0 // indirect
 	golang.org/x/net v0.47.0 // indirect
 	golang.org/x/tools v0.39.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20251124214823-79d6a2a48846 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20251202230838-ff82c1b0f217 // indirect
 	google.golang.org/grpc v1.77.0 // indirect
 	google.golang.org/protobuf v1.36.10 // indirect
 )

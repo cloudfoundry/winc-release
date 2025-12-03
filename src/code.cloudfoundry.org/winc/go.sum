@@ -1,6 +1,6 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
-code.cloudfoundry.org/credhub-cli v0.0.0-20251125211615-1945033c8416 h1:giK0EtkYY3ZbBxr4Aep6hUyTOyfZ+gTcO0D35qseimM=
-code.cloudfoundry.org/credhub-cli v0.0.0-20251125211615-1945033c8416/go.mod h1:KSIHzv43JPkMZRCCcQxEs9xHa080e2tp6srFzAlCe2I=
+code.cloudfoundry.org/credhub-cli v0.0.0-20251202215125-29206b8257c2 h1:ribzJQi5VK+rizMtwgnJpVLaauNoWLr7MMqoKB0rQ/c=
+code.cloudfoundry.org/credhub-cli v0.0.0-20251202215125-29206b8257c2/go.mod h1:goH/8IwZXArTMXxFUm7nVqZg9juhengqwojHziLc0x0=
 code.cloudfoundry.org/filelock v0.52.0 h1:lBEz0DgtTyXvCiS+fLlTRXpGBN3XI15GVulAl3aDzmI=
 code.cloudfoundry.org/filelock v0.52.0/go.mod h1:8vlQ6SSmJes6GsCnepkL2hMS2zOZugwFZ+pYEFwnLmI=
 code.cloudfoundry.org/localip v0.57.0 h1:s1Rdrwfd6nf2wtXTBFliMW0y76FkHQsIrAOh00H+tOI=
@@ -26,8 +26,8 @@ github.com/cloudfoundry/go-socks5 v0.0.0-20250423223041-4ad5fea42851/go.mod h1:7
 github.com/cloudfoundry/socks5-proxy v0.2.162 h1:kjgrHmdTT/DdWiHskTczv11d1p8e36yHMMiS+gVRDak=
 github.com/cloudfoundry/socks5-proxy v0.2.162/go.mod h1:N/U9BOgG5UAdhlRX1gCVRFvGVC5fFmINwmFWvBxBlEI=
 github.com/cncf/udpa/go v0.0.0-20191209042840-269d4d468f6f/go.mod h1:M8M6+tZqaGXZJjfX53e64911xZQV5JYwmTeXPW+k8Sc=
-github.com/containerd/cgroups/v3 v3.1.1 h1:ASZmQGfOHbRj43/1aMn5QcWIsv0R/AuHHDNCguRY0p0=
-github.com/containerd/cgroups/v3 v3.1.1/go.mod h1:PKZ2AcWmSBsY/tJUVhtS/rluX0b1uq1GmPO1ElCmbOw=
+github.com/containerd/cgroups/v3 v3.1.2 h1:OSosXMtkhI6Qove637tg1XgK4q+DhR0mX8Wi8EhrHa4=
+github.com/containerd/cgroups/v3 v3.1.2/go.mod h1:PKZ2AcWmSBsY/tJUVhtS/rluX0b1uq1GmPO1ElCmbOw=
 github.com/containerd/errdefs v1.0.0 h1:tg5yIfIlQIrxYtu9ajqY42W3lpS19XqdxRQeEwYG8PI=
 github.com/containerd/errdefs v1.0.0/go.mod h1:+YBYIdtsnF4Iw6nWZhJcqGSg/dwvV7tyJ/kCkyJ2k+M=
 github.com/containerd/errdefs/pkg v0.3.0 h1:9IKJ06FvyNlexW690DXuQNx2KA2cUJXx151Xdx3ZPPE=
@@ -92,8 +92,8 @@ github.com/hashicorp/errwrap v1.1.0 h1:OxrOeh75EUXMY8TBjag2fzXGZ40LB6IKw45YeGUDY
 github.com/hashicorp/errwrap v1.1.0/go.mod h1:YH+1FKiLXxHSkmPseP+kNlulaMuP3n2brvKWEqk/Jc4=
 github.com/hashicorp/go-multierror v1.1.1 h1:H5DkEtf6CXdFp0N0Em5UCwQpXMWke8IA0+lD48awMYo=
 github.com/hashicorp/go-multierror v1.1.1/go.mod h1:iw975J/qwKPdAO1clOe2L8331t/9/fmwbPZ6JB6eMoM=
-github.com/hashicorp/go-version v1.7.0 h1:5tqGy27NaOTB8yJKUZELlFAS/LTKJkrmONwQKeRZfjY=
-github.com/hashicorp/go-version v1.7.0/go.mod h1:fltr4n8CU8Ke44wwGCBoEymUuxUHl09ZGVZPK5anwXA=
+github.com/hashicorp/go-version v1.8.0 h1:KAkNb1HAiZd1ukkxDFGmokVZe1Xy9HG6NUp+bPle2i4=
+github.com/hashicorp/go-version v1.8.0/go.mod h1:fltr4n8CU8Ke44wwGCBoEymUuxUHl09ZGVZPK5anwXA=
 github.com/hectane/go-acl v0.0.0-20230122075934-ca0b05cb1adb h1:PGufWXXDq9yaev6xX1YQauaO1MV90e6Mpoq1I7Lz/VM=
 github.com/hectane/go-acl v0.0.0-20230122075934-ca0b05cb1adb/go.mod h1:QiyDdbZLaJ/mZP4Zwc9g2QsfaEA4o7XvvgZegSci5/E=
 github.com/joshdk/go-junit v1.0.0 h1:S86cUKIdwBHWwA6xCmFlf3RTLfVXYQfvanM5Uh+K6GE=
@@ -246,8 +246,8 @@ google.golang.org/appengine v1.4.0/go.mod h1:xpcJRLb0r/rnEns0DIKYYv+WjYCduHsrkT7
 google.golang.org/genproto v0.0.0-20180817151627-c66870c02cf8/go.mod h1:JiN7NxoALGmiZfu7CAH4rXhgtRTLTxftemlI0sWmxmc=
 google.golang.org/genproto v0.0.0-20190819201941-24fa4b261c55/go.mod h1:DMBHOl98Agz4BDEuKkezgsaosCRResVns1a3J2ZsMNc=
 google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013/go.mod h1:NbSheEEYHJ7i3ixzK3sjbqSGDJWnxyFXZblF3eUsNvo=
-google.golang.org/genproto/googleapis/rpc v0.0.0-20251124214823-79d6a2a48846 h1:Wgl1rcDNThT+Zn47YyCXOXyX/COgMTIdhJ717F0l4xk=
-google.golang.org/genproto/googleapis/rpc v0.0.0-20251124214823-79d6a2a48846/go.mod h1:7i2o+ce6H/6BluujYR+kqX3GKH+dChPTQU19wjRPiGk=
+google.golang.org/genproto/googleapis/rpc v0.0.0-20251202230838-ff82c1b0f217 h1:gRkg/vSppuSQoDjxyiGfN4Upv/h/DQmIR10ZU8dh4Ww=
+google.golang.org/genproto/googleapis/rpc v0.0.0-20251202230838-ff82c1b0f217/go.mod h1:7i2o+ce6H/6BluujYR+kqX3GKH+dChPTQU19wjRPiGk=
 google.golang.org/grpc v1.19.0/go.mod h1:mqu4LbDTu4XGKhr4mRzUsmM4RtVoemTSY81AxZiDr8c=
 google.golang.org/grpc v1.23.0/go.mod h1:Y5yQAOtifL1yxbo5wqy6BxZv8vAUGQwXBOALyacEbxg=
 google.golang.org/grpc v1.25.1/go.mod h1:c3i+UQWmh7LiEpx4sFZnkU36qjEYZ0imhYfXVyQciAY=

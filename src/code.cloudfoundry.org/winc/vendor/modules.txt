@@ -1,4 +1,4 @@
-# code.cloudfoundry.org/credhub-cli v0.0.0-20251125211615-1945033c8416
+# code.cloudfoundry.org/credhub-cli v0.0.0-20251202215125-29206b8257c2
 ## explicit; go 1.24.0
 code.cloudfoundry.org/credhub-cli/credhub
 code.cloudfoundry.org/credhub-cli/credhub/auth
@@ -71,7 +71,7 @@ github.com/cloudfoundry/go-socks5
 # github.com/cloudfoundry/socks5-proxy v0.2.162
 ## explicit; go 1.24.0
 github.com/cloudfoundry/socks5-proxy
-# github.com/containerd/cgroups/v3 v3.1.1
+# github.com/containerd/cgroups/v3 v3.1.2
 ## explicit; go 1.22.0
 github.com/containerd/cgroups/v3/cgroup1/stats
 # github.com/containerd/errdefs v1.0.0
@@ -130,7 +130,7 @@ github.com/hashicorp/errwrap
 # github.com/hashicorp/go-multierror v1.1.1
 ## explicit; go 1.13
 github.com/hashicorp/go-multierror
-# github.com/hashicorp/go-version v1.7.0
+# github.com/hashicorp/go-version v1.8.0
 ## explicit
 github.com/hashicorp/go-version
 # github.com/hectane/go-acl v0.0.0-20230122075934-ca0b05cb1adb
@@ -308,7 +308,7 @@ golang.org/x/tools/internal/stdlib
 golang.org/x/tools/internal/typeparams
 golang.org/x/tools/internal/typesinternal
 golang.org/x/tools/internal/versions
-# google.golang.org/genproto/googleapis/rpc v0.0.0-20251124214823-79d6a2a48846
+# google.golang.org/genproto/googleapis/rpc v0.0.0-20251202230838-ff82c1b0f217
 ## explicit; go 1.24.0
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.77.0
