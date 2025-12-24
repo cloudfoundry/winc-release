@@ -68,7 +68,7 @@ github.com/blang/semver/v4
 # github.com/cloudfoundry/go-socks5 v0.0.0-20250423223041-4ad5fea42851
 ## explicit; go 1.21.0
 github.com/cloudfoundry/go-socks5
-# github.com/cloudfoundry/socks5-proxy v0.2.162
+# github.com/cloudfoundry/socks5-proxy v0.2.163
 ## explicit; go 1.24.0
 github.com/cloudfoundry/socks5-proxy
 # github.com/containerd/cgroups/v3 v3.1.2
@@ -308,10 +308,10 @@ golang.org/x/tools/internal/stdlib
 golang.org/x/tools/internal/typeparams
 golang.org/x/tools/internal/typesinternal
 golang.org/x/tools/internal/versions
-# google.golang.org/genproto/googleapis/rpc v0.0.0-20251213004720-97cd9d5aeac2
+# google.golang.org/genproto/googleapis/rpc v0.0.0-20251222181119-0a764e51fe1b
 ## explicit; go 1.24.0
 google.golang.org/genproto/googleapis/rpc/status
-# google.golang.org/grpc v1.77.0
+# google.golang.org/grpc v1.78.0
 ## explicit; go 1.24.0
 google.golang.org/grpc/codes
 google.golang.org/grpc/connectivity
