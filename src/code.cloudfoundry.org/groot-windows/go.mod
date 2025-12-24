@@ -6,7 +6,7 @@ replace github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.8.7
 
 require (
 	code.cloudfoundry.org/filelock v0.54.0
-	code.cloudfoundry.org/groot v0.91.0
+	code.cloudfoundry.org/groot v0.92.0
 	code.cloudfoundry.org/hydrator v0.75.0
 	code.cloudfoundry.org/lager/v3 v3.56.0
 	github.com/Microsoft/go-winio v0.6.2
@@ -20,7 +20,7 @@ require (
 )
 
 require (
-	github.com/BurntSushi/toml v1.5.0 // indirect
+	github.com/BurntSushi/toml v1.6.0 // indirect
 	github.com/Masterminds/semver/v3 v3.4.0 // indirect
 	github.com/containerd/cgroups v1.1.0 // indirect
 	github.com/containers/image/v5 v5.36.2 // indirect
