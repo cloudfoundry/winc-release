@@ -1,4 +1,4 @@
-# code.cloudfoundry.org/credhub-cli v0.0.0-20251215140710-93274ab0250e
+# code.cloudfoundry.org/credhub-cli v0.0.0-20260120220531-8a8e945863b2
 ## explicit; go 1.24.9
 code.cloudfoundry.org/credhub-cli/credhub
 code.cloudfoundry.org/credhub-cli/credhub/auth
@@ -12,7 +12,7 @@ code.cloudfoundry.org/credhub-cli/credhub/server
 ## explicit; go 1.24.9
 code.cloudfoundry.org/filelock
 code.cloudfoundry.org/filelock/fakes
-# code.cloudfoundry.org/localip v0.60.0
+# code.cloudfoundry.org/localip v0.61.0
 ## explicit; go 1.24.9
 code.cloudfoundry.org/localip
 # cyphar.com/go-pathrs v0.2.2
@@ -68,7 +68,7 @@ github.com/blang/semver/v4
 # github.com/cloudfoundry/go-socks5 v0.0.0-20250423223041-4ad5fea42851
 ## explicit; go 1.21.0
 github.com/cloudfoundry/go-socks5
-# github.com/cloudfoundry/socks5-proxy v0.2.164
+# github.com/cloudfoundry/socks5-proxy v0.2.165
 ## explicit; go 1.24.0
 github.com/cloudfoundry/socks5-proxy
 # github.com/containerd/cgroups/v3 v3.1.2
@@ -121,7 +121,7 @@ github.com/google/go-cmp/cmp/internal/diff
 github.com/google/go-cmp/cmp/internal/flags
 github.com/google/go-cmp/cmp/internal/function
 github.com/google/go-cmp/cmp/internal/value
-# github.com/google/pprof v0.0.0-20260111202518-71be6bfdd440
+# github.com/google/pprof v0.0.0-20260115054156-294ebfa9ad83
 ## explicit; go 1.24.0
 github.com/google/pprof/profile
 # github.com/hashicorp/errwrap v1.1.0
@@ -205,8 +205,8 @@ github.com/pkg/errors
 # github.com/russross/blackfriday/v2 v2.1.0
 ## explicit
 github.com/russross/blackfriday/v2
-# github.com/sirupsen/logrus v1.9.3
-## explicit; go 1.13
+# github.com/sirupsen/logrus v1.9.4
+## explicit; go 1.17
 github.com/sirupsen/logrus
 # github.com/syndtr/gocapability v0.0.0-20200815063812-42c35b437635
 ## explicit
@@ -308,7 +308,7 @@ golang.org/x/tools/internal/stdlib
 golang.org/x/tools/internal/typeparams
 golang.org/x/tools/internal/typesinternal
 golang.org/x/tools/internal/versions
-# google.golang.org/genproto/googleapis/rpc v0.0.0-20260112192933-99fd39fd28a9
+# google.golang.org/genproto/googleapis/rpc v0.0.0-20260120221211-b8f7ae30c516
 ## explicit; go 1.24.0
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.78.0
