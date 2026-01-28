@@ -1,12 +1,12 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
-code.cloudfoundry.org/archiver v0.59.0 h1:C9PoZvFVHI5FN1igRa5sv+A30L7frrS26I34MxysSdQ=
-code.cloudfoundry.org/archiver v0.59.0/go.mod h1:7qUhhIvZF0JvkI82GKqQvlaFoK1Gm7n0md/3xW9AlCw=
+code.cloudfoundry.org/archiver v0.60.0 h1:7Viz7nuK1Yea9s+Oi8Au2K3DucPBvgEFq7qwq6tIadc=
+code.cloudfoundry.org/archiver v0.60.0/go.mod h1:FbkDhkLHqltJwAtN5LQNf2FNXozVDG1TVIG+dCpJz1w=
 code.cloudfoundry.org/filelock v0.56.0 h1:4ksjCpd3kTjz4G1R0fapLLgC5ZIVHkP62+D/y5RT+wU=
 code.cloudfoundry.org/filelock v0.56.0/go.mod h1:sAAWqxFDpVYEC0SlBEvysy4MC4SDomBq8A6OwDRFL/0=
 code.cloudfoundry.org/groot v0.95.0 h1:WTpFcGFvAy1E0661qMLPzQVkqd6bpT+C5QiS31FSXXA=
 code.cloudfoundry.org/groot v0.95.0/go.mod h1:jfgmVQdQb6/9yCZEftuPcHwGoxZvwWQNVi691Wau2Yo=
-code.cloudfoundry.org/hydrator v0.78.0 h1:KBDPZL3zSK/+PrNLwnQrR41Hmg/QOvS505vYT8K0yA8=
-code.cloudfoundry.org/hydrator v0.78.0/go.mod h1:lyAH1mvuYyqL8YKVc0j+rMHe+7RG6r2Xndgw4duH4yY=
+code.cloudfoundry.org/hydrator v0.79.0 h1:sLPu4jNtEqTm6xArs2ToHf/guVrKGO4fM1YK3Ge0X+k=
+code.cloudfoundry.org/hydrator v0.79.0/go.mod h1:FflRkKILbHJ9Qlz0wXMqUKkGpY3G5nXNAP81+RXBves=
 code.cloudfoundry.org/lager/v3 v3.59.0 h1:3yRkiLLlrEnzODat1JfTqOEsoRcUO77wgz7yDEfbiRI=
 code.cloudfoundry.org/lager/v3 v3.59.0/go.mod h1:g05wIHDapO43fHCabGb4h0+4+QlO4tYlDa4xdToxqU4=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
@@ -138,8 +138,8 @@ github.com/json-iterator/go v1.1.12/go.mod h1:e30LSqwooZae/UwlEbR2852Gd8hjQvJoHm
 github.com/kisielk/errcheck v1.1.0/go.mod h1:EZBBE59ingxPouuu3KfxchcWSUPOHkagtvWXihfKN4Q=
 github.com/kisielk/errcheck v1.5.0/go.mod h1:pFxgyoBC7bSaBwPgfKdkLd5X25qrDl4LWUI2bnpBCr8=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
-github.com/klauspost/compress v1.18.2 h1:iiPHWW0YrcFgpBYhsA6D1+fqHssJscY/Tm/y2Uqnapk=
-github.com/klauspost/compress v1.18.2/go.mod h1:R0h/fSBs8DE4ENlcrlib3PsXS61voFxhIs2DeRhCvJ4=
+github.com/klauspost/compress v1.18.3 h1:9PJRvfbmTabkOX8moIpXPbMMbYN60bWImDDU7L+/6zw=
+github.com/klauspost/compress v1.18.3/go.mod h1:R0h/fSBs8DE4ENlcrlib3PsXS61voFxhIs2DeRhCvJ4=
 github.com/klauspost/pgzip v1.2.6 h1:8RXeL5crjEUFnR2/Sn6GJNWtSQ3Dk8pq4CL3jvdDyjU=
 github.com/klauspost/pgzip v1.2.6/go.mod h1:Ch1tH69qFZu15pkjo5kYi6mth2Zzwzt50oCQKQE9RUs=
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
