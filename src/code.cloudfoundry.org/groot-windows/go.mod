@@ -1,13 +1,13 @@
 module code.cloudfoundry.org/groot-windows
 
-go 1.24.9
+go 1.25.0
 
 replace github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.8.7
 
 require (
-	code.cloudfoundry.org/filelock v0.57.0
-	code.cloudfoundry.org/groot v0.97.0
-	code.cloudfoundry.org/hydrator v0.80.0
+	code.cloudfoundry.org/filelock v0.58.0
+	code.cloudfoundry.org/groot v0.98.0
+	code.cloudfoundry.org/hydrator v0.82.0
 	code.cloudfoundry.org/lager/v3 v3.61.0
 	github.com/Microsoft/go-winio v0.6.2
 	github.com/Microsoft/hcsshim v0.13.0

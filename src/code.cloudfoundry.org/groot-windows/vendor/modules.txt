@@ -1,7 +1,7 @@
-# code.cloudfoundry.org/filelock v0.57.0
+# code.cloudfoundry.org/filelock v0.58.0
 ## explicit; go 1.24.9
 code.cloudfoundry.org/filelock
-# code.cloudfoundry.org/groot v0.97.0
+# code.cloudfoundry.org/groot v0.98.0
 ## explicit; go 1.24.9
 code.cloudfoundry.org/groot
 code.cloudfoundry.org/groot/fetcher/filefetcher
@@ -9,8 +9,8 @@ code.cloudfoundry.org/groot/fetcher/layerfetcher
 code.cloudfoundry.org/groot/fetcher/layerfetcher/source
 code.cloudfoundry.org/groot/imagepuller
 code.cloudfoundry.org/groot/imagepuller/ondemand
-# code.cloudfoundry.org/hydrator v0.80.0
-## explicit; go 1.24.9
+# code.cloudfoundry.org/hydrator v0.82.0
+## explicit; go 1.25.0
 code.cloudfoundry.org/hydrator/compress
 code.cloudfoundry.org/hydrator/downloader
 code.cloudfoundry.org/hydrator/imagefetcher
