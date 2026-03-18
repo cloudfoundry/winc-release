@@ -8,7 +8,7 @@ require (
 	code.cloudfoundry.org/filelock v0.59.0
 	code.cloudfoundry.org/groot v0.99.0
 	code.cloudfoundry.org/hydrator v0.83.0
-	code.cloudfoundry.org/lager/v3 v3.63.0
+	code.cloudfoundry.org/lager/v3 v3.64.0
 	github.com/Microsoft/go-winio v0.6.2
 	github.com/Microsoft/hcsshim v0.13.0
 	github.com/onsi/ginkgo/v2 v2.28.1
@@ -51,11 +51,11 @@ require (
 	github.com/sirupsen/logrus v1.9.4 // indirect
 	go.opencensus.io v0.24.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
-	golang.org/x/mod v0.33.0 // indirect
-	golang.org/x/net v0.51.0 // indirect
+	golang.org/x/mod v0.34.0 // indirect
+	golang.org/x/net v0.52.0 // indirect
 	golang.org/x/sync v0.20.0 // indirect
-	golang.org/x/text v0.34.0 // indirect
-	golang.org/x/tools v0.42.0 // indirect
+	golang.org/x/text v0.35.0 // indirect
+	golang.org/x/tools v0.43.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
