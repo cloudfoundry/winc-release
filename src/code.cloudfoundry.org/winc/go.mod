@@ -3,8 +3,8 @@ module code.cloudfoundry.org/winc
 go 1.25.7
 
 require (
-	code.cloudfoundry.org/credhub-cli v0.0.0-20260316130226-db948d6c5f1c
-	code.cloudfoundry.org/filelock v0.59.0
+	code.cloudfoundry.org/credhub-cli v0.0.0-20260323130242-4632577e239e
+	code.cloudfoundry.org/filelock v0.60.0
 	code.cloudfoundry.org/localip v0.66.0
 	github.com/Microsoft/hcsshim v0.13.0
 	github.com/blang/semver v3.5.1+incompatible
@@ -57,7 +57,7 @@ require (
 	golang.org/x/mod v0.34.0 // indirect
 	golang.org/x/net v0.52.0 // indirect
 	golang.org/x/tools v0.43.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260316180232-0b37fe3546d5 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260319201613-d00831a3d3e7 // indirect
 	google.golang.org/grpc v1.79.3 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
