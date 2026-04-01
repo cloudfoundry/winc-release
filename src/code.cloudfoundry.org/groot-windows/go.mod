@@ -5,12 +5,12 @@ go 1.25.7
 replace github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.8.7
 
 require (
-	code.cloudfoundry.org/filelock v0.60.0
+	code.cloudfoundry.org/filelock v0.61.0
 	code.cloudfoundry.org/groot v0.100.0
 	code.cloudfoundry.org/hydrator v0.84.0
 	code.cloudfoundry.org/lager/v3 v3.64.0
 	github.com/Microsoft/go-winio v0.6.2
-	github.com/Microsoft/hcsshim v0.13.0
+	github.com/Microsoft/hcsshim v0.14.0
 	github.com/onsi/ginkgo/v2 v2.28.1
 	github.com/onsi/gomega v1.39.1
 	github.com/opencontainers/image-spec v1.1.1
