@@ -1,4 +1,4 @@
-# code.cloudfoundry.org/credhub-cli v0.0.0-20260420130056-7d96fd093179
+# code.cloudfoundry.org/credhub-cli v0.0.0-20260427130137-96647328890b
 ## explicit; go 1.25.7
 code.cloudfoundry.org/credhub-cli/credhub
 code.cloudfoundry.org/credhub-cli/credhub/auth
@@ -8,11 +8,11 @@ code.cloudfoundry.org/credhub-cli/credhub/credentials/generate
 code.cloudfoundry.org/credhub-cli/credhub/credentials/values
 code.cloudfoundry.org/credhub-cli/credhub/permissions
 code.cloudfoundry.org/credhub-cli/credhub/server
-# code.cloudfoundry.org/filelock v0.63.0
+# code.cloudfoundry.org/filelock v0.64.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/filelock
 code.cloudfoundry.org/filelock/fakes
-# code.cloudfoundry.org/localip v0.68.0
+# code.cloudfoundry.org/localip v0.69.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/localip
 # cyphar.com/go-pathrs v0.2.4
@@ -143,8 +143,8 @@ github.com/miekg/dns
 # github.com/mitchellh/go-ps v1.0.0
 ## explicit; go 1.13
 github.com/mitchellh/go-ps
-# github.com/onsi/ginkgo/v2 v2.28.1
-## explicit; go 1.24.0
+# github.com/onsi/ginkgo/v2 v2.28.3
+## explicit; go 1.25.0
 github.com/onsi/ginkgo/v2
 github.com/onsi/ginkgo/v2/config
 github.com/onsi/ginkgo/v2/formatter
@@ -167,7 +167,7 @@ github.com/onsi/ginkgo/v2/internal/reporters
 github.com/onsi/ginkgo/v2/internal/testingtproxy
 github.com/onsi/ginkgo/v2/reporters
 github.com/onsi/ginkgo/v2/types
-# github.com/onsi/gomega v1.39.1
+# github.com/onsi/gomega v1.40.0
 ## explicit; go 1.24.0
 github.com/onsi/gomega
 github.com/onsi/gomega/format
@@ -308,7 +308,7 @@ golang.org/x/tools/internal/stdlib
 golang.org/x/tools/internal/typeparams
 golang.org/x/tools/internal/typesinternal
 golang.org/x/tools/internal/versions
-# google.golang.org/genproto/googleapis/rpc v0.0.0-20260420184626-e10c466a9529
+# google.golang.org/genproto/googleapis/rpc v0.0.0-20260427160629-7cedc36a6bc4
 ## explicit; go 1.25.0
 google.golang.org/genproto/googleapis/rpc/status
 # google.golang.org/grpc v1.80.0

@@ -3,17 +3,17 @@ module code.cloudfoundry.org/winc
 go 1.25.7
 
 require (
-	code.cloudfoundry.org/credhub-cli v0.0.0-20260420130056-7d96fd093179
-	code.cloudfoundry.org/filelock v0.63.0
-	code.cloudfoundry.org/localip v0.68.0
+	code.cloudfoundry.org/credhub-cli v0.0.0-20260427130137-96647328890b
+	code.cloudfoundry.org/filelock v0.64.0
+	code.cloudfoundry.org/localip v0.69.0
 	github.com/Microsoft/hcsshim v0.14.1
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/hectane/go-acl v0.0.0-20230122075934-ca0b05cb1adb
 	github.com/miekg/dns v1.1.72
 	github.com/mitchellh/go-ps v1.0.0
-	github.com/onsi/ginkgo/v2 v2.28.1
-	github.com/onsi/gomega v1.39.1
+	github.com/onsi/ginkgo/v2 v2.28.3
+	github.com/onsi/gomega v1.40.0
 	github.com/opencontainers/runtime-spec v1.3.0
 	github.com/opencontainers/runtime-tools v0.9.1-0.20221107090550-2e043c6bd626
 	github.com/pkg/errors v0.9.1
@@ -57,7 +57,7 @@ require (
 	golang.org/x/mod v0.35.0 // indirect
 	golang.org/x/net v0.53.0 // indirect
 	golang.org/x/tools v0.44.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260420184626-e10c466a9529 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260427160629-7cedc36a6bc4 // indirect
 	google.golang.org/grpc v1.80.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
