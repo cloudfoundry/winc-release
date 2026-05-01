@@ -19,8 +19,8 @@ reg.exe import $ccgPackagePath\EventLog.reg
 Write-Output "Register the plugin's GUID with CCG" | timestamp
 & "$ccgPackagePath\RegisterPluginWithCCG.ps1"
 
-Write-Output "Change permissions to grant everyone access to dll" | timestamp
-cmd.exe /C "icacls $ccgPackagePath\CfCcgPlugin.dll /grant Everyone:(F)"
+Write-Output "Change permissions to grant LocalService and NetworkService access to dll" | timestamp
+cmd.exe /C "icacls $ccgPackagePath\CfCcgPlugin.dll /grant `"NT AUTHORITY\LocalService`":(RX) /grant `"NT AUTHORITY\NETWORK SERVICE`":(RX)"
 
 Write-Output "Register plugin with the .net framework" | timestamp
 C:\Windows\Microsoft.NET\Framework64\v4.0.30319\RegAsm.exe /codebase /tlb $ccgPackagePath\CfCcgPlugin.dll

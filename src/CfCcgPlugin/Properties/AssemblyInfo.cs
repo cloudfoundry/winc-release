@@ -16,9 +16,11 @@ using System.Runtime.InteropServices;
 
 [assembly: ApplicationActivation(ActivationOption.Server)]
 [assembly: ApplicationAccessControl(
-    AccessChecksLevel = AccessChecksLevelOption.Application,
-    Authentication = AuthenticationOption.None,
-    Value = false)]
+    true,
+    AccessChecksLevel = AccessChecksLevelOption.ApplicationComponent,
+    Authentication = AuthenticationOption.Packet)]
+[assembly: SecurityRole("SYSTEM")]
+[assembly: SecurityRole("CCG")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
