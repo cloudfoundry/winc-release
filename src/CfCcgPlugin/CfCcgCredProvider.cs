@@ -20,6 +20,8 @@ namespace CfCcgPlugin
     [Guid("8019A64C-3F4E-4DE3-AD2B-9A544290E2C3")]
     [ProgId("CfCcgCredProvider")]
     [ComVisible(true)]
+    [SecurityRole("SYSTEM")]
+    [SecurityRole("CCG")]
     public class CfCcgCredProvider : ServicedComponent, ICcgDomainAuthCredentials
     {
         public CfCcgCredProvider()
