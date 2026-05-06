@@ -5,10 +5,10 @@ go 1.25.7
 replace github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.8.7
 
 require (
-	code.cloudfoundry.org/filelock v0.64.0
-	code.cloudfoundry.org/groot v0.105.0
-	code.cloudfoundry.org/hydrator v0.89.0
-	code.cloudfoundry.org/lager/v3 v3.67.0
+	code.cloudfoundry.org/filelock v0.65.0
+	code.cloudfoundry.org/groot v0.106.0
+	code.cloudfoundry.org/hydrator v0.90.0
+	code.cloudfoundry.org/lager/v3 v3.68.0
 	github.com/Microsoft/go-winio v0.6.2
 	github.com/Microsoft/hcsshim v0.14.1
 	github.com/onsi/ginkgo/v2 v2.28.3
@@ -21,7 +21,7 @@ require (
 
 require (
 	github.com/BurntSushi/toml v1.6.0 // indirect
-	github.com/Masterminds/semver/v3 v3.4.0 // indirect
+	github.com/Masterminds/semver/v3 v3.5.0 // indirect
 	github.com/containerd/cgroups v1.1.0 // indirect
 	github.com/containers/image/v5 v5.36.2 // indirect
 	github.com/containers/libtrust v0.0.0-20230121012942-c1716e8a8d01 // indirect
