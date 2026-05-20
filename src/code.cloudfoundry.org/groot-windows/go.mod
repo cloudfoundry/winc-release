@@ -8,11 +8,11 @@ require (
 	code.cloudfoundry.org/filelock v0.66.0
 	code.cloudfoundry.org/groot v0.107.0
 	code.cloudfoundry.org/hydrator v0.91.0
-	code.cloudfoundry.org/lager/v3 v3.69.0
+	code.cloudfoundry.org/lager/v3 v3.70.0
 	github.com/Microsoft/go-winio v0.6.2
 	github.com/Microsoft/hcsshim v0.14.1
-	github.com/onsi/ginkgo/v2 v2.28.3
-	github.com/onsi/gomega v1.40.0
+	github.com/onsi/ginkgo/v2 v2.29.0
+	github.com/onsi/gomega v1.41.0
 	github.com/opencontainers/image-spec v1.1.1
 	github.com/opencontainers/runtime-spec v1.3.0
 	github.com/urfave/cli v1.22.17
