@@ -8,7 +8,7 @@ require (
 	code.cloudfoundry.org/filelock v0.66.0
 	code.cloudfoundry.org/groot v0.107.0
 	code.cloudfoundry.org/hydrator v0.91.0
-	code.cloudfoundry.org/lager/v3 v3.70.0
+	code.cloudfoundry.org/lager/v3 v3.71.0
 	github.com/Microsoft/go-winio v0.6.2
 	github.com/Microsoft/hcsshim v0.14.1
 	github.com/onsi/ginkgo/v2 v2.29.0
@@ -16,7 +16,7 @@ require (
 	github.com/opencontainers/image-spec v1.1.1
 	github.com/opencontainers/runtime-spec v1.3.0
 	github.com/urfave/cli v1.22.17
-	golang.org/x/sys v0.44.0
+	golang.org/x/sys v0.45.0
 )
 
 require (
@@ -52,7 +52,7 @@ require (
 	go.opencensus.io v0.24.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
 	golang.org/x/mod v0.36.0 // indirect
-	golang.org/x/net v0.54.0 // indirect
+	golang.org/x/net v0.55.0 // indirect
 	golang.org/x/sync v0.20.0 // indirect
 	golang.org/x/text v0.37.0 // indirect
 	golang.org/x/tools v0.45.0 // indirect
