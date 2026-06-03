@@ -80,8 +80,6 @@ files:
   - code.cloudfoundry.org/winc/vendor/github.com/cyphar/filepath-securejoin/pathrs-lite/internal/linux/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/cyphar/filepath-securejoin/pathrs-lite/internal/procfs/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/cyphar/filepath-securejoin/pathrs-lite/procfs/*.go # gosub
-  - code.cloudfoundry.org/winc/vendor/github.com/gogo/protobuf/proto/*.go # gosub
-  - code.cloudfoundry.org/winc/vendor/github.com/gogo/protobuf/proto/Makefile # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/golang/groupcache/lru/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/hashicorp/errwrap/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/hashicorp/go-multierror/*.go # gosub

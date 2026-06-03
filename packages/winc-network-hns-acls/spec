@@ -61,8 +61,6 @@ files:
   - code.cloudfoundry.org/winc/vendor/github.com/containerd/errdefs/pkg/internal/types/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/containerd/typeurl/v2/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/cpuguy83/go-md2man/v2/md2man/*.go # gosub
-  - code.cloudfoundry.org/winc/vendor/github.com/gogo/protobuf/proto/*.go # gosub
-  - code.cloudfoundry.org/winc/vendor/github.com/gogo/protobuf/proto/Makefile # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/golang/groupcache/lru/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/pkg/errors/*.go # gosub
   - code.cloudfoundry.org/winc/vendor/github.com/pkg/errors/Makefile # gosub
