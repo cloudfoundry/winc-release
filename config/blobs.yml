@@ -2,7 +2,7 @@
   size: 1568768
   object_id: 58ba4a91-f798-4adc-5a2d-cb9f7bb67f54
   sha: sha256:9643110e10bd0f2f31afa30d904da77f91161b95cc9b744d2f58c9167e23c1a7
-mingw/x86_64-15.2.0-release-posix-seh-ucrt-rt_v13-rev1.7z:
-  size: 103193634
-  object_id: f1262841-7d6f-42f8-7ab7-d4eef36e88cd
-  sha: sha256:029bd02b5bce7c10fd9476165b3fe178239fe1838ad62516b5c3e0921bb283cf
+mingw/x86_64-16.1.0-release-posix-seh-ucrt-rt_v14-rev1.7z:
+  size: 107056212
+  object_id: 9d6ac523-273b-4be1-49c3-774dea446532
+  sha: sha256:820bed24f181b96cfc3b0542113e11b4208a36810d2e5272fe715bcb99687284
