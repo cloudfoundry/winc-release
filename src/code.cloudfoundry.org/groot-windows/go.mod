@@ -5,14 +5,14 @@ go 1.25.7
 replace github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.8.7
 
 require (
-	code.cloudfoundry.org/filelock v0.67.0
-	code.cloudfoundry.org/groot v0.109.0
-	code.cloudfoundry.org/hydrator v0.92.0
-	code.cloudfoundry.org/lager/v3 v3.73.0
+	code.cloudfoundry.org/filelock v0.69.0
+	code.cloudfoundry.org/groot v0.112.0
+	code.cloudfoundry.org/hydrator v0.94.0
+	code.cloudfoundry.org/lager/v3 v3.74.0
 	github.com/Microsoft/go-winio v0.6.2
 	github.com/Microsoft/hcsshim v0.14.1
-	github.com/onsi/ginkgo/v2 v2.29.0
-	github.com/onsi/gomega v1.41.0
+	github.com/onsi/ginkgo/v2 v2.31.0
+	github.com/onsi/gomega v1.42.0
 	github.com/opencontainers/image-spec v1.1.1
 	github.com/opencontainers/runtime-spec v1.3.0
 	github.com/urfave/cli v1.22.17
@@ -52,10 +52,10 @@ require (
 	go.opencensus.io v0.24.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
 	golang.org/x/mod v0.37.0 // indirect
-	golang.org/x/net v0.55.0 // indirect
+	golang.org/x/net v0.56.0 // indirect
 	golang.org/x/sync v0.21.0 // indirect
 	golang.org/x/text v0.38.0 // indirect
-	golang.org/x/tools v0.45.0 // indirect
+	golang.org/x/tools v0.46.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
