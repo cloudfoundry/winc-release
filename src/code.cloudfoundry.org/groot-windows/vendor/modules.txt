@@ -1,7 +1,7 @@
-# code.cloudfoundry.org/filelock v0.69.0
+# code.cloudfoundry.org/filelock v0.70.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/filelock
-# code.cloudfoundry.org/groot v0.112.0
+# code.cloudfoundry.org/groot v0.113.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/groot
 code.cloudfoundry.org/groot/fetcher/filefetcher
@@ -9,14 +9,14 @@ code.cloudfoundry.org/groot/fetcher/layerfetcher
 code.cloudfoundry.org/groot/fetcher/layerfetcher/source
 code.cloudfoundry.org/groot/imagepuller
 code.cloudfoundry.org/groot/imagepuller/ondemand
-# code.cloudfoundry.org/hydrator v0.94.0
+# code.cloudfoundry.org/hydrator v0.95.0
 ## explicit; go 1.25.7
 code.cloudfoundry.org/hydrator/compress
 code.cloudfoundry.org/hydrator/downloader
 code.cloudfoundry.org/hydrator/imagefetcher
 code.cloudfoundry.org/hydrator/oci-directory
 code.cloudfoundry.org/hydrator/registry
-# code.cloudfoundry.org/lager/v3 v3.74.0
+# code.cloudfoundry.org/lager/v3 v3.75.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/lager/v3
 code.cloudfoundry.org/lager/v3/internal/truncate
@@ -181,7 +181,7 @@ github.com/moby/sys/mountinfo
 # github.com/moby/sys/user v0.4.0
 ## explicit; go 1.17
 github.com/moby/sys/user
-# github.com/onsi/ginkgo/v2 v2.31.0
+# github.com/onsi/ginkgo/v2 v2.32.0
 ## explicit; go 1.25.0
 github.com/onsi/ginkgo/v2
 github.com/onsi/ginkgo/v2/config
@@ -205,8 +205,8 @@ github.com/onsi/ginkgo/v2/internal/reporters
 github.com/onsi/ginkgo/v2/internal/testingtproxy
 github.com/onsi/ginkgo/v2/reporters
 github.com/onsi/ginkgo/v2/types
-# github.com/onsi/gomega v1.42.0
-## explicit; go 1.24.0
+# github.com/onsi/gomega v1.42.1
+## explicit; go 1.25.0
 github.com/onsi/gomega
 github.com/onsi/gomega/format
 github.com/onsi/gomega/gbytes
