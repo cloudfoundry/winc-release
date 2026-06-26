@@ -1,7 +1,7 @@
-7zip/7z2601.msi:
-  size: 1568768
-  object_id: 58ba4a91-f798-4adc-5a2d-cb9f7bb67f54
-  sha: sha256:9643110e10bd0f2f31afa30d904da77f91161b95cc9b744d2f58c9167e23c1a7
+7zip/7z2602.msi:
+  size: 1569792
+  object_id: a67a4859-5ff6-478f-7317-58ef24ef6677
+  sha: sha256:55171bb369d0375ae0e6e8f6cccfffb112c8b13e5c991c4d1f6b21ad968c1af0
 mingw/x86_64-16.1.0-release-posix-seh-ucrt-rt_v14-rev1.7z:
   size: 107056212
   object_id: 9d6ac523-273b-4be1-49c3-774dea446532
