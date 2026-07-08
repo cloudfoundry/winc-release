@@ -5,7 +5,7 @@ go 1.25.7
 require (
 	code.cloudfoundry.org/credhub-cli v0.0.0-20260629130111-5ee9a1ab59ab
 	code.cloudfoundry.org/filelock v0.71.0
-	code.cloudfoundry.org/localip v0.78.0
+	code.cloudfoundry.org/localip v0.79.0
 	github.com/Microsoft/hcsshim v0.14.1
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/hashicorp/go-multierror v1.1.1
@@ -21,7 +21,7 @@ require (
 	github.com/urfave/cli v1.22.17
 	golang.org/x/sync v0.21.0
 	golang.org/x/sys v0.46.0
-	golang.org/x/text v0.38.0
+	golang.org/x/text v0.39.0
 )
 
 require (
@@ -56,7 +56,7 @@ require (
 	golang.org/x/mod v0.37.0 // indirect
 	golang.org/x/net v0.56.0 // indirect
 	golang.org/x/tools v0.47.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260630182238-925bb5da69e7 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260706201446-f0a921348800 // indirect
 	google.golang.org/grpc v1.82.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
