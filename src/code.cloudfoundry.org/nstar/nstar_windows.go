@@ -75,12 +75,19 @@ func streamOut(tarBin, pid, username, path, compressPath string) {
 func sanitizeDestination(pid, username, path string) string {
 	var destination string
 	path = filepath.Clean(path)
+
+	if strings.HasPrefix(path, "..") {
+		fmt.Println("invalid path: traversal not permitted")
+		os.Exit(1)
+	}
+
 	if filepath.IsAbs(path) || strings.HasPrefix(path, "\\") {
 		containerPath := strings.TrimPrefix(path, filepath.VolumeName(path))
 		destination = filepath.Join("c:\\", "proc", pid, "root", containerPath)
 	} else {
 		destination = filepath.Join("c:\\", "proc", pid, "root", "Users", username, path)
 	}
+
 	return destination
 }
 

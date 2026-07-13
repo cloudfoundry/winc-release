@@ -279,6 +279,17 @@ var _ = Describe("Nstar", func() {
 		})
 	})
 
+	Context("when the path is a traversal attack", func() {
+		It("exits with an error", func() {
+			stdout := gbytes.NewBuffer()
+			cmd := exec.Command(nstarBin, tarBin, "123", "some-user", `..\..\..\..\..\\Windows\\System32`)
+			session, err := gexec.Start(cmd, stdout, GinkgoWriter)
+			Expect(err).ToNot(HaveOccurred())
+			Eventually(session).Should(gexec.Exit(1))
+			Expect(stdout).To(gbytes.Say("invalid path: traversal not permitted"))
+		})
+	})
+
 	Context("when not enough arguments are provided", func() {
 		It("exits with an error", func() {
 			stdout := gbytes.NewBuffer()
