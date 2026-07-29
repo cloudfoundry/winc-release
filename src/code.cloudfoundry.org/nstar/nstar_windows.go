@@ -88,6 +88,12 @@ func sanitizeDestination(pid, username, path string) string {
 		destination = filepath.Join("c:\\", "proc", pid, "root", "Users", username, path)
 	}
 
+	containerRoot := filepath.Join("c:\\", "proc", pid, "root")
+	if !strings.HasPrefix(destination, containerRoot) {
+		fmt.Println("invalid path: resolved outside container root")
+		os.Exit(1)
+	}
+
 	return destination
 }
 

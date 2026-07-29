@@ -280,9 +280,27 @@ var _ = Describe("Nstar", func() {
 	})
 
 	Context("when the path is a traversal attack", func() {
-		It("exits with an error", func() {
+		It("exits with an error on streamIn", func() {
 			stdout := gbytes.NewBuffer()
 			cmd := exec.Command(nstarBin, tarBin, "123", "some-user", `..\..\..\..\..\\Windows\\System32`)
+			session, err := gexec.Start(cmd, stdout, GinkgoWriter)
+			Expect(err).ToNot(HaveOccurred())
+			Eventually(session).Should(gexec.Exit(1))
+			Expect(stdout).To(gbytes.Say("invalid path: traversal not permitted"))
+		})
+
+		It("exits with an error on streamOut", func() {
+			stdout := gbytes.NewBuffer()
+			cmd := exec.Command(nstarBin, tarBin, "123", "some-user", `..\..\..\..\..\\Windows\\System32`, "some-file")
+			session, err := gexec.Start(cmd, stdout, GinkgoWriter)
+			Expect(err).ToNot(HaveOccurred())
+			Eventually(session).Should(gexec.Exit(1))
+			Expect(stdout).To(gbytes.Say("invalid path: traversal not permitted"))
+		})
+
+		It("exits with an error for a single-segment traversal", func() {
+			stdout := gbytes.NewBuffer()
+			cmd := exec.Command(nstarBin, tarBin, "123", "some-user", `..`)
 			session, err := gexec.Start(cmd, stdout, GinkgoWriter)
 			Expect(err).ToNot(HaveOccurred())
 			Eventually(session).Should(gexec.Exit(1))
