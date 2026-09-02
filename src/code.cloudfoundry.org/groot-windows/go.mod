@@ -8,11 +8,11 @@ require (
 	code.cloudfoundry.org/filelock v0.76.0
 	code.cloudfoundry.org/groot v0.117.0
 	code.cloudfoundry.org/hydrator v0.101.0
-	code.cloudfoundry.org/lager/v3 v3.82.0
+	code.cloudfoundry.org/lager/v3 v3.85.0
 	github.com/Microsoft/go-winio v0.6.2
 	github.com/Microsoft/hcsshim v0.14.1
 	github.com/onsi/ginkgo/v2 v2.32.1
-	github.com/onsi/gomega v1.42.1
+	github.com/onsi/gomega v1.43.0
 	github.com/opencontainers/image-spec v1.1.1
 	github.com/opencontainers/runtime-spec v1.3.0
 	github.com/urfave/cli v1.22.17
@@ -31,7 +31,7 @@ require (
 	github.com/distribution/reference v0.6.0 // indirect
 	github.com/docker/distribution v2.8.3+incompatible // indirect
 	github.com/docker/docker v28.5.2+incompatible // indirect
-	github.com/docker/docker-credential-helpers v0.9.8 // indirect
+	github.com/docker/docker-credential-helpers v0.9.9 // indirect
 	github.com/docker/go-connections v0.8.1 // indirect
 	github.com/docker/go-units v0.5.0 // indirect
 	github.com/go-logr/logr v1.4.4 // indirect
@@ -39,7 +39,7 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
-	github.com/google/pprof v0.0.0-20260825171938-4d453200e7d9 // indirect
+	github.com/google/pprof v0.0.0-20260902005441-ca85771921e4 // indirect
 	github.com/gorilla/mux v1.8.1 // indirect
 	github.com/moby/sys/capability v0.4.0 // indirect
 	github.com/moby/sys/mountinfo v0.7.2 // indirect

@@ -16,7 +16,7 @@ code.cloudfoundry.org/hydrator/downloader
 code.cloudfoundry.org/hydrator/imagefetcher
 code.cloudfoundry.org/hydrator/oci-directory
 code.cloudfoundry.org/hydrator/registry
-# code.cloudfoundry.org/lager/v3 v3.82.0
+# code.cloudfoundry.org/lager/v3 v3.85.0
 ## explicit; go 1.25.0
 code.cloudfoundry.org/lager/v3
 code.cloudfoundry.org/lager/v3/internal/truncate
@@ -134,7 +134,7 @@ github.com/docker/distribution/registry/api/v2
 # github.com/docker/docker v28.5.2+incompatible
 ## explicit
 github.com/docker/docker/api/types/versions
-# github.com/docker/docker-credential-helpers v0.9.8
+# github.com/docker/docker-credential-helpers v0.9.9
 ## explicit; go 1.21
 github.com/docker/docker-credential-helpers/client
 github.com/docker/docker-credential-helpers/credentials
@@ -166,7 +166,7 @@ github.com/google/go-cmp/cmp/internal/diff
 github.com/google/go-cmp/cmp/internal/flags
 github.com/google/go-cmp/cmp/internal/function
 github.com/google/go-cmp/cmp/internal/value
-# github.com/google/pprof v0.0.0-20260825171938-4d453200e7d9
+# github.com/google/pprof v0.0.0-20260902005441-ca85771921e4
 ## explicit; go 1.25.0
 github.com/google/pprof/profile
 # github.com/gorilla/mux v1.8.1
@@ -205,7 +205,7 @@ github.com/onsi/ginkgo/v2/internal/reporters
 github.com/onsi/ginkgo/v2/internal/testingtproxy
 github.com/onsi/ginkgo/v2/reporters
 github.com/onsi/ginkgo/v2/types
-# github.com/onsi/gomega v1.42.1
+# github.com/onsi/gomega v1.43.0
 ## explicit; go 1.25.0
 github.com/onsi/gomega
 github.com/onsi/gomega/format
