@@ -3,9 +3,9 @@ module code.cloudfoundry.org/winc
 go 1.26.0
 
 require (
-	code.cloudfoundry.org/credhub-cli v0.0.0-20260907130120-567c46b571cd
-	code.cloudfoundry.org/filelock v0.80.0
-	code.cloudfoundry.org/localip v0.88.0
+	code.cloudfoundry.org/credhub-cli v0.0.0-20260915183920-858ec47b73bd
+	code.cloudfoundry.org/filelock v0.81.0
+	code.cloudfoundry.org/localip v0.89.0
 	github.com/Microsoft/hcsshim v0.14.1
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/hashicorp/go-multierror v1.1.1
@@ -30,7 +30,7 @@ require (
 	github.com/Microsoft/go-winio v0.6.2 // indirect
 	github.com/blang/semver/v4 v4.0.0 // indirect
 	github.com/cloudfoundry/go-socks5 v0.0.0-20250423223041-4ad5fea42851 // indirect
-	github.com/cloudfoundry/socks5-proxy v0.2.187 // indirect
+	github.com/cloudfoundry/socks5-proxy v0.2.188 // indirect
 	github.com/containerd/cgroups/v3 v3.1.3 // indirect
 	github.com/containerd/errdefs v1.0.0 // indirect
 	github.com/containerd/errdefs/pkg v0.3.0 // indirect
@@ -56,7 +56,7 @@ require (
 	golang.org/x/mod v0.41.0 // indirect
 	golang.org/x/net v0.59.0 // indirect
 	golang.org/x/tools v0.50.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260908043556-f8649ddbbfe6 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260911204522-f61a6ca850bd // indirect
 	google.golang.org/grpc v1.83.2 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 )
