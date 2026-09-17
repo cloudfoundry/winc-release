@@ -2,7 +2,7 @@
 name: winc-network-hns-acls
 
 dependencies:
-- golang-1.26-windows
+- golang-1.27-windows
 - mingw
 
 files:
