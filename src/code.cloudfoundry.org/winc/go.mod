@@ -3,9 +3,9 @@ module code.cloudfoundry.org/winc
 go 1.26.0
 
 require (
-	code.cloudfoundry.org/credhub-cli v0.0.0-20260921130234-f80c1c8a1b4a
-	code.cloudfoundry.org/filelock v0.82.0
-	code.cloudfoundry.org/localip v0.90.0
+	code.cloudfoundry.org/credhub-cli v0.0.0-20260928130258-77a1a415b605
+	code.cloudfoundry.org/filelock v0.83.0
+	code.cloudfoundry.org/localip v0.91.0
 	github.com/Microsoft/hcsshim v0.14.1
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/hashicorp/go-multierror v1.1.1
@@ -13,7 +13,7 @@ require (
 	github.com/miekg/dns v1.1.73
 	github.com/mitchellh/go-ps v1.0.0
 	github.com/onsi/ginkgo/v2 v2.33.0
-	github.com/onsi/gomega v1.43.1
+	github.com/onsi/gomega v1.44.0
 	github.com/opencontainers/runtime-spec v1.3.0
 	github.com/opencontainers/runtime-tools v0.9.1-0.20221107090550-2e043c6bd626
 	github.com/pkg/errors v0.9.1
@@ -41,7 +41,7 @@ require (
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
 	github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
-	github.com/google/pprof v0.0.0-20260906184651-6331bc6350fe // indirect
+	github.com/google/pprof v0.0.0-20260926063103-aaccee046517 // indirect
 	github.com/hashicorp/errwrap v1.1.0 // indirect
 	github.com/hashicorp/go-version v1.9.0 // indirect
 	github.com/opencontainers/selinux v1.15.1 // indirect
@@ -56,7 +56,7 @@ require (
 	golang.org/x/mod v0.41.0 // indirect
 	golang.org/x/net v0.59.0 // indirect
 	golang.org/x/tools v0.50.0 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260921155816-b14227669459 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260928230214-8a89bd6388cc // indirect
 	google.golang.org/grpc v1.84.0 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 )
