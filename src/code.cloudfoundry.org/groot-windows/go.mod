@@ -5,10 +5,10 @@ go 1.27.0
 replace github.com/Microsoft/hcsshim => github.com/Microsoft/hcsshim v0.8.7
 
 require (
-	code.cloudfoundry.org/filelock v0.83.0
+	code.cloudfoundry.org/filelock v0.84.0
 	code.cloudfoundry.org/groot v0.127.0
-	code.cloudfoundry.org/hydrator v0.107.0
-	code.cloudfoundry.org/lager/v3 v3.89.0
+	code.cloudfoundry.org/hydrator v0.108.0
+	code.cloudfoundry.org/lager/v3 v3.90.0
 	github.com/Microsoft/go-winio v0.6.2
 	github.com/Microsoft/hcsshim v0.14.1
 	github.com/onsi/ginkgo/v2 v2.33.0
@@ -39,7 +39,7 @@ require (
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang/groupcache v0.0.0-20241129210726-2c02b8208cf8 // indirect
 	github.com/google/go-cmp v0.7.0 // indirect
-	github.com/google/pprof v0.0.0-20260926063103-aaccee046517 // indirect
+	github.com/google/pprof v0.0.0-20261006160405-d99a6174ef52 // indirect
 	github.com/gorilla/mux v1.8.1 // indirect
 	github.com/moby/sys/capability v0.4.0 // indirect
 	github.com/moby/sys/mountinfo v0.7.2 // indirect
@@ -55,7 +55,7 @@ require (
 	golang.org/x/net v0.59.0 // indirect
 	golang.org/x/sync v0.23.0 // indirect
 	golang.org/x/text v0.42.0 // indirect
-	golang.org/x/tools v0.50.0 // indirect
+	golang.org/x/tools v0.51.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
