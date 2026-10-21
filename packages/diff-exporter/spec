@@ -34,7 +34,7 @@ files:
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/longpath/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/memory/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/mergemaps/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/oc/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/ot/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/protocol/guestrequest/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/queue/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/safefile/*.go # gosub
@@ -43,35 +43,58 @@ files:
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/vmcompute/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/wclayer/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/winapi/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/winapi/cimfs/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/winapi/cimwriter/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/internal/winapi/types/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/Microsoft/hcsshim/osversion/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/cespare/xxhash/v2/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/cespare/xxhash/v2/*.s # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/cgroups/v3/cgroup1/stats/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/errdefs/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/errdefs/pkg/errgrpc/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/errdefs/pkg/internal/cause/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/errdefs/pkg/internal/types/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/containerd/typeurl/v2/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/github.com/golang/groupcache/lru/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/go-logr/logr/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/go-logr/logr/funcr/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/go-logr/stdr/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/github.com/google/uuid/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/opencontainers/runtime-spec/specs-go/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/pkg/errors/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/pkg/errors/Makefile # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/github.com/sirupsen/logrus/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/go.opencensus.io/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/go.opencensus.io/Makefile # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/go.opencensus.io/internal/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/go.opencensus.io/trace/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/go.opencensus.io/trace/internal/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/go.opencensus.io/trace/tracestate/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/auto/sdk/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/auto/sdk/internal/telemetry/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/Makefile # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/attribute/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/attribute/internal/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/attribute/internal/xxhash/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/baggage/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/codes/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/internal/baggage/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/internal/errorhandler/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/internal/global/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/log/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/log/embedded/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/metric/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/metric/embedded/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/metric/noop/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/propagation/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/propagation/internal/hextable/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/sdk/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/sdk/instrumentation/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/sdk/internal/attrnorm/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/sdk/internal/x/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/sdk/resource/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/sdk/trace/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/sdk/trace/internal/env/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/sdk/trace/internal/observ/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/semconv/internal/metricpool/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/semconv/v1.37.0/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/semconv/v1.43.0/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/semconv/v1.43.0/otelconv/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/trace/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/trace/embedded/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/trace/internal/telemetry/*.go # gosub
+  - code.cloudfoundry.org/diff-exporter/vendor/go.opentelemetry.io/otel/trace/noop/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/golang.org/x/sys/windows/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/golang.org/x/sys/windows/registry/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/genproto/googleapis/rpc/status/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/codes/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/connectivity/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/grpclog/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/grpclog/internal/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/internal/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/internal/status/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/serviceconfig/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/grpc/status/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/encoding/protojson/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/encoding/prototext/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/encoding/protowire/*.go # gosub
@@ -98,9 +121,7 @@ files:
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/internal/strs/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/internal/version/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/proto/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/protoadapt/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/reflect/protoreflect/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/reflect/protoregistry/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/runtime/protoiface/*.go # gosub
   - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/runtime/protoimpl/*.go # gosub
-  - code.cloudfoundry.org/diff-exporter/vendor/google.golang.org/protobuf/types/known/anypb/*.go # gosub
