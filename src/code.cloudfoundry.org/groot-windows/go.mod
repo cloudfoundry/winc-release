@@ -8,7 +8,7 @@ require (
 	code.cloudfoundry.org/filelock v0.90.0
 	code.cloudfoundry.org/groot v0.134.0
 	code.cloudfoundry.org/hydrator v0.114.0
-	code.cloudfoundry.org/lager/v3 v3.96.0
+	code.cloudfoundry.org/lager/v3 v3.97.0
 	github.com/Microsoft/go-winio v0.6.4
 	github.com/Microsoft/hcsshim v0.15.0
 	github.com/onsi/ginkgo/v2 v2.34.0
@@ -43,7 +43,7 @@ require (
 	github.com/gorilla/mux v1.8.1 // indirect
 	github.com/moby/sys/capability v0.5.0 // indirect
 	github.com/moby/sys/mountinfo v0.7.3 // indirect
-	github.com/moby/sys/user v0.5.0 // indirect
+	github.com/moby/sys/user v0.5.1 // indirect
 	github.com/opencontainers/go-digest v1.0.0 // indirect
 	github.com/openzipkin/zipkin-go v0.4.3 // indirect
 	github.com/pkg/errors v0.9.1 // indirect

@@ -16,7 +16,7 @@ code.cloudfoundry.org/hydrator/downloader
 code.cloudfoundry.org/hydrator/imagefetcher
 code.cloudfoundry.org/hydrator/oci-directory
 code.cloudfoundry.org/hydrator/registry
-# code.cloudfoundry.org/lager/v3 v3.96.0
+# code.cloudfoundry.org/lager/v3 v3.97.0
 ## explicit; go 1.26.0
 code.cloudfoundry.org/lager/v3
 code.cloudfoundry.org/lager/v3/internal/truncate
@@ -178,7 +178,7 @@ github.com/moby/sys/capability
 # github.com/moby/sys/mountinfo v0.7.3
 ## explicit; go 1.18
 github.com/moby/sys/mountinfo
-# github.com/moby/sys/user v0.5.0
+# github.com/moby/sys/user v0.5.1
 ## explicit; go 1.24
 github.com/moby/sys/user
 # github.com/onsi/ginkgo/v2 v2.34.0
