@@ -3,9 +3,9 @@ module code.cloudfoundry.org/winc
 go 1.26.11
 
 require (
-	code.cloudfoundry.org/credhub-cli v0.0.0-20261116140315-25d77097276f
+	code.cloudfoundry.org/credhub-cli v0.0.0-20261123140128-302644006641
 	code.cloudfoundry.org/filelock v0.90.0
-	code.cloudfoundry.org/localip v0.98.0
+	code.cloudfoundry.org/localip v0.99.0
 	github.com/Microsoft/hcsshim v0.15.0
 	github.com/blang/semver v3.5.1+incompatible
 	github.com/hashicorp/go-multierror v1.1.1
@@ -31,7 +31,7 @@ require (
 	github.com/blang/semver/v4 v4.0.0 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/cloudfoundry/go-socks5 v0.0.0-20250423223041-4ad5fea42851 // indirect
-	github.com/cloudfoundry/socks5-proxy v0.2.197 // indirect
+	github.com/cloudfoundry/socks5-proxy v0.2.198 // indirect
 	github.com/containerd/cgroups/v3 v3.1.3 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.7 // indirect
 	github.com/cyphar/filepath-securejoin v0.7.0 // indirect
@@ -45,12 +45,11 @@ require (
 	github.com/hashicorp/go-version v1.9.0 // indirect
 	github.com/opencontainers/selinux v1.15.1 // indirect
 	github.com/russross/blackfriday/v2 v2.1.0 // indirect
-	github.com/sergi/go-diff v1.4.0 // indirect
 	github.com/syndtr/gocapability v0.0.0-20200815063812-42c35b437635 // indirect
 	github.com/xeipuuv/gojsonpointer v0.0.0-20190905194746-02993c407bfb // indirect
 	github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415 // indirect
 	github.com/xeipuuv/gojsonschema v1.2.0 // indirect
-	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
+	go.opentelemetry.io/auto/sdk v1.2.2 // indirect
 	go.opentelemetry.io/otel v1.47.0 // indirect
 	go.opentelemetry.io/otel/log v1.47.0 // indirect
 	go.opentelemetry.io/otel/metric v1.47.0 // indirect
